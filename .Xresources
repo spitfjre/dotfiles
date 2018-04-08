@@ -1,0 +1,83 @@
+#define base_foreground #fffaf4
+#define base_background #0e1019
+#define base_color0 	#232323
+#define base_color1 	#ff000f
+#define base_color2 	#8ce10b
+#define base_color3 	#ffb900
+#define base_color4 	#008df8
+#define base_color5 	#6d43a6
+#define base_color6 	#00d8eb
+#define base_color7 	#ffffff
+#define base_color8 	#444444
+#define base_color9 	#ff2740
+#define base_color10 	#abe15b
+#define base_color11 	#ffd242
+#define base_color12 	#0092ff
+#define base_color13 	#9a5feb
+#define base_color14 	#67fff0
+#define base_color15 	#ffffff
+
+*foreground: base_foreground
+*background: base_background
+!black
+*color0:  base_color0
+*color8:  base_color8
+!red
+*color1:  base_color1
+*color9:  base_color9
+!green
+*color2:  base_color2
+*color10: base_color10
+!yellow
+*color3:  base_color3
+*color11: base_color11
+!blue
+*color4:  base_color4
+*color12: base_color12
+!magenta
+*color5:  base_color5
+*color13: base_color13
+!cyan
+*color6:  base_color6
+*color14: base_color14
+!white
+*color7:  base_color7
+*color15: base_color15
+
+#define base_custom_foreground 			#d3dae3
+#define base_custom_background_dark 	#404552
+#define base_custom_background_light 	#666a73
+#define base_custom_primary 			#3daee9
+#define base_custom_warn 				#da4453
+
+*custom_foreground: 		base_custom_foreground
+*custom_background_dark: 	base_custom_background_dark
+*custom_background_light: 	base_custom_background_light
+*custom_primary: 			base_custom_primary
+*custom_warn:				base_custom_warn
+
+! Rofi Settings
+rofi.width:				750
+rofi.padding:			5
+rofi.fullscreen: 		false
+rofi.fixed-num-lines: 	true
+rofi.bw:				1
+rofi.location:			0
+rofi.terminal:			alacritty
+rofi.lines:				10
+rofi.eh:				1
+rofi.hide-scrollbar: 	true
+rofi.separator-style: 	solid
+rofi.font:      		Iosevka Term 10px
+rofi.show-icons:        false
+rofi.dpi:				96
+
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+! 					background						foreground					background alt					highlight background			highlight foreground
+rofi.color-window: 	base_custom_background_dark, 	base_custom_primary,     	base_custom_primary
+rofi.color-normal: 	base_custom_background_dark, 	base_custom_foreground, 	base_custom_background_dark, 	base_custom_primary, 			base_custom_foreground
+rofi.color-active: 	base_custom_background_dark, 	base_custom_primary,     	base_custom_background_dark, 	base_custom_primary, 			base_custom_primary
+rofi.color-urgent: 	base_custom_background_dark, 	base_custom_foreground, 	base_custom_background_dark, 	base_custom_primary, 			base_custom_foreground
