@@ -15,8 +15,8 @@ fixed-center = false
 background = ${colors.custom_background_dark}
 foreground = ${colors.custom_foreground}
 
-font-0 = Iosevka Term:fontformat=truetype:pixelsize=8:antialias=true;2
-font-1 = Iosevka Nerd Font Mono:fontformat=truetype:size=14:antialias=true;3
+font-0 = Iosevka:fontformat=truetype:pixelsize=8:antialias=true;2
+font-1 = Iosevka:fontformat=truetype:pixelsize=8:antialias=true;3
 font-2 = Material Icons:fontformat=truetype:pixelsize=10:antialias=true;3
 
 modules-left   = left_end i3 right_end
@@ -297,7 +297,7 @@ format-prefix            = %{T3}%{T-}
 format-prefix-foreground = ${colors.custom_primary}
 format-prefix-background = ${colors.custom_background_dark}
 
-label            = " %temperature:3%"
+label            = " %temperature-c:3%"
 label-foreground = ${colors.custom_foreground}
 label-background = ${colors.custom_background_dark}
 
@@ -305,7 +305,7 @@ format-warn-prefix            = %{T3}%{T-}
 format-warn-prefix-foreground = ${colors.custom_warn}
 format-warn-prefix-background = ${colors.custom_background_dark}
 
-label-warn            = " %temperature:3%"
+label-warn            = " %temperature-c:3%"
 label-warn-foreground = ${colors.custom_foreground}
 label-warn-background = ${colors.custom_background_dark}
 

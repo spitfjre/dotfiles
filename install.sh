@@ -12,6 +12,7 @@ yaourt -S --noconfirm --needed xorg-xinit
 yaourt -S --noconfirm --needed i3-gaps-next-git
 yaourt -S --noconfirm --needed feh
 yaourt -S --noconfirm --needed dunst
+yaourt -S --noconfirm --needed scrot
 yaourt -S --noconfirm --needed polybar-git
 yaourt -S --noconfirm --needed rofi
 yaourt -S --noconfirm --needed arandr
@@ -51,7 +52,6 @@ yaourt -S --noconfirm --needed sublime-text
 
 # font
 yaourt -S --noconfirm --needed ttf-fira-sans
-yaourt -S --noconfirm --needed ttf-iosevka-term
 yaourt -S --noconfirm --needed ttf-material-icons
 
 # chat

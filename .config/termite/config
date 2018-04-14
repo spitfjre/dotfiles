@@ -3,13 +3,13 @@ allow_bold = true
 audible_bell = false
 clickable_url = true
 dynamic_title = true
-font = Fira Mono 8
+font = Iosevka Term 8
 scrollback_lines = 10000
 
 [colors]
-background = "#0e1019"
-cursor = "#ff0018"
-foreground = "#fffaf4"
+background = #0e1019
+cursor = #ff0018
+foreground = #fffaf4
 color0 = #232323
 color1 = #ff000f
 color2 = #8ce10b

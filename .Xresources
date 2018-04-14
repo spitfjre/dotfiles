@@ -61,16 +61,16 @@ rofi.width:				750
 rofi.padding:			5
 rofi.fullscreen: 		false
 rofi.fixed-num-lines: 	true
-rofi.bw:				1
+rofi.bw:				2
 rofi.location:			0
 rofi.terminal:			alacritty
 rofi.lines:				10
 rofi.eh:				1
 rofi.hide-scrollbar: 	true
 rofi.separator-style: 	solid
-rofi.font:      		Iosevka Term 10px
-rofi.show-icons:        false
-rofi.dpi:				96
+rofi.font:      		Iosevka Regular 10px
+rofi.show-icons:        true
+rofi.dpi:				100
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme

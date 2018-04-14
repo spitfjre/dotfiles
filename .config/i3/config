@@ -5,17 +5,18 @@ exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/1920x1080.png
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id sh ~/.config/i3/arandr.sh
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh
+exec_always --no-startup-id xrdb ~/.Xresources
 
 exec --no-startup-id redshift
 exec --no-startup-id dropbox
-exec --no-startup-id compton
+exec --no-startup-id dunst
 exec --no-startup-id mpd
 
 # disable touchpad
 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
 
 # font for window titles
-font pango: Iosevka Term 8
+font pango: Iosevka 8
 
 # colors
 set_from_resource   $custom_foreground     		custom_foreground

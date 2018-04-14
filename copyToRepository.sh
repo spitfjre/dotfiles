@@ -12,6 +12,7 @@ cp -r $HOME/.config/polybar/config $repoDir/.config/polybar/
 cp -r $HOME/.config/termite/* $repoDir/.config/termite/
 
 cp -r $HOME/Pictures/wallpaper/* $repoDir/wallpaper/
+cp -r $HOME/.fonts/* $repoDir/.fonts/
 
 if [ -e $HOME/.xinitrc ]
  then cp $HOME/.xinitrc $repoDir/
