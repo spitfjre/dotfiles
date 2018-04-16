@@ -15,9 +15,9 @@ fixed-center = false
 background = ${colors.custom_background_dark}
 foreground = ${colors.custom_foreground}
 
-font-0 = Iosevka:fontformat=truetype:pixelsize=8:antialias=true;2
-font-1 = Iosevka:fontformat=truetype:pixelsize=8:antialias=true;3
-font-2 = Material Icons:fontformat=truetype:pixelsize=10:antialias=true;3
+font-0 = Iosevka Term:fontformat=truetype:pixelsize=9:antialias=true;2
+font-1 = Fira Sans:fontformat=truetype:pixelsize=9:antialias=true;3
+font-2 = Material Icons:fontformat=truetype:pixelsize=11:antialias=true;4
 
 modules-left   = left_end i3 right_end
 modules-center = left_end mpd_controls divider mpd right_end
@@ -59,21 +59,21 @@ label-urgent-background    = ${colors.custom_background_dark}
 [module/divider]
 type = custom/text
 
-content            = "  |  "
+content            = " | "
 content-foreground = ${colors.custom_background_light}
 content-background = ${colors.custom_background_dark}
 
 [module/left_end]
 type = custom/text
 
-content            = "   -----[   "
+content            = "  [  "
 content-foreground = ${colors.custom_background_light}
 content-background = ${colors.custom_background_dark}
 
 [module/right_end]
 type = custom/text
 
-content            = "   ]-----   "
+content            = "  ]  "
 content-foreground = ${colors.custom_background_light}
 content-background = ${colors.custom_background_dark}
 
@@ -99,6 +99,7 @@ label-song-ellipsis   = true
 label-song            = %artist% - %title%
 label-song-foreground = ${colors.custom_foreground}
 label-song-background = ${colors.custom_background_dark}
+label-song-font		  = 2
 
 [module/mpd_controls]
 type = internal/mpd

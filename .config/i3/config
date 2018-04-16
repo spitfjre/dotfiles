@@ -11,12 +11,13 @@ exec --no-startup-id redshift
 exec --no-startup-id dropbox
 exec --no-startup-id dunst
 exec --no-startup-id mpd
+exec --no-startup-id compton -b --paint-on-overlay --unredir-if-possible --backend xr_glx_hybrid --vsync drm --glx-swap-method -1 --glx-no-stencil
 
 # disable touchpad
 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
 
 # font for window titles
-font pango: Iosevka 8
+font pango: Iosevka 9
 
 # colors
 set_from_resource   $custom_foreground     		custom_foreground

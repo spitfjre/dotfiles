@@ -20,6 +20,7 @@ yaourt -S --noconfirm --needed lxappearance
 yaourt -S --noconfirm --needed numlockx
 yaourt -S --noconfirm --needed mpd
 yaourt -S --noconfirm --needed mpc
+yaourt -S --noconfirm --needed compton
 
 # arc theme
 yaourt -S --noconfirm --needed arc-gtk-theme
@@ -57,6 +58,7 @@ yaourt -S --noconfirm --needed ttf-material-icons
 # chat
 yaourt -S --noconfirm --needed slack-desktop
 yaourt -S --noconfirm --needed rocketchat-desktop
+yaourt -S --noconfirm --needed whatsapp-desktop
 
 # dev
 yaourt -S --noconfirm --needed git
