@@ -52,7 +52,6 @@ yaourt -S --noconfirm --needed android-studio
 yaourt -S --noconfirm --needed sublime-text
 
 # font
-yaourt -S --noconfirm --needed ttf-fira-sans
 yaourt -S --noconfirm --needed ttf-material-icons
 
 # chat
