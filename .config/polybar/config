@@ -3,6 +3,7 @@ custom_foreground 	    = ${xrdb:custom_foreground}
 custom_background_dark 	= ${xrdb:custom_background_dark}
 custom_background_light = ${xrdb:custom_background_light}
 custom_primary    	 	= ${xrdb:custom_primary}
+black					= ${xrdb:color0}
 red    	 				= ${xrdb:color1}
 white					= ${xrdb:color7}
 
@@ -12,19 +13,19 @@ height       = 25
 bottom       = false
 fixed-center = false
 
-border-bottom-color = ${colors.custom_background_dark}
+border-bottom-color = ${colors.black}
 border-bottom-size  = 1
 
-background = ${colors.custom_background_dark}
+background = ${colors.custom_background_light}
 foreground = ${colors.custom_foreground}
 
-font-0 = Roboto Mono:fontformat=truetype:pixelsize=9:antialias=true;2
-font-1 = Roboto:fontformat=truetype:pixelsize=9:antialias=true;2
-font-2 = Material Icons:fontformat=truetype:pixelsize=12:antialias=true;4
+font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
+font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
+font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
 modules-left   = i3
-modules-center = mpd_controls divider mpd
-modules-right  = battery memory divider cpu divider temperature divider wifi_down eth_down divider wifi_up eth_up divider volume divider date divider time
+modules-center = mpd_controls mpd
+modules-right  = battery memory cpu temperature wifi_down eth_down wifi_up eth_up volume date time
 
 [module/i3]
 type 			= internal/i3
@@ -49,23 +50,16 @@ label-focused-background   = ${colors.custom_primary}
 label-focused-padding      = 2
 label-unfocused 		   = %icon%
 label-unfocused-foreground = ${colors.custom_foreground}
-label-unfocused-background = ${colors.custom_background_dark}
+label-unfocused-background = ${colors.custom_background_light}
 label-unfocused-padding    = 2
 label-visible 			   = %icon%
-label-visible-foreground   = ${colors.white}
+label-visible-foreground   = ${colors.custom_primary}
 label-visible-background   = ${colors.custom_background_light}
 label-visible-padding      = 2
 label-urgent 			   = %icon%
 label-urgent-foreground    = ${colors.red}
-label-urgent-background    = ${colors.custom_background_dark}
+label-urgent-background    = ${colors.custom_background_light}
 label-urgent-padding       = 2
-
-[module/divider]
-type = custom/text
-
-content            = |
-content-foreground = ${colors.custom_background_light}
-content-background = ${colors.custom_background_dark}
 
 [module/mpd]
 type = internal/mpd
@@ -79,19 +73,19 @@ format-stopped-padding = 2
 
 format-playing-prefix            = %{T3}%{T-}
 format-playing-prefix-foreground = ${colors.custom_primary}
-format-playing-prefix-background = ${colors.custom_background_dark}
+format-playing-prefix-background = ${colors.custom_background_light}
 format-paused-prefix             = %{T3}%{T-}
 format-paused-prefix-foreground  = ${colors.custom_primary}
-format-paused-prefix-background  = ${colors.custom_background_dark}
+format-paused-prefix-background  = ${colors.custom_background_light}
 format-stopped-prefix            = %{T3}%{T-}
 format-stopped-prefix-foreground = ${colors.custom_primary}
-format-stopped-prefix-background = ${colors.custom_background_dark}
+format-stopped-prefix-background = ${colors.custom_background_light}
 
 label-song-maxlen       = 100
 label-song-ellipsis     = true
 label-song              = %artist% - %title%
 label-song-foreground   = ${colors.custom_foreground}
-label-song-background   = ${colors.custom_background_dark}
+label-song-background   = ${colors.custom_background_light}
 label-song-font		    = 2
 label-song-padding-left = 1
 
@@ -107,16 +101,16 @@ format-stopped-padding = 2
 
 icon-play             = %{T3}%{T-}
 icon-play-foreground  = ${colors.custom_foreground}
-icon-play-background  = ${colors.custom_background_dark}
+icon-play-background  = ${colors.custom_background_light}
 icon-pause            = %{T3}%{T-}
 icon-pause-foreground = ${colors.custom_foreground}
-icon-pause-background = ${colors.custom_background_dark}
+icon-pause-background = ${colors.custom_background_light}
 icon-prev             = %{T3}%{T-}
 icon-prev-foreground  = ${colors.custom_foreground}
-icon-prev-background  = ${colors.custom_background_dark}
+icon-prev-background  = ${colors.custom_background_light}
 icon-next             = %{T3}%{T-}
 icon-next-foreground  = ${colors.custom_foreground}
-icon-next-background  = ${colors.custom_background_dark}
+icon-next-background  = ${colors.custom_background_light}
 
 [module/cpu]
 type     = internal/cpu
@@ -125,12 +119,12 @@ interval = 1
 format-padding           = 2
 format-prefix            = %{T3}%{T-}
 format-prefix-foreground = ${colors.custom_primary}
-format-prefix-background = ${colors.custom_background_dark}
+format-prefix-background = ${colors.custom_background_light}
 
 label              = %percentage:3%%
 label-padding-left = 1
 label-foreground   = ${colors.custom_foreground}
-label-background   = ${colors.custom_background_dark}
+label-background   = ${colors.custom_background_light}
 
 [module/memory]
 type     = internal/memory
@@ -139,12 +133,12 @@ interval = 1
 format-padding           = 2
 format-prefix            = %{T3}%{T-}
 format-prefix-foreground = ${colors.custom_primary}
-format-prefix-background = ${colors.custom_background_dark}
+format-prefix-background = ${colors.custom_background_light}
 
 label              = %percentage_used:3%%
 label-padding-left = 1
 label-foreground   = ${colors.custom_foreground}
-label-background   = ${colors.custom_background_dark}
+label-background   = ${colors.custom_background_light}
 
 [module/wifi_down]
 type             = internal/network
@@ -155,12 +149,12 @@ accumulate-stats = true
 format-connected-padding           = 2
 format-connected-prefix            = %{T3}%{T-}
 format-connected-prefix-foreground = ${colors.custom_primary}
-format-connected-prefix-background = ${colors.custom_background_dark}
+format-connected-prefix-background = ${colors.custom_background_light}
 
 label-connected              = %downspeed:8%
 label-connected-padding-left = 1
 label-connected-foreground   = ${colors.custom_foreground}
-label-connected-background   = ${colors.custom_background_dark}
+label-connected-background   = ${colors.custom_background_light}
 
 [module/wifi_up]
 type             = internal/network
@@ -171,12 +165,12 @@ accumulate-stats = true
 format-connected-padding           = 2
 format-connected-prefix            = %{T3}%{T-}
 format-connected-prefix-foreground = ${colors.custom_primary}
-format-connected-prefix-background = ${colors.custom_background_dark}
+format-connected-prefix-background = ${colors.custom_background_light}
 
 label-connected              = %upspeed:8%
 label-connected-padding-left = 1
 label-connected-foreground   = ${colors.custom_foreground}
-label-connected-background   = ${colors.custom_background_dark}
+label-connected-background   = ${colors.custom_background_light}
 
 [module/eth_down]
 type             = internal/network
@@ -187,12 +181,12 @@ accumulate-stats = true
 format-connected-padding           = 2
 format-connected-prefix            = %{T3}%{T-}
 format-connected-prefix-foreground = ${colors.custom_primary}
-format-connected-prefix-background = ${colors.custom_background_dark}
+format-connected-prefix-background = ${colors.custom_background_light}
 
 label-connected              = %downspeed:8%
 label-connected-padding-left = 1
 label-connected-foreground   = ${colors.custom_foreground}
-label-connected-background   = ${colors.custom_background_dark}
+label-connected-background   = ${colors.custom_background_light}
 
 [module/eth_up]
 type             = internal/network
@@ -203,12 +197,12 @@ accumulate-stats = true
 format-connected-padding           = 2
 format-connected-prefix            = %{T3}%{T-}
 format-connected-prefix-foreground = ${colors.custom_primary}
-format-connected-prefix-background = ${colors.custom_background_dark}
+format-connected-prefix-background = ${colors.custom_background_light}
 
 label-connected              = %upspeed:8%
 label-connected-padding-left = 1
 label-connected-foreground   = ${colors.custom_foreground}
-label-connected-background   = ${colors.custom_background_dark}
+label-connected-background   = ${colors.custom_background_light}
 
 [module/date]
 type     = internal/date
@@ -220,12 +214,12 @@ date-alt = %d-%m-%Y
 format-padding           = 2
 format-prefix            = %{T3}%{T-}
 format-prefix-foreground = ${colors.custom_primary}
-format-prefix-background = ${colors.custom_background_dark}
+format-prefix-background = ${colors.custom_background_light}
 
 label              = %date%
 label-padding-left = 1
 label-foreground   = ${colors.custom_foreground}
-label-background   = ${colors.custom_background_dark}
+label-background   = ${colors.custom_background_light}
 
 [module/time]
 type     = internal/date
@@ -237,12 +231,12 @@ time-alt = %H:%M:%S
 format-padding           = 2
 format-prefix            = %{T3}%{T-}
 format-prefix-foreground = ${colors.custom_primary}
-format-prefix-background = ${colors.custom_background_dark}
+format-prefix-background = ${colors.custom_background_light}
 
 label              = %time%
 label-padding-left = 1
 label-foreground   = ${colors.custom_foreground}
-label-background   = ${colors.custom_background_dark}
+label-background   = ${colors.custom_background_light}
 
 [module/volume]
 type     = internal/alsa
@@ -251,22 +245,22 @@ interval = 0.1
 format-volume-padding           = 2
 format-volume-prefix            = %{T3}%{T-}
 format-volume-prefix-foreground = ${colors.custom_primary}
-format-volume-prefix-background = ${colors.custom_background_dark}
+format-volume-prefix-background = ${colors.custom_background_light}
 
 label-volume              = %percentage:3%%
 label-volume-padding-left = 1
 label-volume-foreground   = ${colors.custom_foreground}
-label-volume-background   = ${colors.custom_background_dark}
+label-volume-background   = ${colors.custom_background_light}
 
 format-muted-padding           = 2
 format-muted-prefix            = %{T3}%{T-}
 format-muted-prefix-foreground = ${colors.red}
-format-muted-prefix-background = ${colors.custom_background_dark}
+format-muted-prefix-background = ${colors.custom_background_light}
 
 label-muted              = %percentage:3%%
 label-muted-padding-left = 1
 label-muted-foreground   = ${colors.custom_foreground}
-label-muted-background   = ${colors.custom_background_dark}
+label-muted-background   = ${colors.custom_background_light}
 
 [module/battery]
 type    = internal/battery
@@ -277,34 +271,25 @@ full-at = 100
 format-charging                      = <label-charging>
 format-charging-prefix               = %{T3}%{T-}
 format-charging-prefix-foreground    = ${colors.custom_primary}
-format-charging-prefix-background    = ${colors.custom_background_dark}
-format-charging-suffix               = "  |  "
-format-charging-suffix-foreground    = ${colors.custom_background_light}
-format-charging-suffix-background    = ${colors.custom_background_dark}
+format-charging-prefix-background    = ${colors.custom_background_light}
 format-discharging                   = <label-discharging>
 format-discharging-prefix            = %{T3}%{T-}
 format-discharging-prefix-foreground = ${colors.red}
-format-discharging-prefix-background = ${colors.custom_background_dark}
-format-discharging-suffix            = "  |  "
-format-discharging-suffix-foreground = ${colors.custom_background_light}
-format-discharging-suffix-background = ${colors.custom_background_dark}
+format-discharging-prefix-background = ${colors.custom_background_light}
 format-full                          = <label-full>
 format-full-prefix                   = %{T3}%{T-}
 format-full-prefix-foreground        = ${colors.custom_primary}
-format-full-prefix-background        = ${colors.custom_background_dark}
-format-full-suffix                   = "  |  "
-format-full-suffix-foreground        = ${colors.custom_background_light}
-format-full-suffix-background        = ${colors.custom_background_dark}
+format-full-prefix-background        = ${colors.custom_background_light}
 
 label-charging                 = " %percentage:3%%"
 label-charging-foreground      = ${colors.custom_foreground}
-label-charging-background      = ${colors.custom_background_dark}
+label-charging-background      = ${colors.custom_background_light}
 label-discharging              = " %percentage:3%%"
 label-discharging-foreground   = ${colors.custom_foreground}
-label-discharging-background   = ${colors.custom_background_dark}
+label-discharging-background   = ${colors.custom_background_light}
 label-full                     = " %percentage:3%%"
 label-full-foreground          = ${colors.custom_foreground}
-label-full-background          = ${colors.custom_background_dark}
+label-full-background          = ${colors.custom_background_light}
 
 [module/temperature]
 type             = internal/temperature
@@ -314,22 +299,22 @@ warn-temperature = 70
 format-padding           = 2
 format-prefix            = %{T3}%{T-}
 format-prefix-foreground = ${colors.custom_primary}
-format-prefix-background = ${colors.custom_background_dark}
+format-prefix-background = ${colors.custom_background_light}
 
 label              = %temperature-c:3%
 label-padding-left = 1
 label-foreground   = ${colors.custom_foreground}
-label-background   = ${colors.custom_background_dark}
+label-background   = ${colors.custom_background_light}
 
 format-warn-padding           = 2
 format-warn-prefix            = %{T3}%{T-}
 format-warn-prefix-foreground = ${colors.red}
-format-warn-prefix-background = ${colors.custom_background_dark}
+format-warn-prefix-background = ${colors.custom_background_light}
 
 label-warn              = %temperature-c:3%
 label-warn-padding-left = 1
 label-warn-foreground   = ${colors.custom_foreground}
-label-warn-background   = ${colors.custom_background_dark}
+label-warn-background   = ${colors.custom_background_light}
 
 [settings]
 screenchange-reload = true

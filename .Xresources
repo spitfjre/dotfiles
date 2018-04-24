@@ -52,10 +52,10 @@ Xft.lcdfilter: 	lcddefault
 *color7:  base_color7
 *color15: base_color15
 
-#define base_custom_foreground 			#b3bdcb
-#define base_custom_background_dark 	#303641
-#define base_custom_background_light 	#414a59
-#define base_custom_primary 			#5294e2
+#define base_custom_foreground 			#cfd8dc
+#define base_custom_background_dark 	#263238
+#define base_custom_background_light 	#2f3d44
+#define base_custom_primary 			#00bcd4
 
 *custom_foreground: 		base_custom_foreground
 *custom_background_dark: 	base_custom_background_dark
@@ -67,7 +67,7 @@ rofi.width:				50
 rofi.padding:			5
 rofi.fullscreen: 		false
 rofi.fixed-num-lines: 	true
-rofi.bw:				4
+rofi.bw:				1
 rofi.location:			0
 rofi.terminal:			alacritty
 rofi.lines:				10

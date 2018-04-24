@@ -4,8 +4,8 @@ set $mod Mod4
 exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/1920x1080.png
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id sh ~/.config/i3/arandr.sh
-exec_always --no-startup-id sh ~/.config/polybar/launch.sh
 exec_always --no-startup-id xrdb ~/.Xresources
+exec_always --no-startup-id sh ~/.config/polybar/launch.sh
 
 exec --no-startup-id redshift
 exec --no-startup-id dropbox
@@ -29,11 +29,11 @@ set_from_resource   $white                      color7
 
 # class                 border              		background          		text    indicator           		child_border
 client.focused          $custom_primary     		$custom_primary     		$white 	$custom_primary             $custom_primary
-client.focused_inactive $custom_background_light   	$custom_background_light   	$white  $custom_background_light   	$custom_background_light
-client.unfocused        $custom_background_light   	$custom_background_light  	$white  $custom_background_light   	$custom_background_light
+client.focused_inactive $custom_background_dark   	$custom_background_dark   	$white  $custom_background_dark   	$custom_background_dark
+client.unfocused        $custom_background_dark   	$custom_background_dark  	$white  $custom_background_dark   	$custom_background_dark
 client.urgent           $red                        $red                        $white  $red                        $red 
-client.placeholder      $custom_background_light   	$custom_background_light  	$white  $custom_background_light   	$custom_background_light
-client.background       $custom_background_light
+client.placeholder      $custom_background_dark   	$custom_background_dark  	$white  $custom_background_dark   	$custom_background_dark
+client.background       $custom_background_dark
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier       $mod
@@ -43,7 +43,7 @@ bindsym $mod+Return     exec --no-startup-id alacritty
 bindsym $mod+Shift+f    exec --no-startup-id firefox
 mouse_warping           none
 
-for_window [class="^.*"] border normal
+for_window [class="^.*"] border normal 1
 for_window [class="^.*"] title_format " <b>>_ %title</b>"
 
 # i3-gaps

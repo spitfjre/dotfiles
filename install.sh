@@ -22,9 +22,9 @@ yaourt -S --noconfirm --needed mpd
 yaourt -S --noconfirm --needed mpc
 yaourt -S --noconfirm --needed compton
 
-# arc theme
-yaourt -S --noconfirm --needed arc-gtk-theme
-yaourt -S --noconfirm --needed arc-icon-theme
+# gtk-theme
+yaourt -S --noconfirm --needed adapta-gtk-theme-git
+yaourt -S --noconfirm --needed paper-icon-theme-git
 
 # laptop
 yaourt -S --noconfirm --needed light
