@@ -52,9 +52,9 @@ yaourt -S --noconfirm --needed android-studio
 yaourt -S --noconfirm --needed sublime-text
 
 # tex
-yaourt -S --noconfirm --needed texmaker
 yaourt -S --noconfirm --needed texlive-most
 yaourt -S --noconfirm --needed texlive-lang
+yaourt -S --noconfirm --needed texmaker
 
 # font
 yaourt -S --noconfirm --needed ttf-material-icons
