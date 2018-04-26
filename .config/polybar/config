@@ -24,8 +24,38 @@ font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
 modules-left   = i3
-modules-center = mpd_controls mpd
+modules-center = 
 modules-right  = battery memory cpu temperature wifi_down eth_down wifi_up eth_up volume date time
+
+[bar/bottom]
+monitor      = ${env:MONITOR}
+height       = 25
+bottom       = true
+fixed-center = false
+
+border-top-color = ${colors.black}
+border-top-size  = 1
+
+background = ${colors.custom_background_light}
+foreground = ${colors.custom_foreground}
+
+font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
+font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
+font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
+
+modules-left   = mpd_controls mpd
+modules-center = 
+modules-right  = 
+
+tray-position = right
+tray-detached = false
+tray-maxsize = 16
+tray-transparent = false
+tray-background = ${colors.custom_background_light}
+tray-offset-x = 0
+tray-offset-y = 0
+tray-padding = 0
+tray-scale = 1.0
 
 [module/i3]
 type 			= internal/i3
