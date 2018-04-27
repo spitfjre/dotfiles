@@ -52,15 +52,19 @@ Xft.lcdfilter: 	lcddefault
 *color7:  base_color7
 *color15: base_color15
 
-#define base_custom_foreground 			#cfd8dc
-#define base_custom_background_dark 	#263238
-#define base_custom_background_light 	#2f3d44
-#define base_custom_primary 			#00bcd4
+#define base_material_foreground 		#cfd8dc
+#define base_material_background_dark 	#222d32
+#define base_material_background_light 	#2f3d44
+#define base_material_primary 			#00bcd4
+#define base_material_info         		#009688
+#define base_material_warn         		#ff5252
 
-*custom_foreground: 		base_custom_foreground
-*custom_background_dark: 	base_custom_background_dark
-*custom_background_light: 	base_custom_background_light
-*custom_primary: 			base_custom_primary
+*material_foreground: 			base_material_foreground
+*material_background_dark: 		base_material_background_dark
+*material_background_light: 	base_material_background_light
+*material_primary: 				base_material_primary
+*material_info: 				base_material_info
+*material_warn: 				base_material_warn
 
 ! Rofi Settings
 rofi.width:				50
@@ -83,7 +87,7 @@ rofi.dpi:				100
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: false
 ! 					background						foreground					background alt					highlight background			highlight foreground
-rofi.color-window: 	base_custom_background_dark, 	base_custom_primary,     	base_custom_background_light
-rofi.color-normal: 	base_custom_background_dark, 	base_custom_foreground, 	base_custom_background_dark, 	base_custom_primary, 			base_color7
-rofi.color-active: 	base_custom_background_dark, 	base_custom_primary,     	base_custom_background_dark, 	base_custom_primary, 			base_color7
-rofi.color-urgent: 	base_custom_background_dark, 	base_custom_foreground, 	base_custom_background_dark, 	base_custom_primary, 			base_color7
+rofi.color-window: 	base_material_background_dark, 	base_material_primary,     	base_material_background_light
+rofi.color-normal: 	base_material_background_dark, 	base_material_foreground, 	base_material_background_dark, 	base_material_primary, 			base_color7
+rofi.color-active: 	base_material_background_dark, 	base_material_primary,     	base_material_background_dark, 	base_material_primary, 			base_color7
+rofi.color-urgent: 	base_material_background_dark, 	base_material_foreground, 	base_material_background_dark, 	base_material_primary, 			base_color7

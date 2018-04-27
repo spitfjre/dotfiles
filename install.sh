@@ -58,6 +58,7 @@ yaourt -S --noconfirm --needed texmaker
 
 # font
 yaourt -S --noconfirm --needed ttf-material-icons
+yaourt -S --noconfirm --needed noto-fonts
 
 # chat
 yaourt -S --noconfirm --needed slack-desktop

@@ -20,20 +20,21 @@ exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
 font pango: Roboto 9
 
 # colors
-set_from_resource   $custom_foreground     		custom_foreground
-set_from_resource   $custom_background_dark   	custom_background_dark
-set_from_resource   $custom_background_light   	custom_background_light
-set_from_resource   $custom_primary           	custom_primary
-set_from_resource   $red                        color1
+set_from_resource   $material_foreground     	material_foreground
+set_from_resource   $material_background_dark   material_background_dark
+set_from_resource   $material_background_light  material_background_light
+set_from_resource   $material_primary           material_primary
+set_from_resource   $material_info              material_info
+set_from_resource   $material_warn              material_warn
 set_from_resource   $white                      color7
 
 # class                 border              		background          		text    indicator           		child_border
-client.focused          $custom_primary     		$custom_primary     		$white 	$custom_primary             $custom_primary
-client.focused_inactive $custom_background_dark   	$custom_background_dark   	$white  $custom_background_dark   	$custom_background_dark
-client.unfocused        $custom_background_dark   	$custom_background_dark  	$white  $custom_background_dark   	$custom_background_dark
-client.urgent           $red                        $red                        $white  $red                        $red 
-client.placeholder      $custom_background_dark   	$custom_background_dark  	$white  $custom_background_dark   	$custom_background_dark
-client.background       $custom_background_dark
+client.focused          $material_primary     		$material_primary     		$white 	$material_primary           $material_primary
+client.focused_inactive $material_background_dark   $material_background_dark   $white  $material_background_dark   $material_background_dark
+client.unfocused        $material_background_dark   $material_background_dark  	$white  $material_background_dark   $material_background_dark
+client.urgent           $material_warn              $material_warn              $white  $material_warn              $material_warn 
+client.placeholder      $material_background_dark   $material_background_dark  	$white  $material_background_dark   $material_background_dark
+client.background       $material_background_dark
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier       $mod
