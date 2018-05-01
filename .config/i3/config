@@ -11,6 +11,7 @@ exec --no-startup-id redshift
 exec --no-startup-id dropbox
 exec --no-startup-id dunst
 exec --no-startup-id mpd
+exec --no-startup-id NetworkManager
 exec --no-startup-id compton -b --paint-on-overlay --unredir-if-possible --backend xr_glx_hybrid --vsync drm --glx-swap-method -1 --glx-no-stencil
 
 # disable touchpad
@@ -44,12 +45,12 @@ bindsym $mod+Return     exec --no-startup-id alacritty
 bindsym $mod+Shift+f    exec --no-startup-id firefox
 mouse_warping           none
 
-for_window [class="^.*"] border normal 1
+for_window [class="^.*"] border pixel 1
 for_window [class="^.*"] title_format " <b>>_ %title</b>"
 
 # i3-gaps
-gaps inner 0
-gaps outer 0
+gaps inner 5
+gaps outer 20
 
 # kill focused window
 bindsym $mod+Shift+q kill

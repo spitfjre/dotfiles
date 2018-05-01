@@ -23,11 +23,9 @@ foreground = ${colors.material_foreground}
 font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
-font-3 = Font Awesome 5 Brands:fontformat=opentype:size=11:antialias=true;3
-font-4 = devicons:fontformat=truetype:size=11:antialias=true;3
 
 modules-left   = i3
-modules-center = 
+modules-center = title
 modules-right  = battery memory cpu temperature wifi_down eth_down wifi_up eth_up volume date time
 
 [bar/bottom]
@@ -45,7 +43,6 @@ foreground = ${colors.white}
 font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
-font-3 = Font Awesome 5 Brands:fontformat=opentype:size=11:antialias=true;3
 
 modules-left   = mpd_controls mpd
 modules-center = 
@@ -60,6 +57,23 @@ tray-offset-x = 0
 tray-offset-y = 0
 tray-padding = 0
 tray-scale = 1.0
+
+[module/title]
+type = internal/xwindow
+
+format            = <label>
+format-foreground = ${colors.material_foreground}
+format-background = ${colors.material_background_light}
+format-padding    = 2
+
+format-prefix            = %{T3}%{T-}
+format-prefix-foreground = ${colors.material_primary}
+format-prefix-background = ${colors.material_background_light}
+
+label              = %title%
+label-font         = 2
+label-padding-left = 1
+label-maxlen       = 100
 
 [module/i3]
 type 			= internal/i3
@@ -123,21 +137,27 @@ label-song-background   = ${colors.material_background_dark}
 label-song-font		    = 2
 label-song-padding-left = 1
 
+label-offline              = mpd is offline
+label-offline-foreground   = ${colors.white}
+label-offline-background   = ${colors.material_background_dark}
+label-offline-font		   = 2
+label-offline-padding-left = 1
+
 [module/mpd_controls]
 type = internal/mpd
 
-format-playing         = <icon-prev><toggle><icon-next>
+format-playing         = <icon-prev> <icon-seekb><toggle><icon-seekf> <icon-next>
 format-playing-padding = 2
-format-paused          = <icon-prev><toggle><icon-next>
+format-paused          = <icon-prev> <icon-seekb><toggle><icon-seekf> <icon-next>
 format-paused-padding  = 2
-format-stopped         = <icon-prev><toggle><icon-next>
+format-stopped         = <icon-prev> <icon-seekb><toggle><icon-seekf> <icon-next>
 format-stopped-padding = 2
 
 icon-play             = %{T3}%{T-}
-icon-play-foreground  = ${colors.white}
+icon-play-foreground  = ${colors.material_primary}
 icon-play-background  = ${colors.material_background_dark}
 icon-pause            = %{T3}%{T-}
-icon-pause-foreground = ${colors.white}
+icon-pause-foreground = ${colors.material_primary}
 icon-pause-background = ${colors.material_background_dark}
 icon-prev             = %{T3}%{T-}
 icon-prev-foreground  = ${colors.white}
@@ -145,6 +165,12 @@ icon-prev-background  = ${colors.material_background_dark}
 icon-next             = %{T3}%{T-}
 icon-next-foreground  = ${colors.white}
 icon-next-background  = ${colors.material_background_dark}
+icon-seekb             = %{T3}%{T-}
+icon-seekb-foreground  = ${colors.material_primary}
+icon-seekb-background  = ${colors.material_background_dark}
+icon-seekf             = %{T3}%{T-}
+icon-seekf-foreground  = ${colors.material_primary}
+icon-seekf-background  = ${colors.material_background_dark}
 
 [module/cpu]
 type     = internal/cpu
