@@ -49,8 +49,8 @@ for_window [class="^.*"] border pixel 1
 for_window [class="^.*"] title_format " <b>>_ %title</b>"
 
 # i3-gaps
-gaps inner 5
-gaps outer 20
+gaps inner 10
+gaps outer 10
 
 # kill focused window
 bindsym $mod+Shift+q kill
