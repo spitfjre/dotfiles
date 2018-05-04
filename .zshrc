@@ -11,6 +11,7 @@ DEFAULT_USER=`whoami`
 
 alias ls='ls -A --color=auto'
 alias syu='yaourt -Syu --aur --noconfirm'
+alias docker_clean='docker rmi $(docker images -q)'
 
 export JAVA_HOME=/usr/lib/jvm/java-8-jdk
 export ANDROID_HOME=/home/spitfjre/Android/Sdk
