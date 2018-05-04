@@ -73,6 +73,14 @@ yaourt -S --noconfirm --needed gradle
 yaourt -S --noconfirm --needed nodejs
 yaourt -S --noconfirm --needed npm
 
+# docker
+yaourt -S --noconfirm --needed docker
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo gpasswd -a spitfjre docker
+sudo newgrp docker
+exit
+
 # misc
 yaourt -S --noconfirm --needed ipe
 yaourt -S --noconfirm --needed jdownloader2
