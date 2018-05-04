@@ -28,7 +28,7 @@ modules-left   = i3
 modules-center = title
 modules-right  = battery memory cpu temperature wifi_down eth_down wifi_up eth_up volume date time
 
-[bar/bottom]
+[bar/bottom_with_tray]
 monitor      = ${env:MONITOR}
 height       = 25
 bottom       = true
@@ -57,6 +57,26 @@ tray-offset-x = 0
 tray-offset-y = 0
 tray-padding = 0
 tray-scale = 1.0
+
+[bar/bottom]
+monitor      = ${env:MONITOR}
+height       = 25
+bottom       = true
+fixed-center = false
+
+border-top-color = ${colors.black}
+border-top-size  = 1
+
+background = ${colors.material_background_dark}
+foreground = ${colors.white}
+
+font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
+font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
+font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
+
+modules-left   = mpd_controls mpd
+modules-center = 
+modules-right  = 
 
 [module/title]
 type = internal/xwindow
