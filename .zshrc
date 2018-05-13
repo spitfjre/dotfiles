@@ -17,6 +17,8 @@ export JAVA_HOME=/usr/lib/jvm/java-8-jdk
 export ANDROID_HOME=/home/spitfjre/Android/Sdk
 export PATH=$PATH:/home/spitfjre/Android/Sdk/platform-tools
 
+export PATH=/opt/flutter/bin:$PATH
+
 export PATH="$PATH:$HOME/.npm-packages/bin"
 
 export NVM_DIR="/home/spitfjre/.nvm"

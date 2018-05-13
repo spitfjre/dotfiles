@@ -13,7 +13,6 @@ yaourt -S --noconfirm --needed i3-gaps-next-git
 yaourt -S --noconfirm --needed feh
 yaourt -S --noconfirm --needed dunst
 yaourt -S --noconfirm --needed scrot
-yaourt -S --noconfirm --needed polybar-git
 yaourt -S --noconfirm --needed rofi
 yaourt -S --noconfirm --needed arandr
 yaourt -S --noconfirm --needed lxappearance
@@ -21,6 +20,7 @@ yaourt -S --noconfirm --needed numlockx
 yaourt -S --noconfirm --needed mpd
 yaourt -S --noconfirm --needed mpc
 yaourt -S --noconfirm --needed compton
+yaourt -S --noconfirm --needed polybar-git # Place polybar last to ensure polybar also installs the mpd module
 
 # gtk-theme
 yaourt -S --noconfirm --needed adapta-gtk-theme-git
@@ -73,14 +73,6 @@ yaourt -S --noconfirm --needed gradle
 yaourt -S --noconfirm --needed nodejs
 yaourt -S --noconfirm --needed npm
 
-# docker
-yaourt -S --noconfirm --needed docker
-sudo systemctl start docker
-sudo systemctl enable docker
-sudo gpasswd -a spitfjre docker
-sudo newgrp docker
-exit
-
 # misc
 yaourt -S --noconfirm --needed ipe
 yaourt -S --noconfirm --needed jdownloader2
@@ -90,3 +82,13 @@ yaourt -S --noconfirm --needed dropbox
 yaourt -S --noconfirm --needed thunderbird
 yaourt -S --noconfirm --needed gimp
 
+# docker
+yaourt -S --noconfirm --needed docker
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo gpasswd -a spitfjre docker
+sudo newgrp docker
+exit
+
+# flutter
+yaourt -S --noconfirm --needed flutter
