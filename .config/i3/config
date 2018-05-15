@@ -21,21 +21,19 @@ exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
 font pango: Roboto 9
 
 # colors
-set_from_resource   $material_foreground     	material_foreground
-set_from_resource   $material_background_dark   material_background_dark
-set_from_resource   $material_background_light  material_background_light
-set_from_resource   $material_primary           material_primary
-set_from_resource   $material_info              material_info
-set_from_resource   $material_warn              material_warn
-set_from_resource   $white                      color7
+set_from_resource   $material_foreground    material_foreground
+set_from_resource   $material_background    material_background
+set_from_resource   $material_primary       material_primary
+set_from_resource   $material_info          material_info
+set_from_resource   $material_warn          material_warn
 
-# class                 border              		background          		text    indicator           		child_border
-client.focused          $material_primary     		$material_primary     		$white 	$material_primary           $material_primary
-client.focused_inactive $material_background_dark   $material_background_dark   $white  $material_background_dark   $material_background_dark
-client.unfocused        $material_background_dark   $material_background_dark  	$white  $material_background_dark   $material_background_dark
-client.urgent           $material_warn              $material_warn              $white  $material_warn              $material_warn 
-client.placeholder      $material_background_dark   $material_background_dark  	$white  $material_background_dark   $material_background_dark
-client.background       $material_background_dark
+# class                 border              	background          	text                    indicator             child_border
+client.focused          $material_primary       $material_primary       $material_foreground    $material_primary     $material_primary
+client.focused_inactive $material_background    $material_background    $material_foreground    $material_background  $material_background
+client.unfocused        $material_background    $material_background  	$material_foreground    $material_background  $material_background
+client.urgent           $material_warn          $material_warn          $material_foreground    $material_warn        $material_warn 
+client.placeholder      $material_background    $material_background  	$material_foreground    $material_background  $material_background
+client.background       $material_background
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier       $mod
