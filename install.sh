@@ -30,18 +30,18 @@ yaourt -S --noconfirm --needed paper-icon-theme-git
 yaourt -S --noconfirm --needed light
 yaourt -S --noconfirm --needed xorg-xbacklight
 
-#terminal
+# terminal
 yaourt -S --noconfirm --needed alacritty-scrollback-git
 yaourt -S --noconfirm --needed termite
 yaourt -S --noconfirm --needed htop
 yaourt -S --noconfirm --needed ncmpcpp
 
-#zsh
+# zsh
 yaourt -S --noconfirm --needed zsh
 yaourt -S --noconfirm --needed zsh-completions
 yaourt -S --noconfirm --needed oh-my-zsh-git
 
-#browser
+# browser
 yaourt -S --noconfirm --needed chromium
 yaourt -S --noconfirm --needed google-chrome
 yaourt -S --noconfirm --needed firefox
@@ -50,6 +50,7 @@ yaourt -S --noconfirm --needed firefox
 yaourt -S --noconfirm --needed jetbrains-toolbox
 yaourt -S --noconfirm --needed android-studio
 yaourt -S --noconfirm --needed sublime-text
+yaourt -S --noconfirm --needed visual-studio-code-bin
 
 # tex
 yaourt -S --noconfirm --needed texlive-most
