@@ -27,7 +27,7 @@ font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
 modules-left   = i3
 modules-center = title
-modules-right  = battery memory cpu temperature wifi_down eth_down wifi_up eth_up volume date time
+modules-right  = battery memory cpu temperature wifi_up eth_up wifi_down eth_down volume date time
 
 [bar/bottom_with_tray]
 monitor      = ${env:MONITOR}
@@ -116,19 +116,19 @@ ws-icon-8 = 9;%{T3}%{T-}
 label-focused 			   = %icon%
 label-focused-foreground   = ${colors.white}
 label-focused-background   = ${colors.material_primary}
-label-focused-padding      = 2
+label-focused-padding      = 1
 label-unfocused 		   = %icon%
 label-unfocused-foreground = ${colors.material_foreground}
 label-unfocused-background = ${colors.material_background}
-label-unfocused-padding    = 2
+label-unfocused-padding    = 1
 label-visible 			   = %icon%
 label-visible-foreground   = ${colors.material_primary}
 label-visible-background   = ${colors.material_background}
-label-visible-padding      = 2
+label-visible-padding      = 1
 label-urgent 			   = %icon%
 label-urgent-foreground    = ${colors.material_warn}
 label-urgent-background    = ${colors.material_background}
-label-urgent-padding       = 2
+label-urgent-padding       = 1
 
 [module/mpd]
 type = internal/mpd
