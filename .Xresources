@@ -66,7 +66,7 @@ Xft.lcdfilter: 	lcddefault
 
 ! Rofi Settings
 rofi.width:				50
-rofi.padding:			5
+rofi.padding:			10
 rofi.fullscreen: 		false
 rofi.fixed-num-lines: 	true
 rofi.bw:				1
@@ -77,15 +77,14 @@ rofi.eh:				1
 rofi.hide-scrollbar: 	true
 rofi.separator-style: 	solid
 rofi.font:      		Roboto 9
-rofi.show-icons:        false
-rofi.dpi:				100
+rofi.show-icons:        true
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: false
 ! 					background					foreground					background alt				highlight background	highlight foreground
-rofi.color-window: 	base_material_background, 	base_material_primary,     	base_material_background
-rofi.color-normal: 	base_material_background, 	base_material_foreground, 	base_material_background, 	base_material_primary, 	base_color7
-rofi.color-active: 	base_material_background, 	base_material_primary,     	base_material_background, 	base_material_primary, 	base_color7
-rofi.color-urgent: 	base_material_background, 	base_material_foreground, 	base_material_background, 	base_material_primary, 	base_color7
+rofi.color-window: 	base_material_background, 	base_material_primary,     	base_material_info
+rofi.color-normal: 	base_material_background, 	base_material_foreground, 	base_material_background, 	base_material_primary, 	base_material_background
+rofi.color-active: 	base_material_background, 	base_material_primary,     	base_material_background, 	base_material_primary, 	base_material_background
+rofi.color-urgent: 	base_material_background, 	base_material_foreground, 	base_material_background, 	base_material_primary, 	base_material_background
