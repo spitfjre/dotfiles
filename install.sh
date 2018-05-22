@@ -64,9 +64,8 @@ yaourt -S --noconfirm --needed ttf-roboto
 yaourt -S --noconfirm --needed ttf-roboto-mono
 
 # chat
-yaourt -S --noconfirm --needed slack-desktop
 yaourt -S --noconfirm --needed rocketchat-desktop
-yaourt -S --noconfirm --needed whatsapp-desktop
+yaourt -S --noconfirm --needed franz-bin
 
 # dev
 yaourt -S --noconfirm --needed git
