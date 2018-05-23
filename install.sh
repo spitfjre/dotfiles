@@ -65,6 +65,7 @@ yaourt -S --noconfirm --needed ttf-roboto-mono
 
 # chat
 yaourt -S --noconfirm --needed rambox-bin
+yaourt -S --noconfirm --needed discord
 
 # dev
 yaourt -S --noconfirm --needed git
