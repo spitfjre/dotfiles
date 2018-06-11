@@ -4,7 +4,7 @@ material_background       = ${xrdb:material_background}
 material_primary    	  = ${xrdb:material_primary}
 material_info    	      = ${xrdb:material_info}
 material_warn    	      = ${xrdb:material_warn}
-black					  	  = ${xrdb:color0}
+black					  = ${xrdb:color0}
 red					  	  = ${xrdb:color1}
 green					  = ${xrdb:color2}
 
@@ -12,7 +12,7 @@ green					  = ${xrdb:color2}
 monitor      = ${env:MONITOR}
 height       = 25
 bottom       = false
-fixed-center = false
+fixed-center = true
 
 border-bottom-color = ${colors.black}
 border-bottom-size  = 1
@@ -24,15 +24,15 @@ font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
-modules-left   = i3
-modules-center = title
-modules-right  = battery memory cpu temperature wifi_up eth_up wifi_down eth_down volume date time
+modules-left   = i3 title
+modules-center = wifi eth wifi_up eth_up wifi_down eth_down
+modules-right  = battery memory cpu temperature volume date time
 
 [bar/bottom_with_tray]
 monitor      = ${env:MONITOR}
 height       = 25
 bottom       = true
-fixed-center = false
+fixed-center = true
 
 border-top-color = ${colors.black}
 border-top-size  = 1
@@ -62,7 +62,7 @@ tray-scale = 1.0
 monitor      = ${env:MONITOR}
 height       = 25
 bottom       = true
-fixed-center = false
+fixed-center = true
 
 border-top-color = ${colors.black}
 border-top-size  = 1
@@ -75,7 +75,7 @@ font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
 modules-left   = mpd_controls mpd
-modules-center = 
+modules-center = wifi eth wifi_up eth_up wifi_down eth_down
 modules-right  = 
 
 [module/title]
@@ -220,6 +220,21 @@ label-padding-left = 1
 label-foreground   = ${colors.material_foreground}
 label-background   = ${colors.material_background}
 
+[module/wifi]
+type             = internal/network
+interface        = wlp3s0
+interval         = 1.0
+
+format-connected-padding           = 2
+format-connected-prefix            = %{T3}%{T-}
+format-connected-prefix-foreground = ${colors.material_info}
+format-connected-prefix-background = ${colors.material_background}
+
+label                        = wifi
+label-connected-padding-left = 1
+label-connected-foreground   = ${colors.material_foreground}
+label-connected-background   = ${colors.material_background}
+
 [module/wifi_down]
 type             = internal/network
 interface        = wlp3s0
@@ -248,6 +263,21 @@ format-connected-prefix-foreground = ${colors.red}
 format-connected-prefix-background = ${colors.material_background}
 
 label-connected              = %upspeed:8%
+label-connected-padding-left = 1
+label-connected-foreground   = ${colors.material_foreground}
+label-connected-background   = ${colors.material_background}
+
+[module/eth]
+type             = internal/network
+interface        = enp0s31f6
+interval         = 1.0
+
+format-connected-padding           = 2
+format-connected-prefix            = %{T3}%{T-}
+format-connected-prefix-foreground = ${colors.material_info}
+format-connected-prefix-background = ${colors.material_background}
+
+label                        = eth
 label-connected-padding-left = 1
 label-connected-foreground   = ${colors.material_foreground}
 label-connected-background   = ${colors.material_background}
