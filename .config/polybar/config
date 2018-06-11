@@ -75,7 +75,7 @@ font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
 modules-left   = mpd_controls mpd
-modules-center = wifi eth wifi_up eth_up wifi_down eth_down
+modules-center = 
 modules-right  = 
 
 [module/title]
@@ -269,7 +269,7 @@ label-connected-background   = ${colors.material_background}
 
 [module/eth]
 type             = internal/network
-interface        = enp0s31f6
+interface        = enp0s25
 interval         = 1.0
 
 format-connected-padding           = 2
@@ -284,7 +284,7 @@ label-connected-background   = ${colors.material_background}
 
 [module/eth_down]
 type             = internal/network
-interface        = enp0s31f6
+interface        = enp0s25
 interval         = 1.0
 accumulate-stats = true
 
@@ -300,7 +300,7 @@ label-connected-background   = ${colors.material_background}
 
 [module/eth_up]
 type             = internal/network
-interface        = enp0s31f6
+interface        = enp0s25
 interval         = 1.0
 accumulate-stats = true
 
