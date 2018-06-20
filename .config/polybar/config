@@ -1,21 +1,29 @@
 [colors]
-material_foreground 	  = ${xrdb:material_foreground}
-material_background       = ${xrdb:material_background}
-material_primary    	  = ${xrdb:material_primary}
-material_info    	      = ${xrdb:material_info}
-material_warn    	      = ${xrdb:material_warn}
-black					  = ${xrdb:color0}
-red					  	  = ${xrdb:color1}
-green					  = ${xrdb:color2}
+material_foreground = ${xrdb:material_foreground}
+material_background = ${xrdb:material_background}
+material_primary = ${xrdb:material_primary}
+material_info = ${xrdb:material_info}
+material_warn = ${xrdb:material_warn}
+black = ${xrdb:color0}
+red = ${xrdb:color1}
+green = ${xrdb:color2}
+
+
+
+[interfaces]
+eth = enp0s31f6
+wifi = wlp3s0
+
+
 
 [bar/top]
-monitor      = ${env:MONITOR}
-height       = 25
-bottom       = false
+monitor = ${env:MONITOR}
+height = 25
+bottom = false
 fixed-center = true
 
 border-bottom-color = ${colors.black}
-border-bottom-size  = 1
+border-bottom-size = 1
 
 background = ${colors.material_background}
 foreground = ${colors.material_foreground}
@@ -24,18 +32,20 @@ font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
-modules-left   = i3 title
+modules-left = i3 title
 modules-center = wifi eth wifi_up eth_up wifi_down eth_down
-modules-right  = battery memory cpu temperature volume date time
+modules-right = battery memory cpu temperature volume date time
+
+
 
 [bar/bottom_with_tray]
-monitor      = ${env:MONITOR}
-height       = 25
-bottom       = true
+monitor = ${env:MONITOR}
+height = 25
+bottom = true
 fixed-center = true
 
 border-top-color = ${colors.black}
-border-top-size  = 1
+border-top-size = 1
 
 background = ${colors.material_background}
 foreground = ${colors.material_foreground}
@@ -44,9 +54,9 @@ font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
-modules-left   = mpd_controls mpd
+modules-left = mpd_controls mpd
 modules-center = 
-modules-right  = 
+modules-right = 
 
 tray-position = right
 tray-detached = false
@@ -58,14 +68,16 @@ tray-offset-y = 0
 tray-padding = 0
 tray-scale = 1.0
 
+
+
 [bar/bottom]
-monitor      = ${env:MONITOR}
-height       = 25
-bottom       = true
+monitor = ${env:MONITOR}
+height = 25
+bottom = true
 fixed-center = true
 
 border-top-color = ${colors.black}
-border-top-size  = 1
+border-top-size = 1
 
 background = ${colors.material_background}
 foreground = ${colors.material_foreground}
@@ -74,33 +86,37 @@ font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
-modules-left   = mpd_controls mpd
+modules-left = mpd_controls mpd
 modules-center = 
-modules-right  = 
+modules-right = 
+
+
 
 [module/title]
 type = internal/xwindow
 
-format            = <label>
+format = <label>
 format-foreground = ${colors.material_foreground}
 format-background = ${colors.material_background}
-format-padding    = 2
+format-padding = 2
 
-format-prefix            = %{T3}%{T-}
+format-prefix = %{T3}%{T-}
 format-prefix-foreground = ${colors.material_primary}
 format-prefix-background = ${colors.material_background}
 
-label              = %title%
-label-font         = 2
+label = %title%
+label-font = 2
 label-padding-left = 1
-label-maxlen       = 100
+label-maxlen = 100
+
+
 
 [module/i3]
-type 			= internal/i3
-index-sort      = true
+type = internal/i3
+index-sort = true
 wrapping-scroll = true
 strip-wsnumbers = false
-pin-workspaces  = true
+pin-workspaces = true
 
 ws-icon-0 = 1;%{T3}%{T-}
 ws-icon-1 = 2;%{T3}%{T-}
@@ -112,323 +128,357 @@ ws-icon-6 = 7;%{T3}%{T-}
 ws-icon-7 = 8;%{T3}%{T-}
 ws-icon-8 = 9;%{T3}%{T-}
 
-label-focused 			   = %icon%
-label-focused-foreground   = ${colors.material_background}
-label-focused-background   = ${colors.material_primary}
-label-focused-padding      = 1
-label-unfocused 		   = %icon%
+label-focused = %icon%
+label-focused-foreground = ${colors.material_background}
+label-focused-background = ${colors.material_primary}
+label-focused-padding = 1
+label-unfocused = %icon%
 label-unfocused-foreground = ${colors.material_foreground}
 label-unfocused-background = ${colors.material_background}
-label-unfocused-padding    = 1
-label-visible 			   = %icon%
-label-visible-foreground   = ${colors.material_primary}
-label-visible-background   = ${colors.material_background}
-label-visible-padding      = 1
-label-urgent 			   = %icon%
-label-urgent-foreground    = ${colors.material_warn}
-label-urgent-background    = ${colors.material_background}
-label-urgent-padding       = 1
+label-unfocused-padding = 1
+label-visible = %icon%
+label-visible-foreground = ${colors.material_primary}
+label-visible-background = ${colors.material_background}
+label-visible-padding = 1
+label-urgent = %icon%
+label-urgent-foreground = ${colors.material_warn}
+label-urgent-background = ${colors.material_background}
+label-urgent-padding = 1
+
+
 
 [module/mpd]
 type = internal/mpd
 
-format-playing         = <label-song>
+format-playing = <label-song>
 format-playing-padding = 2
-format-paused          = <label-song>
-format-paused-padding  = 2
-format-stopped         = <label-song>
+format-paused = <label-song>
+format-paused-padding = 2
+format-stopped = <label-song>
 format-stopped-padding = 2
 
-format-playing-prefix            = %{T3}%{T-}
+format-playing-prefix = %{T3}%{T-}
 format-playing-prefix-foreground = ${colors.material_info}
 format-playing-prefix-background = ${colors.material_background}
-format-paused-prefix             = %{T3}%{T-}
+format-paused-prefix = %{T3}%{T-}
 format-paused-prefix-foreground  = ${colors.material_info}
 format-paused-prefix-background  = ${colors.material_background}
-format-stopped-prefix            = %{T3}%{T-}
+format-stopped-prefix = %{T3}%{T-}
 format-stopped-prefix-foreground = ${colors.material_info}
 format-stopped-prefix-background = ${colors.material_background}
 
-label-song-maxlen       = 100
-label-song-ellipsis     = true
-label-song              = %artist% - %title%
-label-song-foreground   = ${colors.material_foreground}
-label-song-background   = ${colors.material_background}
-label-song-font		    = 2
+label-song-maxlen = 100
+label-song-ellipsis = true
+label-song = %artist% - %title%
+label-song-foreground = ${colors.material_foreground}
+label-song-background = ${colors.material_background}
+label-song-font	= 2
 label-song-padding-left = 1
 
-label-offline              = mpd is offline
-label-offline-foreground   = ${colors.material_foreground}
-label-offline-background   = ${colors.material_background}
-label-offline-font		   = 2
+label-offline = mpd is offline
+label-offline-foreground = ${colors.material_foreground}
+label-offline-background = ${colors.material_background}
+label-offline-font = 2
 label-offline-padding-left = 1
+
+
 
 [module/mpd_controls]
 type = internal/mpd
 
-format-playing         = <icon-prev> <icon-seekb><toggle><icon-seekf> <icon-next>
+format-playing = <icon-prev> <icon-seekb><toggle><icon-seekf> <icon-next>
 format-playing-padding = 2
-format-paused          = <icon-prev> <icon-seekb><toggle><icon-seekf> <icon-next>
+format-paused = <icon-prev> <icon-seekb><toggle><icon-seekf> <icon-next>
 format-paused-padding  = 2
-format-stopped         = <icon-prev> <icon-seekb><toggle><icon-seekf> <icon-next>
+format-stopped = <icon-prev> <icon-seekb><toggle><icon-seekf> <icon-next>
 format-stopped-padding = 2
 
-icon-play             = %{T3}%{T-}
-icon-play-foreground  = ${colors.material_primary}
-icon-play-background  = ${colors.material_background}
-icon-pause            = %{T3}%{T-}
+icon-play = %{T3}%{T-}
+icon-play-foreground = ${colors.material_primary}
+icon-play-background = ${colors.material_background}
+icon-pause = %{T3}%{T-}
 icon-pause-foreground = ${colors.material_primary}
 icon-pause-background = ${colors.material_background}
-icon-prev             = %{T3}%{T-}
-icon-prev-foreground  = ${colors.material_foreground}
-icon-prev-background  = ${colors.material_background}
-icon-next             = %{T3}%{T-}
-icon-next-foreground  = ${colors.material_foreground}
-icon-next-background  = ${colors.material_background}
-icon-seekb             = %{T3}%{T-}
-icon-seekb-foreground  = ${colors.material_primary}
-icon-seekb-background  = ${colors.material_background}
-icon-seekf             = %{T3}%{T-}
-icon-seekf-foreground  = ${colors.material_primary}
-icon-seekf-background  = ${colors.material_background}
+icon-prev = %{T3}%{T-}
+icon-prev-foreground = ${colors.material_foreground}
+icon-prev-background = ${colors.material_background}
+icon-next = %{T3}%{T-}
+icon-next-foreground = ${colors.material_foreground}
+icon-next-background = ${colors.material_background}
+icon-seekb = %{T3}%{T-}
+icon-seekb-foreground = ${colors.material_primary}
+icon-seekb-background = ${colors.material_background}
+icon-seekf = %{T3}%{T-}
+icon-seekf-foreground = ${colors.material_primary}
+icon-seekf-background = ${colors.material_background}
+
+
 
 [module/cpu]
-type     = internal/cpu
+type = internal/cpu
 interval = 1
 
-format-padding           = 2
-format-prefix            = %{T3}%{T-}
+format-padding = 2
+format-prefix = %{T3}%{T-}
 format-prefix-foreground = ${colors.material_info}
 format-prefix-background = ${colors.material_background}
 
-label              = %percentage:3%%
+label = %percentage:3%%
 label-padding-left = 1
-label-foreground   = ${colors.material_foreground}
-label-background   = ${colors.material_background}
+label-foreground = ${colors.material_foreground}
+label-background = ${colors.material_background}
+
+
 
 [module/memory]
-type     = internal/memory
+type = internal/memory
 interval = 1
 
-format-padding           = 2
-format-prefix            = %{T3}%{T-}
+format-padding = 2
+format-prefix = %{T3}%{T-}
 format-prefix-foreground = ${colors.material_info}
 format-prefix-background = ${colors.material_background}
 
-label              = %percentage_used:3%%
+label = %percentage_used:3%%
 label-padding-left = 1
 label-foreground   = ${colors.material_foreground}
 label-background   = ${colors.material_background}
+
+
 
 [module/wifi]
-type             = internal/network
-interface        = wlp3s0
-interval         = 1.0
+type = internal/network
+interface = ${interfaces.wifi}
+interval = 1.0
 
-format-connected-padding           = 2
-format-connected-prefix            = %{T3}%{T-}
+format-connected-padding = 2
+format-connected-prefix = %{T3}%{T-}
 format-connected-prefix-foreground = ${colors.material_info}
 format-connected-prefix-background = ${colors.material_background}
 
-label                        = wifi
+label-connected = wifi
 label-connected-padding-left = 1
-label-connected-foreground   = ${colors.material_foreground}
-label-connected-background   = ${colors.material_background}
+label-connected-foreground = ${colors.material_foreground}
+label-connected-background = ${colors.material_background}
+
+
 
 [module/wifi_down]
-type             = internal/network
-interface        = wlp3s0
-interval         = 1.0
+type = internal/network
+interface = ${interfaces.wifi}
+interval = 1.0
 accumulate-stats = true
 
-format-connected-padding           = 2
-format-connected-prefix            = %{T3}%{T-}
+format-connected-padding = 2
+format-connected-prefix = %{T3}%{T-}
 format-connected-prefix-foreground = ${colors.green}
 format-connected-prefix-background = ${colors.material_background}
 
-label-connected              = %downspeed:8%
+label-connected = %downspeed:8%
 label-connected-padding-left = 1
-label-connected-foreground   = ${colors.material_foreground}
-label-connected-background   = ${colors.material_background}
+label-connected-foreground = ${colors.material_foreground}
+label-connected-background = ${colors.material_background}
+
+
 
 [module/wifi_up]
-type             = internal/network
-interface        = wlp3s0
-interval         = 1.0
+type = internal/network
+interface = ${interfaces.wifi}
+interval = 1.0
 accumulate-stats = true
 
-format-connected-padding           = 2
-format-connected-prefix            = %{T3}%{T-}
+format-connected-padding = 2
+format-connected-prefix = %{T3}%{T-}
 format-connected-prefix-foreground = ${colors.red}
 format-connected-prefix-background = ${colors.material_background}
 
-label-connected              = %upspeed:8%
+label-connected = %upspeed:8%
 label-connected-padding-left = 1
-label-connected-foreground   = ${colors.material_foreground}
-label-connected-background   = ${colors.material_background}
+label-connected-foreground = ${colors.material_foreground}
+label-connected-background = ${colors.material_background}
+
+
 
 [module/eth]
-type             = internal/network
-interface        = enp0s25
-interval         = 1.0
+type = internal/network
+interface = ${interfaces.eth}
+interval = 1.0
 
-format-connected-padding           = 2
-format-connected-prefix            = %{T3}%{T-}
+format-connected-padding = 2
+format-connected-prefix = %{T3}%{T-}
 format-connected-prefix-foreground = ${colors.material_info}
 format-connected-prefix-background = ${colors.material_background}
 
-label                        = eth
+label-connected = eth
 label-connected-padding-left = 1
-label-connected-foreground   = ${colors.material_foreground}
-label-connected-background   = ${colors.material_background}
+label-connected-foreground = ${colors.material_foreground}
+label-connected-background = ${colors.material_background}
+
+
 
 [module/eth_down]
-type             = internal/network
-interface        = enp0s25
-interval         = 1.0
+type = internal/network
+interface = ${interfaces.eth}
+interval = 1.0
 accumulate-stats = true
 
-format-connected-padding           = 2
-format-connected-prefix            = %{T3}%{T-}
+format-connected-padding = 2
+format-connected-prefix = %{T3}%{T-}
 format-connected-prefix-foreground = ${colors.green}
 format-connected-prefix-background = ${colors.material_background}
 
-label-connected              = %downspeed:8%
+label-connected = %downspeed:8%
 label-connected-padding-left = 1
-label-connected-foreground   = ${colors.material_foreground}
-label-connected-background   = ${colors.material_background}
+label-connected-foreground = ${colors.material_foreground}
+label-connected-background = ${colors.material_background}
+
+
 
 [module/eth_up]
-type             = internal/network
-interface        = enp0s25
-interval         = 1.0
+type = internal/network
+interface = ${interfaces.eth}
+interval = 1.0
 accumulate-stats = true
 
-format-connected-padding           = 2
-format-connected-prefix            = %{T3}%{T-}
+format-connected-padding = 2
+format-connected-prefix = %{T3}%{T-}
 format-connected-prefix-foreground = ${colors.red}
 format-connected-prefix-background = ${colors.material_background}
 
-label-connected              = %upspeed:8%
+label-connected = %upspeed:8%
 label-connected-padding-left = 1
-label-connected-foreground   = ${colors.material_foreground}
-label-connected-background   = ${colors.material_background}
+label-connected-foreground = ${colors.material_foreground}
+label-connected-background = ${colors.material_background}
+
+
 
 [module/date]
-type     = internal/date
+type = internal/date
 interval = 1
 
-date     = %d-%m-%Y
+date = %d-%m-%Y
 date-alt = %d-%m-%Y
 
-format-padding           = 2
-format-prefix            = %{T3}%{T-}
+format-padding = 2
+format-prefix = %{T3}%{T-}
 format-prefix-foreground = ${colors.material_info}
 format-prefix-background = ${colors.material_background}
 
-label              = %date%
+label = %date%
 label-padding-left = 1
-label-foreground   = ${colors.material_foreground}
-label-background   = ${colors.material_background}
+label-foreground = ${colors.material_foreground}
+label-background = ${colors.material_background}
+
+
 
 [module/time]
-type     = internal/date
+type = internal/date
 interval = 1
 
-time     = %H:%M
+time = %H:%M
 time-alt = %H:%M:%S
 
-format-padding           = 2
-format-prefix            = %{T3}%{T-}
+format-padding = 2
+format-prefix = %{T3}%{T-}
 format-prefix-foreground = ${colors.material_info}
 format-prefix-background = ${colors.material_background}
 
-label              = %time%
+label = %time%
 label-padding-left = 1
-label-foreground   = ${colors.material_foreground}
-label-background   = ${colors.material_background}
+label-foreground = ${colors.material_foreground}
+label-background = ${colors.material_background}
+
+
 
 [module/volume]
-type     = internal/alsa
+type = internal/alsa
 interval = 0.1
 
-format-volume-padding           = 2
-format-volume-prefix            = %{T3}%{T-}
+format-volume-padding = 2
+format-volume-prefix = %{T3}%{T-}
 format-volume-prefix-foreground = ${colors.material_info}
 format-volume-prefix-background = ${colors.material_background}
 
-label-volume              = %percentage:3%%
+label-volume = %percentage:3%%
 label-volume-padding-left = 1
-label-volume-foreground   = ${colors.material_foreground}
-label-volume-background   = ${colors.material_background}
+label-volume-foreground = ${colors.material_foreground}
+label-volume-background = ${colors.material_background}
 
-format-muted-padding           = 2
-format-muted-prefix            = %{T3}%{T-}
+format-muted-padding = 2
+format-muted-prefix = %{T3}%{T-}
 format-muted-prefix-foreground = ${colors.material_warn}
 format-muted-prefix-background = ${colors.material_background}
 
-label-muted              = %percentage:3%%
+label-muted = %percentage:3%%
 label-muted-padding-left = 1
-label-muted-foreground   = ${colors.material_foreground}
-label-muted-background   = ${colors.material_background}
+label-muted-foreground = ${colors.material_foreground}
+label-muted-background = ${colors.material_background}
+
+
 
 [module/battery]
-type    = internal/battery
+type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 100
 
-format-charging                      = <label-charging>
-format-charging-prefix               = %{T3}%{T-}
-format-charging-prefix-foreground    = ${colors.material_info}
-format-charging-prefix-background    = ${colors.material_background}
-format-discharging                   = <label-discharging>
-format-discharging-prefix            = %{T3}%{T-}
+format-charging = <label-charging>
+format-charging-prefix = %{T3}%{T-}
+format-charging-prefix-foreground = ${colors.material_info}
+format-charging-prefix-background = ${colors.material_background}
+format-discharging = <label-discharging>
+format-discharging-prefix = %{T3}%{T-}
 format-discharging-prefix-foreground = ${colors.material_warn}
 format-discharging-prefix-background = ${colors.material_background}
-format-full                          = <label-full>
-format-full-prefix                   = %{T3}%{T-}
-format-full-prefix-foreground        = ${colors.material_info}
-format-full-prefix-background        = ${colors.material_background}
+format-full = <label-full>
+format-full-prefix = %{T3}%{T-}
+format-full-prefix-foreground = ${colors.material_info}
+format-full-prefix-background = ${colors.material_background}
 
-label-charging                 = " %percentage:3%%"
-label-charging-foreground      = ${colors.material_foreground}
-label-charging-background      = ${colors.material_background}
-label-discharging              = " %percentage:3%%"
-label-discharging-foreground   = ${colors.material_foreground}
-label-discharging-background   = ${colors.material_background}
-label-full                     = " %percentage:3%%"
-label-full-foreground          = ${colors.material_foreground}
-label-full-background          = ${colors.material_background}
+label-charging = " %percentage:3%%"
+label-charging-foreground = ${colors.material_foreground}
+label-charging-background = ${colors.material_background}
+label-discharging = " %percentage:3%%"
+label-discharging-foreground = ${colors.material_foreground}
+label-discharging-background = ${colors.material_background}
+label-full = " %percentage:3%%"
+label-full-foreground = ${colors.material_foreground}
+label-full-background = ${colors.material_background}
+
+
 
 [module/temperature]
-type             = internal/temperature
-thermal-zone     = 0
+type = internal/temperature
+thermal-zone = 0
 warn-temperature = 70
 
-format-padding           = 2
-format-prefix            = %{T3}%{T-}
+format-padding = 2
+format-prefix = %{T3}%{T-}
 format-prefix-foreground = ${colors.material_info}
 format-prefix-background = ${colors.material_background}
 
-label              = %temperature-c:3%
+label = %temperature-c:3%
 label-padding-left = 1
-label-foreground   = ${colors.material_foreground}
-label-background   = ${colors.material_background}
+label-foreground = ${colors.material_foreground}
+label-background = ${colors.material_background}
 
-format-warn-padding           = 2
-format-warn-prefix            = %{T3}%{T-}
+format-warn-padding = 2
+format-warn-prefix = %{T3}%{T-}
 format-warn-prefix-foreground = ${colors.material_warn}
 format-warn-prefix-background = ${colors.material_background}
 
-label-warn              = %temperature-c:3%
+label-warn = %temperature-c:3%
 label-warn-padding-left = 1
-label-warn-foreground   = ${colors.material_foreground}
-label-warn-background   = ${colors.material_background}
+label-warn-foreground = ${colors.material_foreground}
+label-warn-background = ${colors.material_background}
+
+
 
 [settings]
 screenchange-reload = true
 
+
+
 [global/wm]
-margin-top    = 0
+margin-top = 0
 margin-bottom = 0

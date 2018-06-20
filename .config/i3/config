@@ -11,6 +11,7 @@ exec --no-startup-id redshift
 exec --no-startup-id dropbox
 exec --no-startup-id dunst
 exec --no-startup-id mpd
+exec --no-startup-id NetworkManager
 exec --no-startup-id compton -b --paint-on-overlay --unredir-if-possible --backend xr_glx_hybrid --vsync drm --glx-swap-method -1 --glx-no-stencil
 
 # disable touchpad
@@ -20,18 +21,18 @@ exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
 font pango: Roboto 9
 
 # colors
-set_from_resource   $material_foreground    material_foreground
-set_from_resource   $material_background    material_background
-set_from_resource   $material_primary       material_primary
-set_from_resource   $material_info          material_info
-set_from_resource   $material_warn          material_warn
+set_from_resource $material_foreground material_foreground
+set_from_resource $material_background material_background
+set_from_resource $material_primary    material_primary
+set_from_resource $material_info       material_info
+set_from_resource $material_warn       material_warn
 
-# class                 border              	background          	text                    indicator             child_border
-client.focused          $material_primary       $material_primary       $material_foreground    $material_primary     $material_primary
-client.focused_inactive $material_background    $material_background    $material_foreground    $material_background  $material_background
-client.unfocused        $material_background    $material_background  	$material_foreground    $material_background  $material_background
-client.urgent           $material_warn          $material_warn          $material_foreground    $material_warn        $material_warn 
-client.placeholder      $material_background    $material_background  	$material_foreground    $material_background  $material_background
+# class                 border               background           text                 indicator            child_border
+client.focused          $material_primary    $material_primary    $material_foreground $material_primary    $material_primary
+client.focused_inactive $material_background $material_background $material_foreground $material_background $material_background
+client.unfocused        $material_background $material_background $material_foreground $material_background $material_background
+client.urgent           $material_warn       $material_warn       $material_foreground $material_warn       $material_warn 
+client.placeholder      $material_background $material_background $material_foreground $material_background $material_background
 client.background       $material_background
 
 # use Mouse+$mod to drag floating windows to their wanted position

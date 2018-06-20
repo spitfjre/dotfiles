@@ -52,39 +52,39 @@ Xft.lcdfilter: 	lcddefault
 *color7:  base_color7
 *color15: base_color15
 
-#define base_material_foreground 	#cfd8dc
-#define base_material_background 	#222d32
-#define base_material_primary 		#00bcd4
-#define base_material_info         	#009688
-#define base_material_warn         	#ff5252
+#define base_material_foreground #cfd8dc
+#define base_material_background #222d32
+#define base_material_primary 	 #00bcd4
+#define base_material_info       #009688
+#define base_material_warn       #ff5252
 
-*material_foreground: 	base_material_foreground
-*material_background: 	base_material_background
-*material_primary: 		base_material_primary
-*material_info: 		base_material_info
-*material_warn: 		base_material_warn
+*material_foreground: base_material_foreground
+*material_background: base_material_background
+*material_primary: 	  base_material_primary
+*material_info: 	  base_material_info
+*material_warn: 	  base_material_warn
 
 ! Rofi Settings
-rofi.width:				50
-rofi.padding:			5
-rofi.fullscreen: 		false
-rofi.fixed-num-lines: 	true
-rofi.bw:				1
-rofi.location:			0
-rofi.terminal:			alacritty
-rofi.lines:				10
-rofi.eh:				1
-rofi.hide-scrollbar: 	true
-rofi.separator-style: 	solid
-rofi.font:      		Roboto 9
-rofi.show-icons:        true
+rofi.width:			  50
+rofi.padding:		  5
+rofi.fullscreen: 	  false
+rofi.fixed-num-lines: true
+rofi.bw:			  1
+rofi.location:		  0
+rofi.terminal:		  alacritty
+rofi.lines:			  10
+rofi.eh:			  1
+rofi.hide-scrollbar:  true
+rofi.separator-style: solid
+rofi.font:      	  Roboto 9
+rofi.show-icons:      true
 
 ! ------------------------------------------------------------------------------
 ! ROFI Color theme
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: false
-! 					background					foreground					background alt				highlight background	highlight foreground
-rofi.color-window: 	base_material_background, 	base_material_primary,     	base_material_info
-rofi.color-normal: 	base_material_background, 	base_material_foreground, 	base_material_background, 	base_material_primary, 	base_material_background
-rofi.color-active: 	base_material_background, 	base_material_primary,     	base_material_background, 	base_material_primary, 	base_material_background
-rofi.color-urgent: 	base_material_background, 	base_material_foreground, 	base_material_background, 	base_material_primary, 	base_material_background
+! 					background				  foreground				background alt			  highlight background	 highlight foreground
+rofi.color-window: 	base_material_background, base_material_primary,    base_material_info
+rofi.color-normal: 	base_material_background, base_material_foreground, base_material_background, base_material_primary, base_material_background
+rofi.color-active: 	base_material_background, base_material_primary,    base_material_background, base_material_primary, base_material_background
+rofi.color-urgent: 	base_material_background, base_material_foreground, base_material_background, base_material_primary, base_material_background
