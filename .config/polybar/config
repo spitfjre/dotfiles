@@ -11,7 +11,7 @@ green = ${xrdb:color2}
 
 
 [interfaces]
-eth = enp0s31f6
+eth = enp0s25
 wifi = wlp3s0
 
 
@@ -85,7 +85,7 @@ format-prefix-background = ${colors.material_background}
 label = %title%
 label-font = 2
 label-padding-left = 1
-label-maxlen = 75
+label-maxlen = 50
 
 
 
@@ -145,7 +145,7 @@ format-stopped-prefix = %{T3}%{T-}
 format-stopped-prefix-foreground = ${colors.material_info}
 format-stopped-prefix-background = ${colors.material_background}
 
-label-song-maxlen = 75
+label-song-maxlen = 50
 label-song-ellipsis = true
 label-song = %artist% - %title%
 label-song-foreground = ${colors.material_foreground}
@@ -224,23 +224,6 @@ label-background   = ${colors.material_background}
 
 
 
-[module/wifi]
-type = internal/network
-interface = ${interfaces.wifi}
-interval = 1.0
-
-format-connected-padding = 2
-format-connected-prefix = %{T3}%{T-}
-format-connected-prefix-foreground = ${colors.material_info}
-format-connected-prefix-background = ${colors.material_background}
-
-label-connected = wifi
-label-connected-padding-left = 1
-label-connected-foreground = ${colors.material_foreground}
-label-connected-background = ${colors.material_background}
-
-
-
 [module/wifi_down]
 type = internal/network
 interface = ${interfaces.wifi}
@@ -271,23 +254,6 @@ format-connected-prefix-foreground = ${colors.red}
 format-connected-prefix-background = ${colors.material_background}
 
 label-connected = %upspeed:8%
-label-connected-padding-left = 1
-label-connected-foreground = ${colors.material_foreground}
-label-connected-background = ${colors.material_background}
-
-
-
-[module/eth]
-type = internal/network
-interface = ${interfaces.eth}
-interval = 1.0
-
-format-connected-padding = 2
-format-connected-prefix = %{T3}%{T-}
-format-connected-prefix-foreground = ${colors.material_info}
-format-connected-prefix-background = ${colors.material_background}
-
-label-connected = eth
 label-connected-padding-left = 1
 label-connected-foreground = ${colors.material_foreground}
 label-connected-background = ${colors.material_background}
@@ -400,26 +366,32 @@ battery = BAT0
 adapter = AC
 full-at = 100
 
+format-charging-padding = 2
 format-charging = <label-charging>
 format-charging-prefix = %{T3}%{T-}
 format-charging-prefix-foreground = ${colors.material_info}
 format-charging-prefix-background = ${colors.material_background}
+format-discharging-padding = 2
 format-discharging = <label-discharging>
 format-discharging-prefix = %{T3}%{T-}
 format-discharging-prefix-foreground = ${colors.material_warn}
 format-discharging-prefix-background = ${colors.material_background}
+format-full-padding = 2
 format-full = <label-full>
 format-full-prefix = %{T3}%{T-}
 format-full-prefix-foreground = ${colors.material_info}
 format-full-prefix-background = ${colors.material_background}
 
-label-charging = " %percentage:3%%"
+label-charging-padding-left = 1
+label-charging = %percentage:3%%
 label-charging-foreground = ${colors.material_foreground}
 label-charging-background = ${colors.material_background}
-label-discharging = " %percentage:3%%"
+label-discharging-padding-left = 1
+label-discharging = %percentage:3%%
 label-discharging-foreground = ${colors.material_foreground}
 label-discharging-background = ${colors.material_background}
-label-full = " %percentage:3%%"
+label-full-padding-left = 1
+label-full = %percentage:3%%
 label-full-foreground = ${colors.material_foreground}
 label-full-background = ${colors.material_background}
 

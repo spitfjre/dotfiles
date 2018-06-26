@@ -13,6 +13,8 @@ alias ls='ls -A --color=auto'
 alias syu='yaourt -Syu --aur --noconfirm'
 alias docker_clean='docker rmi $(docker images -q)'
 
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+
 export JAVA_HOME=/usr/lib/jvm/java-8-jdk
 export ANDROID_HOME=/home/spitfjre/Android/Sdk
 export PATH=$PATH:/home/spitfjre/Android/Sdk/platform-tools
