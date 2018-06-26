@@ -33,19 +33,19 @@ font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
 modules-left = i3 title
-modules-center = wifi eth wifi_up eth_up wifi_down eth_down
+modules-center = mpd_controls mpd wifi_up eth_up wifi_down eth_down
 modules-right = battery memory cpu temperature volume date time
 
 
 
-[bar/bottom_with_tray]
+[bar/top_with_tray]
 monitor = ${env:MONITOR}
 height = 25
-bottom = true
+bottom = false
 fixed-center = true
 
-border-top-color = ${colors.black}
-border-top-size = 1
+border-bottom-color = ${colors.black}
+border-bottom-size = 1
 
 background = ${colors.material_background}
 foreground = ${colors.material_foreground}
@@ -54,9 +54,9 @@ font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
-modules-left = mpd_controls mpd
-modules-center = 
-modules-right = 
+modules-left = i3 title
+modules-center = mpd_controls mpd wifi_up eth_up wifi_down eth_down
+modules-right = battery memory cpu temperature volume date time
 
 tray-position = right
 tray-detached = false
@@ -70,28 +70,6 @@ tray-scale = 1.0
 
 
 
-[bar/bottom]
-monitor = ${env:MONITOR}
-height = 25
-bottom = true
-fixed-center = true
-
-border-top-color = ${colors.black}
-border-top-size = 1
-
-background = ${colors.material_background}
-foreground = ${colors.material_foreground}
-
-font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
-font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
-font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
-
-modules-left = mpd_controls mpd
-modules-center = 
-modules-right = 
-
-
-
 [module/title]
 type = internal/xwindow
 
@@ -101,13 +79,13 @@ format-background = ${colors.material_background}
 format-padding = 2
 
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_primary}
+format-prefix-foreground = ${colors.material_info}
 format-prefix-background = ${colors.material_background}
 
 label = %title%
 label-font = 2
 label-padding-left = 1
-label-maxlen = 100
+label-maxlen = 75
 
 
 
@@ -129,7 +107,7 @@ ws-icon-7 = 8;%{T3}%{T-}
 ws-icon-8 = 9;%{T3}%{T-}
 
 label-focused = %icon%
-label-focused-foreground = ${colors.material_background}
+label-focused-foreground = ${colors.material_foreground}
 label-focused-background = ${colors.material_primary}
 label-focused-padding = 1
 label-unfocused = %icon%
@@ -167,7 +145,7 @@ format-stopped-prefix = %{T3}%{T-}
 format-stopped-prefix-foreground = ${colors.material_info}
 format-stopped-prefix-background = ${colors.material_background}
 
-label-song-maxlen = 100
+label-song-maxlen = 75
 label-song-ellipsis = true
 label-song = %artist% - %title%
 label-song-foreground = ${colors.material_foreground}
@@ -186,11 +164,11 @@ label-offline-padding-left = 1
 [module/mpd_controls]
 type = internal/mpd
 
-format-playing = <icon-prev> <icon-seekb><toggle><icon-seekf> <icon-next>
+format-playing = <icon-prev><toggle><icon-next>
 format-playing-padding = 2
-format-paused = <icon-prev> <icon-seekb><toggle><icon-seekf> <icon-next>
+format-paused = <icon-prev><toggle><icon-next>
 format-paused-padding  = 2
-format-stopped = <icon-prev> <icon-seekb><toggle><icon-seekf> <icon-next>
+format-stopped = <icon-prev><toggle><icon-next>
 format-stopped-padding = 2
 
 icon-play = %{T3}%{T-}
@@ -200,10 +178,10 @@ icon-pause = %{T3}%{T-}
 icon-pause-foreground = ${colors.material_primary}
 icon-pause-background = ${colors.material_background}
 icon-prev = %{T3}%{T-}
-icon-prev-foreground = ${colors.material_foreground}
+icon-prev-foreground = ${colors.material_primary}
 icon-prev-background = ${colors.material_background}
 icon-next = %{T3}%{T-}
-icon-next-foreground = ${colors.material_foreground}
+icon-next-foreground = ${colors.material_primary}
 icon-next-background = ${colors.material_background}
 icon-seekb = %{T3}%{T-}
 icon-seekb-foreground = ${colors.material_primary}

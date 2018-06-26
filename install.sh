@@ -25,6 +25,7 @@ yaourt -S --noconfirm --needed polybar-git # Place polybar last to ensure polyba
 
 # gtk-theme
 yaourt -S --noconfirm --needed adapta-gtk-theme-git
+yaourt -S --noconfirm --needed vimix-gtk-themes-git
 yaourt -S --noconfirm --needed paper-icon-theme-git
 
 # laptop

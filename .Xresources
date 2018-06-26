@@ -52,11 +52,11 @@ Xft.lcdfilter: 	lcddefault
 *color7:  base_color7
 *color15: base_color15
 
-#define base_material_foreground #cfd8dc
-#define base_material_background #222d32
-#define base_material_primary 	 #00bcd4
-#define base_material_info       #009688
-#define base_material_warn       #ff5252
+#define base_material_foreground #ffffff
+#define base_material_background #303030
+#define base_material_primary 	 #9c27b0
+#define base_material_info       #69f0ae
+#define base_material_warn       #f44336
 
 *material_foreground: base_material_foreground
 *material_background: base_material_background
@@ -69,7 +69,7 @@ rofi.width:			  50
 rofi.padding:		  5
 rofi.fullscreen: 	  false
 rofi.fixed-num-lines: true
-rofi.bw:			  1
+rofi.bw:			  2
 rofi.location:		  0
 rofi.terminal:		  alacritty
 rofi.lines:			  10
@@ -84,7 +84,7 @@ rofi.show-icons:      true
 ! ------------------------------------------------------------------------------
 rofi.color-enabled: false
 ! 					background				  foreground				background alt			  highlight background	 highlight foreground
-rofi.color-window: 	base_material_background, base_material_primary,    base_material_info
-rofi.color-normal: 	base_material_background, base_material_foreground, base_material_background, base_material_primary, base_material_background
-rofi.color-active: 	base_material_background, base_material_primary,    base_material_background, base_material_primary, base_material_background
-rofi.color-urgent: 	base_material_background, base_material_foreground, base_material_background, base_material_primary, base_material_background
+rofi.color-window: 	base_material_background, base_material_primary,    base_material_primary
+rofi.color-normal: 	base_material_background, base_material_foreground, base_material_background, base_material_primary, base_material_foreground
+rofi.color-active: 	base_material_background, base_material_primary,    base_material_background, base_material_primary, base_material_foreground
+rofi.color-urgent: 	base_material_background, base_material_foreground, base_material_background, base_material_primary, base_material_foreground
