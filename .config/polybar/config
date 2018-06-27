@@ -32,8 +32,8 @@ font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
-modules-left = i3 title
-modules-center = mpd_controls mpd wifi_up eth_up wifi_down eth_down
+modules-left = i3 wifi_up eth_up wifi_down eth_down title
+modules-center = mpd_controls mpd
 modules-right = battery memory cpu temperature volume date time
 
 
@@ -54,8 +54,8 @@ font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
-modules-left = i3 title
-modules-center = mpd_controls mpd wifi_up eth_up wifi_down eth_down
+modules-left = i3 wifi_up eth_up wifi_down eth_down title
+modules-center = mpd_controls mpd
 modules-right = battery memory cpu temperature volume date time
 
 tray-position = right
