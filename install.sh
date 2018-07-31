@@ -20,7 +20,6 @@ yaourt -S --noconfirm --needed numlockx
 yaourt -S --noconfirm --needed mpd
 yaourt -S --noconfirm --needed mpc
 yaourt -S --noconfirm --needed networkmanager
-yaourt -S --noconfirm --needed compton
 yaourt -S --noconfirm --needed polybar-git # Place polybar last to ensure polybar also installs the mpd module
 
 # gtk-theme
@@ -76,6 +75,7 @@ yaourt -S --noconfirm --needed maven
 yaourt -S --noconfirm --needed gradle
 yaourt -S --noconfirm --needed nodejs
 yaourt -S --noconfirm --needed npm
+yaourt -S --noconfirm --needed vim
 
 # misc
 yaourt -S --noconfirm --needed ipe

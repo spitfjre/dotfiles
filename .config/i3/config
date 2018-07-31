@@ -7,12 +7,9 @@ exec_always --no-startup-id sh ~/.config/i3/arandr.sh
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh
 
-exec --no-startup-id redshift
 exec --no-startup-id dropbox
 exec --no-startup-id dunst
 exec --no-startup-id mpd
-exec --no-startup-id NetworkManager
-exec --no-startup-id compton -b --paint-on-overlay --unredir-if-possible --backend xr_glx_hybrid --vsync drm --glx-swap-method -1 --glx-no-stencil
 
 # disable touchpad
 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
