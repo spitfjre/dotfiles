@@ -11,7 +11,7 @@ green = ${xrdb:color2}
 
 
 [interfaces]
-eth = enp0s25
+eth = enp0s31f6
 wifi = wlp3s0
 
 

@@ -20,7 +20,9 @@ export ANDROID_HOME=/home/spitfjre/Android/Sdk
 export PATH=$PATH:/home/spitfjre/Android/Sdk/platform-tools
 
 export PATH=/opt/flutter/bin:$PATH
+export PATH=/opt/dart-sdk-dev/bin:$PATH
 
+export PATH="$PATH":"$HOME/.pub-cache/bin"
 export PATH="$PATH:$HOME/.npm-packages/bin"
 
 export LANG=en_US.UTF-8
