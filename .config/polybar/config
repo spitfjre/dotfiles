@@ -42,8 +42,11 @@ height = 25
 bottom = false
 fixed-center = true
 
+overline-size = 2
+underline-size = 2
+
 border-bottom-color = ${colors.black}
-border-bottom-size = 1
+border-bottom-size = 2
 
 background = ${colors.material_background}
 foreground = ${colors.material_foreground}
@@ -64,8 +67,11 @@ height = 25
 bottom = false
 fixed-center = true
 
+overline-size = 2
+underline-size = 2
+
 border-bottom-color = ${colors.black}
-border-bottom-size = 1
+border-bottom-size = 2
 
 background = ${colors.material_background}
 foreground = ${colors.material_foreground}
@@ -118,23 +124,30 @@ pin-workspaces = true
 
 label-focused = 0x%index%
 label-focused-foreground = ${colors.material_foreground}
-label-focused-background = ${colors.material_primary}
+label-focused-background = ${colors.material_background}
+label-focused-overline = ${colors.material_primary}
 label-focused-padding = 1
+label-focused-margin = 1
 
 label-unfocused = 0x%index%
 label-unfocused-foreground = ${colors.material_foreground}
 label-unfocused-background = ${colors.material_background}
 label-unfocused-padding = 1
+label-unfocused-margin = 1
 
 label-visible = 0x%index%
-label-visible-foreground = ${colors.material_background}
-label-visible-background = ${colors.material_info}
+label-visible-foreground = ${colors.material_foreground}
+label-visible-background = ${colors.material_background}
+label-visible-overline = ${colors.material_info}
 label-visible-padding = 1
+label-visible-margin = 1
 
 label-urgent = 0x%index%
-label-urgent-foreground = ${colors.material_warn}
+label-urgent-foreground = ${colors.material_foreground}
 label-urgent-background = ${colors.material_background}
+label-urgent-overline = ${colors.material_warn}
 label-urgent-padding = 1
+label-urgent-margin = 1
 
 
 
