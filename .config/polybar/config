@@ -22,7 +22,7 @@
 material_foreground = ${xrdb:material_foreground}
 material_background = ${xrdb:material_background}
 material_primary = ${xrdb:material_primary}
-material_info = ${xrdb:material_info}
+material_accent = ${xrdb:material_accent}
 material_warn = ${xrdb:material_warn}
 black = ${xrdb:color0}
 red = ${xrdb:color1}
@@ -105,7 +105,7 @@ format-background = ${colors.material_background}
 format-padding = 2
 
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_info}
+format-prefix-foreground = ${colors.material_accent}
 format-prefix-background = ${colors.material_background}
 
 label = %title%
@@ -138,7 +138,7 @@ label-unfocused-margin = 1
 label-visible = 0x%index%
 label-visible-foreground = ${colors.material_foreground}
 label-visible-background = ${colors.material_background}
-label-visible-overline = ${colors.material_info}
+label-visible-overline = ${colors.material_accent}
 label-visible-padding = 1
 label-visible-margin = 1
 
@@ -162,15 +162,15 @@ format-stopped = <label-song>
 format-stopped-padding = 2
 
 format-playing-prefix = %{T3}%{T-}
-format-playing-prefix-foreground = ${colors.material_info}
+format-playing-prefix-foreground = ${colors.material_accent}
 format-playing-prefix-background = ${colors.material_background}
 
 format-paused-prefix = %{T3}%{T-}
-format-paused-prefix-foreground  = ${colors.material_info}
+format-paused-prefix-foreground  = ${colors.material_accent}
 format-paused-prefix-background  = ${colors.material_background}
 
 format-stopped-prefix = %{T3}%{T-}
-format-stopped-prefix-foreground = ${colors.material_info}
+format-stopped-prefix-foreground = ${colors.material_accent}
 format-stopped-prefix-background = ${colors.material_background}
 
 label-song-maxlen = 50
@@ -231,7 +231,7 @@ interval = 1
 
 format-padding = 2
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_info}
+format-prefix-foreground = ${colors.material_accent}
 format-prefix-background = ${colors.material_background}
 
 label = %percentage:3%%
@@ -247,7 +247,7 @@ interval = 1
 
 format-padding = 2
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_info}
+format-prefix-foreground = ${colors.material_accent}
 format-prefix-background = ${colors.material_background}
 
 label = %percentage_used:3%%
@@ -338,7 +338,7 @@ date-alt = %d-%m-%Y
 
 format-padding = 2
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_info}
+format-prefix-foreground = ${colors.material_accent}
 format-prefix-background = ${colors.material_background}
 
 label = %date%
@@ -357,7 +357,7 @@ time-alt = %H:%M:%S
 
 format-padding = 2
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_info}
+format-prefix-foreground = ${colors.material_accent}
 format-prefix-background = ${colors.material_background}
 
 label = %time%
@@ -373,7 +373,7 @@ interval = 0.1
 
 format-volume-padding = 2
 format-volume-prefix = %{T3}%{T-}
-format-volume-prefix-foreground = ${colors.material_info}
+format-volume-prefix-foreground = ${colors.material_accent}
 format-volume-prefix-background = ${colors.material_background}
 
 label-volume = %percentage:3%%
@@ -402,7 +402,7 @@ full-at = 100
 format-charging-padding = 2
 format-charging = <label-charging>
 format-charging-prefix = %{T3}%{T-}
-format-charging-prefix-foreground = ${colors.material_info}
+format-charging-prefix-foreground = ${colors.material_accent}
 format-charging-prefix-background = ${colors.material_background}
 
 format-discharging-padding = 2
@@ -414,7 +414,7 @@ format-discharging-prefix-background = ${colors.material_background}
 format-full-padding = 2
 format-full = <label-full>
 format-full-prefix = %{T3}%{T-}
-format-full-prefix-foreground = ${colors.material_info}
+format-full-prefix-foreground = ${colors.material_accent}
 format-full-prefix-background = ${colors.material_background}
 
 label-charging-padding-left = 1
@@ -441,7 +441,7 @@ warn-temperature = 70
 
 format-padding = 2
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_info}
+format-prefix-foreground = ${colors.material_accent}
 format-prefix-background = ${colors.material_background}
 
 label = %temperature-c:3%

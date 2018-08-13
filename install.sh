@@ -23,7 +23,7 @@ yaourt -S --noconfirm --needed networkmanager
 yaourt -S --noconfirm --needed polybar # Place polybar last to ensure polybar also installs the mpd module
 
 # gtk-theme
-yaourt -S --noconfirm --needed vimix-gtk-themes-git
+yaourt -S --noconfirm --needed arc-gtk-theme
 yaourt -S --noconfirm --needed paper-icon-theme-git
 
 # laptop

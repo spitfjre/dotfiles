@@ -21,7 +21,7 @@ font pango: Roboto 9
 set_from_resource $material_foreground material_foreground
 set_from_resource $material_background material_background
 set_from_resource $material_primary    material_primary
-set_from_resource $material_info       material_info
+set_from_resource $material_accent     material_accent
 set_from_resource $material_warn       material_warn
 
 # class                 border               background           text                 indicator            child_border

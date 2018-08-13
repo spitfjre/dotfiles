@@ -53,15 +53,15 @@ Xft.lcdfilter: 	lcddefault
 *color15: base_color15
 
 #define base_material_foreground #ffffff
-#define base_material_background #303030
-#define base_material_primary 	 #9c27b0
-#define base_material_info       #69f0ae
-#define base_material_warn       #f44336
+#define base_material_background #373d48
+#define base_material_primary 	 #5294e2
+#define base_material_accent     #52e2a1
+#define base_material_warn       #cc575d
 
 *material_foreground: base_material_foreground
 *material_background: base_material_background
 *material_primary: 	  base_material_primary
-*material_info: 	  base_material_info
+*material_accent: 	  base_material_accent
 *material_warn: 	  base_material_warn
 
 ! Rofi Settings

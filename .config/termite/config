@@ -3,7 +3,7 @@ allow_bold = true
 audible_bell = false
 clickable_url = true
 dynamic_title = true
-font = Iosevka Term 9
+font = Iosevka Term 11.0
 scrollback_lines = 10000
 
 [colors]
