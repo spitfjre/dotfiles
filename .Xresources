@@ -53,7 +53,7 @@ Xft.lcdfilter: 	lcddefault
 *color15: base_color15
 
 #define base_material_foreground #ffffff
-#define base_material_background #373d48
+#define base_material_background #2f343f
 #define base_material_primary 	 #5294e2
 #define base_material_accent     #52e2a1
 #define base_material_warn       #cc575d
@@ -69,7 +69,7 @@ rofi.width:			  50
 rofi.padding:		  5
 rofi.fullscreen: 	  false
 rofi.fixed-num-lines: true
-rofi.bw:			  2
+rofi.bw:			  1
 rofi.location:		  0
 rofi.terminal:		  alacritty
 rofi.lines:			  10
