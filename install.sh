@@ -24,7 +24,7 @@ yaourt -S --noconfirm --needed polybar # Place polybar last to ensure polybar al
 
 # gtk-theme
 yaourt -S --noconfirm --needed arc-gtk-theme
-yaourt -S --noconfirm --needed paper-icon-theme-git
+yaourt -S --noconfirm --needed arc-icon-theme
 
 # laptop
 yaourt -S --noconfirm --needed light
