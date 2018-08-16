@@ -59,7 +59,6 @@ yaourt -S --noconfirm --needed texmaker
 
 # font
 yaourt -S --noconfirm --needed ttf-material-icons
-yaourt -S --noconfirm --needed noto-fonts
 yaourt -S --noconfirm --needed ttf-roboto
 yaourt -S --noconfirm --needed ttf-roboto-mono
 
@@ -84,6 +83,7 @@ yaourt -S --noconfirm --needed mpv
 yaourt -S --noconfirm --needed dropbox
 yaourt -S --noconfirm --needed thunderbird
 yaourt -S --noconfirm --needed gimp
+yaourt -S --noconfirm --needed evince
 
 # docker
 yaourt -S --noconfirm --needed docker
