@@ -40,7 +40,7 @@ wifi = wlp3s0
 monitor = ${env:MONITOR}
 height = 25
 bottom = false
-fixed-center = true
+fixed-center = false
 
 overline-size = 2
 underline-size = 2
@@ -55,8 +55,8 @@ font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
-modules-left = i3 wifi_up eth_up wifi_down eth_down title
-modules-center = mpd_controls mpd
+modules-left = i3 wifi_up eth_up wifi_down eth_down
+modules-center = title mpd
 modules-right = battery memory cpu temperature volume date time
 
 
@@ -65,7 +65,7 @@ modules-right = battery memory cpu temperature volume date time
 monitor = ${env:MONITOR}
 height = 25
 bottom = false
-fixed-center = true
+fixed-center = false
 
 overline-size = 2
 underline-size = 2
@@ -80,8 +80,8 @@ font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
-modules-left = i3 wifi_up eth_up wifi_down eth_down title
-modules-center = mpd_controls mpd
+modules-left = i3 wifi_up eth_up wifi_down eth_down 
+modules-center = title mpd
 modules-right = battery memory cpu temperature volume date time
 
 tray-position = right
@@ -111,7 +111,7 @@ format-prefix-background = ${colors.material_background}
 label = %title%
 label-font = 2
 label-padding-left = 1
-label-maxlen = 50
+label-maxlen = 25
 
 
 
@@ -154,74 +154,30 @@ label-urgent-margin = 1
 [module/mpd]
 type = internal/mpd
 
-format-playing = <label-song>
-format-playing-padding = 2
-format-paused = <label-song>
-format-paused-padding = 2
-format-stopped = <label-song>
-format-stopped-padding = 2
+format-playing = <toggle> <label-song>
+format-playing-padding = 1
+format-paused = <toggle> <label-song>
+format-paused-padding = 1
 
-format-playing-prefix = %{T3}%{T-}
-format-playing-prefix-foreground = ${colors.material_accent}
-format-playing-prefix-background = ${colors.material_background}
+icon-play = %{T3}%{T-}
+icon-play-foreground = ${colors.red}
+icon-play-background = ${colors.material_background}
 
-format-paused-prefix = %{T3}%{T-}
-format-paused-prefix-foreground  = ${colors.material_accent}
-format-paused-prefix-background  = ${colors.material_background}
-
-format-stopped-prefix = %{T3}%{T-}
-format-stopped-prefix-foreground = ${colors.material_accent}
-format-stopped-prefix-background = ${colors.material_background}
+icon-pause = %{T3}%{T-}
+icon-pause-foreground = ${colors.green}
+icon-pause-background = ${colors.material_background}
 
 label-song-maxlen = 50
 label-song-ellipsis = true
-label-song = %artist% - %title%
+label-song = %title%
 label-song-foreground = ${colors.material_foreground}
 label-song-background = ${colors.material_background}
 label-song-font	= 2
-label-song-padding-left = 1
 
 label-offline = mpd is offline
 label-offline-foreground = ${colors.material_foreground}
 label-offline-background = ${colors.material_background}
 label-offline-font = 2
-label-offline-padding-left = 1
-
-
-
-[module/mpd_controls]
-type = internal/mpd
-
-format-playing = <icon-prev><toggle><icon-next>
-format-playing-padding = 2
-format-paused = <icon-prev><toggle><icon-next>
-format-paused-padding  = 2
-format-stopped = <icon-prev><toggle><icon-next>
-format-stopped-padding = 2
-
-icon-play = %{T3}%{T-}
-icon-play-foreground = ${colors.material_primary}
-icon-play-background = ${colors.material_background}
-
-icon-pause = %{T3}%{T-}
-icon-pause-foreground = ${colors.material_primary}
-icon-pause-background = ${colors.material_background}
-
-icon-prev = %{T3}%{T-}
-icon-prev-foreground = ${colors.material_primary}
-icon-prev-background = ${colors.material_background}
-
-icon-next = %{T3}%{T-}
-icon-next-foreground = ${colors.material_primary}
-icon-next-background = ${colors.material_background}
-
-icon-seekb = %{T3}%{T-}
-icon-seekb-foreground = ${colors.material_primary}
-icon-seekb-background = ${colors.material_background}
-
-icon-seekf = %{T3}%{T-}
-icon-seekf-foreground = ${colors.material_primary}
-icon-seekf-background = ${colors.material_background}
 
 
 
@@ -397,7 +353,7 @@ label-muted-background = ${colors.material_background}
 type = internal/battery
 battery = BAT0
 adapter = AC
-full-at = 100
+full-at = 95
 
 format-charging-padding = 2
 format-charging = <label-charging>
