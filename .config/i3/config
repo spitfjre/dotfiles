@@ -23,14 +23,15 @@ set_from_resource $material_background material_background
 set_from_resource $material_primary    material_primary
 set_from_resource $material_accent     material_accent
 set_from_resource $material_warn       material_warn
+set_from_resource $black               color0
 
-# class                 border               background           text                 indicator            child_border
-client.focused          $material_primary    $material_primary    $material_foreground $material_primary    $material_primary
-client.focused_inactive $material_background $material_background $material_foreground $material_background $material_background
-client.unfocused        $material_background $material_background $material_foreground $material_background $material_background
-client.urgent           $material_warn       $material_warn       $material_foreground $material_warn       $material_warn 
-client.placeholder      $material_background $material_background $material_foreground $material_background $material_background
-client.background       $material_background
+# class                 border              background           text                 indicator            child_border
+client.focused          $material_primary   $material_primary    $material_foreground $material_primary    $material_primary
+client.focused_inactive $black              $material_background $material_foreground $material_background $black
+client.unfocused        $black              $material_background $material_foreground $material_background $black
+client.urgent           $material_warn      $material_warn       $material_foreground $material_warn       $material_warn 
+client.placeholder      $black              $material_background $material_foreground $material_background $black
+client.background       $black
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier       $mod

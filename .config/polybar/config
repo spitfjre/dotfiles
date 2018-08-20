@@ -24,9 +24,6 @@ material_background = ${xrdb:material_background}
 material_primary = ${xrdb:material_primary}
 material_accent = ${xrdb:material_accent}
 material_warn = ${xrdb:material_warn}
-black = ${xrdb:color0}
-red = ${xrdb:color1}
-green = ${xrdb:color2}
 
 
 
@@ -40,13 +37,10 @@ wifi = wlp3s0
 monitor = ${env:MONITOR}
 height = 25
 bottom = false
-fixed-center = false
+fixed-center = true
 
 overline-size = 2
 underline-size = 2
-
-border-bottom-color = ${colors.black}
-border-bottom-size = 2
 
 background = ${colors.material_background}
 foreground = ${colors.material_foreground}
@@ -55,8 +49,8 @@ font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
-modules-left = i3 wifi_up eth_up wifi_down eth_down
-modules-center = title mpd
+modules-left = i3 title
+modules-center = mpd wifi_up eth_up wifi_down eth_down 
 modules-right = battery memory cpu temperature volume date time
 
 
@@ -65,13 +59,10 @@ modules-right = battery memory cpu temperature volume date time
 monitor = ${env:MONITOR}
 height = 25
 bottom = false
-fixed-center = false
+fixed-center = true
 
 overline-size = 2
 underline-size = 2
-
-border-bottom-color = ${colors.black}
-border-bottom-size = 2
 
 background = ${colors.material_background}
 foreground = ${colors.material_foreground}
@@ -80,8 +71,8 @@ font-0 = Roboto Mono:fontformat=truetype:size=9:antialias=true;2
 font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
-modules-left = i3 wifi_up eth_up wifi_down eth_down 
-modules-center = title mpd
+modules-left = i3 title
+modules-center = mpd wifi_up eth_up wifi_down eth_down 
 modules-right = battery memory cpu temperature volume date time
 
 tray-position = right
@@ -105,13 +96,13 @@ format-background = ${colors.material_background}
 format-padding = 2
 
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_accent}
+format-prefix-foreground = ${colors.material_primary}
 format-prefix-background = ${colors.material_background}
 
 label = %title%
 label-font = 2
 label-padding-left = 1
-label-maxlen = 25
+label-maxlen = 50
 
 
 
@@ -122,32 +113,30 @@ wrapping-scroll = true
 strip-wsnumbers = true
 pin-workspaces = true
 
-label-focused = 0x%index%
+format-padding = 1
+
+label-focused = %index%
 label-focused-foreground = ${colors.material_foreground}
 label-focused-background = ${colors.material_background}
 label-focused-overline = ${colors.material_primary}
-label-focused-padding = 1
-label-focused-margin = 1
+label-focused-padding = 2
 
-label-unfocused = 0x%index%
+label-unfocused = %index%
 label-unfocused-foreground = ${colors.material_foreground}
 label-unfocused-background = ${colors.material_background}
-label-unfocused-padding = 1
-label-unfocused-margin = 1
+label-unfocused-padding = 2
 
-label-visible = 0x%index%
+label-visible = %index%
 label-visible-foreground = ${colors.material_foreground}
 label-visible-background = ${colors.material_background}
-label-visible-overline = ${colors.material_accent}
-label-visible-padding = 1
-label-visible-margin = 1
+label-visible-overline = ${colors.material_primary}
+label-visible-padding = 2
 
-label-urgent = 0x%index%
+label-urgent = %index%
 label-urgent-foreground = ${colors.material_foreground}
 label-urgent-background = ${colors.material_background}
 label-urgent-overline = ${colors.material_warn}
-label-urgent-padding = 1
-label-urgent-margin = 1
+label-urgent-padding = 2
 
 
 
@@ -157,14 +146,15 @@ type = internal/mpd
 format-playing = <toggle> <label-song>
 format-playing-padding = 1
 format-paused = <toggle> <label-song>
+format-paused-overline = ${colors.material_warn}
 format-paused-padding = 1
 
 icon-play = %{T3}%{T-}
-icon-play-foreground = ${colors.red}
+icon-play-foreground = ${colors.material_warn}
 icon-play-background = ${colors.material_background}
 
 icon-pause = %{T3}%{T-}
-icon-pause-foreground = ${colors.green}
+icon-pause-foreground = ${colors.material_primary}
 icon-pause-background = ${colors.material_background}
 
 label-song-maxlen = 50
@@ -187,7 +177,7 @@ interval = 1
 
 format-padding = 2
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_accent}
+format-prefix-foreground = ${colors.material_primary}
 format-prefix-background = ${colors.material_background}
 
 label = %percentage:3%%
@@ -203,7 +193,7 @@ interval = 1
 
 format-padding = 2
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_accent}
+format-prefix-foreground = ${colors.material_primary}
 format-prefix-background = ${colors.material_background}
 
 label = %percentage_used:3%%
@@ -221,7 +211,7 @@ accumulate-stats = true
 
 format-connected-padding = 2
 format-connected-prefix = %{T3}%{T-}
-format-connected-prefix-foreground = ${colors.green}
+format-connected-prefix-foreground = ${colors.material_primary}
 format-connected-prefix-background = ${colors.material_background}
 
 label-connected = %downspeed:8%
@@ -239,7 +229,7 @@ accumulate-stats = true
 
 format-connected-padding = 2
 format-connected-prefix = %{T3}%{T-}
-format-connected-prefix-foreground = ${colors.red}
+format-connected-prefix-foreground = ${colors.material_primary}
 format-connected-prefix-background = ${colors.material_background}
 
 label-connected = %upspeed:8%
@@ -257,7 +247,7 @@ accumulate-stats = true
 
 format-connected-padding = 2
 format-connected-prefix = %{T3}%{T-}
-format-connected-prefix-foreground = ${colors.green}
+format-connected-prefix-foreground = ${colors.material_primary}
 format-connected-prefix-background = ${colors.material_background}
 
 label-connected = %downspeed:8%
@@ -275,7 +265,7 @@ accumulate-stats = true
 
 format-connected-padding = 2
 format-connected-prefix = %{T3}%{T-}
-format-connected-prefix-foreground = ${colors.red}
+format-connected-prefix-foreground = ${colors.material_primary}
 format-connected-prefix-background = ${colors.material_background}
 
 label-connected = %upspeed:8%
@@ -294,7 +284,7 @@ date-alt = %d-%m-%Y
 
 format-padding = 2
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_accent}
+format-prefix-foreground = ${colors.material_primary}
 format-prefix-background = ${colors.material_background}
 
 label = %date%
@@ -313,7 +303,7 @@ time-alt = %H:%M:%S
 
 format-padding = 2
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_accent}
+format-prefix-foreground = ${colors.material_primary}
 format-prefix-background = ${colors.material_background}
 
 label = %time%
@@ -329,7 +319,7 @@ interval = 0.1
 
 format-volume-padding = 2
 format-volume-prefix = %{T3}%{T-}
-format-volume-prefix-foreground = ${colors.material_accent}
+format-volume-prefix-foreground = ${colors.material_primary}
 format-volume-prefix-background = ${colors.material_background}
 
 label-volume = %percentage:3%%
@@ -338,6 +328,7 @@ label-volume-foreground = ${colors.material_foreground}
 label-volume-background = ${colors.material_background}
 
 format-muted-padding = 2
+format-muted-overline = ${colors.material_warn}
 format-muted-prefix = %{T3}%{T-}
 format-muted-prefix-foreground = ${colors.material_warn}
 format-muted-prefix-background = ${colors.material_background}
@@ -358,10 +349,11 @@ full-at = 95
 format-charging-padding = 2
 format-charging = <label-charging>
 format-charging-prefix = %{T3}%{T-}
-format-charging-prefix-foreground = ${colors.material_accent}
+format-charging-prefix-foreground = ${colors.material_primary}
 format-charging-prefix-background = ${colors.material_background}
 
 format-discharging-padding = 2
+format-discharging-overline = ${colors.material_warn}
 format-discharging = <label-discharging>
 format-discharging-prefix = %{T3}%{T-}
 format-discharging-prefix-foreground = ${colors.material_warn}
@@ -370,7 +362,7 @@ format-discharging-prefix-background = ${colors.material_background}
 format-full-padding = 2
 format-full = <label-full>
 format-full-prefix = %{T3}%{T-}
-format-full-prefix-foreground = ${colors.material_accent}
+format-full-prefix-foreground = ${colors.material_primary}
 format-full-prefix-background = ${colors.material_background}
 
 label-charging-padding-left = 1
@@ -397,7 +389,7 @@ warn-temperature = 70
 
 format-padding = 2
 format-prefix = %{T3}%{T-}
-format-prefix-foreground = ${colors.material_accent}
+format-prefix-foreground = ${colors.material_primary}
 format-prefix-background = ${colors.material_background}
 
 label = %temperature-c:3%
