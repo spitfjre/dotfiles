@@ -50,8 +50,8 @@ font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
 modules-left = i3 title
-modules-center = mpd wifi_up eth_up wifi_down eth_down 
-modules-right = battery memory cpu temperature volume date time
+modules-center = 
+modules-right = mpd battery memory cpu temperature wifi_up eth_up wifi_down eth_down volume date time
 
 
 
@@ -72,8 +72,8 @@ font-1 = Roboto:fontformat=truetype:size=9:antialias=true;2
 font-2 = Material Icons:fontformat=truetype:size=11:antialias=true;4
 
 modules-left = i3 title
-modules-center = mpd wifi_up eth_up wifi_down eth_down 
-modules-right = battery memory cpu temperature volume date time
+modules-center = 
+modules-right = mpd battery memory cpu temperature wifi_up eth_up wifi_down eth_down volume date time
 
 tray-position = right
 tray-detached = false
@@ -85,6 +85,7 @@ tray-offset-y = 0
 tray-padding = 0
 tray-scale = 1.0
 
+[module/title]
 
 
 [module/title]
@@ -146,7 +147,6 @@ type = internal/mpd
 format-playing = <toggle> <label-song>
 format-playing-padding = 1
 format-paused = <toggle> <label-song>
-format-paused-overline = ${colors.material_warn}
 format-paused-padding = 1
 
 icon-play = %{T3}%{T-}
@@ -184,8 +184,6 @@ label = %percentage:3%%
 label-padding-left = 1
 label-foreground = ${colors.material_foreground}
 label-background = ${colors.material_background}
-
-
 
 [module/memory]
 type = internal/memory
@@ -279,8 +277,7 @@ label-connected-background = ${colors.material_background}
 type = internal/date
 interval = 1
 
-date = %d-%m-%Y
-date-alt = %d-%m-%Y
+date = %d.%m.%Y
 
 format-padding = 2
 format-prefix = %{T3}%{T-}
@@ -299,7 +296,6 @@ type = internal/date
 interval = 1
 
 time = %H:%M
-time-alt = %H:%M:%S
 
 format-padding = 2
 format-prefix = %{T3}%{T-}
@@ -328,7 +324,6 @@ label-volume-foreground = ${colors.material_foreground}
 label-volume-background = ${colors.material_background}
 
 format-muted-padding = 2
-format-muted-overline = ${colors.material_warn}
 format-muted-prefix = %{T3}%{T-}
 format-muted-prefix-foreground = ${colors.material_warn}
 format-muted-prefix-background = ${colors.material_background}
@@ -353,7 +348,6 @@ format-charging-prefix-foreground = ${colors.material_primary}
 format-charging-prefix-background = ${colors.material_background}
 
 format-discharging-padding = 2
-format-discharging-overline = ${colors.material_warn}
 format-discharging = <label-discharging>
 format-discharging-prefix = %{T3}%{T-}
 format-discharging-prefix-foreground = ${colors.material_warn}
