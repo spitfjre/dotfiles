@@ -39,16 +39,16 @@ height = 22
 bottom = false
 fixed-center = true
 
-border-left = 2
-border-right = 2
+border-left-size = 2
+border-right-size = 2
 border-color = #000000
 
 background = ${colors.material_light_background}
 foreground = ${colors.material_foreground}
 
-font-0 = Iosevka:fontformat=truetype:size=9:antialias=true;2
-font-1 = Material Icons:fontformat=truetype:size=11:antialias=true;3
-font-2 = Iosevka:fontformat=truetype:pixelsize=14:antialias=true;2
+font-0 = Iosevka Term:fontformat=truetype:pixelsize=9:antialias=true;2
+font-1 = Material Icons:fontformat=truetype:pixelsize=11:antialias=true;3
+font-2 = Iosevka Term:fontformat=truetype:pixelsize=14:antialias=true;2
 
 modules-left = left_start left_primary_dark i3 left_dark_primary left_primary_light wifi_up eth_up wifi_down eth_down left_light_dark title left_dark_primary left_primary_light
 modules-center = 
@@ -62,16 +62,16 @@ height = 22
 bottom = false
 fixed-center = true
 
-border-left = 2
-border-right = 2
+border-left-size = 2
+border-right-size = 2
 border-color = #000000
 
 background = ${colors.material_light_background}
 foreground = ${colors.material_foreground}
 
-font-0 = Iosevka:fontformat=truetype:size=9:antialias=true;2
-font-1 = Material Icons:fontformat=truetype:size=11:antialias=true;3
-font-2 = Iosevka:fontformat=truetype:pixelsize=14:antialias=true;2
+font-0 = Iosevka Term:fontformat=truetype:pixelsize=9:antialias=true;2
+font-1 = Material Icons:fontformat=truetype:pixelsize=11:antialias=true;3
+font-2 = Iosevka Term:fontformat=truetype:pixelsize=14:antialias=true;2
 
 modules-left = left_start left_primary_dark i3 left_dark_primary left_primary_light wifi_up eth_up wifi_down eth_down left_light_dark title left_dark_primary left_primary_light
 modules-center =  
