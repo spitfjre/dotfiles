@@ -1,7 +1,6 @@
 set $mod Mod4
 
 # autostart
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/1920x1080.png
 exec_always --no-startup-id numlockx on
 exec_always --no-startup-id sh ~/.config/i3/arandr.sh
 exec_always --no-startup-id xrdb ~/.Xresources
@@ -15,37 +14,35 @@ exec --no-startup-id mpd
 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
 
 # font for window titles
-font pango: Roboto 9
+font pango: Iosevka 9
 
 # colors
-set_from_resource $material_foreground material_foreground
-set_from_resource $material_background material_background
-set_from_resource $material_primary    material_primary
-set_from_resource $material_accent     material_accent
-set_from_resource $material_warn       material_warn
-set_from_resource $black               color0
+set_from_resource $material_foreground          material_foreground
+set_from_resource $material_dark_background     material_dark_background
+set_from_resource $material_light_background    material_light_background
+set_from_resource $material_primary             material_primary
+set_from_resource $material_warn                material_warn
 
-# class                 border              background           text                 indicator            child_border
-client.focused          $material_primary   $material_primary    $material_foreground $material_primary    $material_primary
-client.focused_inactive $black              $material_background $material_foreground $material_background $black
-client.unfocused        $black              $material_background $material_foreground $material_background $black
-client.urgent           $material_warn      $material_warn       $material_foreground $material_warn       $material_warn 
-client.placeholder      $black              $material_background $material_foreground $material_background $black
-client.background       $black
+# class                 border                      background                  text                 indicator                  child_border
+client.focused          $material_primary           $material_primary           $material_foreground $material_primary          $material_primary
+client.focused_inactive $material_light_background  $material_light_background  $material_foreground $material_light_background $material_light_background
+client.unfocused        $material_light_background  $material_light_background  $material_foreground $material_light_background $material_light_background
+client.urgent           $material_warn              $material_warn              $material_foreground $material_warn             $material_warn 
+client.placeholder      $material_light_background  $material_light_background  $material_foreground $material_light_background $material_light_background
+client.background       $material_light_background
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier       $mod
 popup_during_fullscreen smart
-bindsym $mod+t          exec --no-startup-id alacritty
-bindsym $mod+Return     exec --no-startup-id alacritty
-bindsym $mod+Shift+f    exec --no-startup-id firefox
+bindsym $mod+Return     exec alacritty
+bindsym $mod+Shift+b    exec brave
 mouse_warping           none
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 for_window [class="^.*"] title_format "  %title"
 
 # i3-gaps
-gaps inner 0
+gaps inner 2
 gaps outer 0
 
 # kill focused window
@@ -55,34 +52,34 @@ bindsym $mod+Tab move workspace to output left
 bindsym $mod+Shift+Tab move workspace to output right
 
 # start rofi (program launcher)
-bindsym $mod+d exec --no-startup-id rofi -monitor -1 -show drun
+bindsym $mod+d exec rofi -monitor -1 -show drun
 # start rofi (window switcher)
-bindsym $mod+Shift+d exec --no-startup-id rofi -monitor -1 -show window
+bindsym $mod+Shift+d exec rofi -monitor -1 -show window
 
 # audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pulseaudio-ctl up 1
-bindsym XF86AudioLowerVolume exec --no-startup-id pulseaudio-ctl down 1
-bindsym XF86AudioMute exec --no-startup-id pulseaudio-ctl mute
-bindsym $mod+Shift+plus exec --no-startup-id pulseaudio-ctl up 1
-bindsym $mod+Shift+minus exec --no-startup-id pulseaudio-ctl down 1
-bindsym $mod+plus exec --no-startup-id mpc volume +1
-bindsym $mod+minus exec --no-startup-id mpc volume -1
+bindsym XF86AudioRaiseVolume exec pulseaudio-ctl up 1
+bindsym XF86AudioLowerVolume exec pulseaudio-ctl down 1
+bindsym XF86AudioMute exec pulseaudio-ctl mute
+bindsym $mod+Shift+plus exec pulseaudio-ctl up 1
+bindsym $mod+Shift+minus exec pulseaudio-ctl down 1
+bindsym $mod+plus exec mpc volume +1
+bindsym $mod+minus exec mpc volume -1
 
 # media player controls
-bindsym XF86AudioPlay exec --no-startup-id mpc toggle
-bindsym XF86AudioStop exec --no-startup-id mpc stop
-bindsym XF86AudioNext exec --no-startup-id mpc next
-bindsym XF86AudioPrev exec --no-startup-id mpc prev
+bindsym XF86AudioPlay exec mpc toggle
+bindsym XF86AudioStop exec mpc stop
+bindsym XF86AudioNext exec mpc next
+bindsym XF86AudioPrev exec mpc prev
 
 # brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
-bindsym $mod+Print exec --no-startup-id scrot -u -e 'mv $f ~/Pictures/screenshots/'
-bindsym $mod+Shift+Print exec --no-startup-id scrot -e 'mv $f ~/Pictures/screenshots/'
+bindsym $mod+Print exec scrot -u -e 'mv $f ~/Pictures/screenshots/'
+bindsym $mod+Shift+Print exec scrot -e 'mv $f ~/Pictures/screenshots/'
 
-bindsym $mod+Escape exec --no-startup-id i3-msg exit
-bindsym $mod+Shift+Escape exec --no-startup-id poweroff
+bindsym $mod+Escape exec i3-msg exit
+bindsym $mod+Shift+Escape exec poweroff
 
 # change focus
 bindsym $mod+Left focus left

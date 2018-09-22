@@ -19,6 +19,8 @@ export JAVA_HOME=/usr/lib/jvm/java-8-jdk
 export ANDROID_HOME=/home/spitfjre/Android/Sdk
 export PATH=$PATH:/home/spitfjre/Android/Sdk/platform-tools
 
+export PATH=$PATH:$GOPATH/bin
+
 export PATH=/opt/flutter/bin:$PATH
 export PATH=/opt/dart-sdk-dev/bin:$PATH
 
@@ -27,3 +29,5 @@ export PATH="$PATH:$HOME/.npm-packages/bin"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+
+export BROWSER=/usr/bin/brave
