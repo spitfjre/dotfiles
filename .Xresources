@@ -1,9 +1,9 @@
-Xft.dpi: 		100
+Xft.dpi: 		96
 Xft.antialias: 	true
 Xft.hinting: 	true
 Xft.rgba: 		rgb
-Xft.autohint: 	true
-Xft.hintstyle: 	hintfull
+Xft.autohint: 	false
+Xft.hintstyle: 	hintslight
 Xft.lcdfilter: 	lcddefault
 
 #define base_foreground #fffaf4
@@ -68,17 +68,17 @@ Xft.lcdfilter: 	lcddefault
 
 ! Rofi Settings
 rofi.width:			  50
-rofi.padding:		  5
+rofi.padding:		  10
 rofi.fullscreen: 	  false
 rofi.fixed-num-lines: true
-rofi.bw:			  2
+rofi.bw:			  1
 rofi.location:		  0
 rofi.terminal:		  alacritty
 rofi.lines:			  10
 rofi.eh:			  1
 rofi.hide-scrollbar:  true
 rofi.separator-style: solid
-rofi.font:      	  Iosevka 9
+rofi.font:      	  Iosevka Term 9
 rofi.show-icons:      true
 
 ! ------------------------------------------------------------------------------

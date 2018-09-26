@@ -1,14 +1,17 @@
 set $mod Mod4
 
 # autostart
-exec_always --no-startup-id numlockx on
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/1920x1080.png
 exec_always --no-startup-id sh ~/.config/i3/arandr.sh
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh
+exec_always --no-startup-id compton -b -i 0.95
 
+exec --no-startup-id numlockx on
 exec --no-startup-id dropbox
 exec --no-startup-id dunst
 exec --no-startup-id mpd
+exec --no-startup-id nm-applet
 
 # disable touchpad
 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
@@ -25,8 +28,8 @@ set_from_resource $material_warn                material_warn
 
 # class                 border                      background                  text                 indicator                  child_border
 client.focused          $material_primary           $material_primary           $material_foreground $material_primary          $material_primary
-client.focused_inactive $material_light_background  $material_light_background  $material_foreground $material_light_background $material_light_background
-client.unfocused        $material_light_background  $material_light_background  $material_foreground $material_light_background $material_light_background
+client.focused_inactive $material_primary           $material_light_background  $material_foreground $material_light_background $material_light_background
+client.unfocused        $material_primary           $material_light_background  $material_foreground $material_light_background $material_light_background
 client.urgent           $material_warn              $material_warn              $material_foreground $material_warn             $material_warn 
 client.placeholder      $material_light_background  $material_light_background  $material_foreground $material_light_background $material_light_background
 client.background       $material_light_background
@@ -38,11 +41,11 @@ bindsym $mod+Return     exec --no-startup-id alacritty
 bindsym $mod+Shift+b    exec --no-startup-id brave
 mouse_warping           none
 
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 1
 for_window [class="^.*"] title_format "  %title"
 
 # i3-gaps
-gaps inner 2
+gaps inner 0
 gaps outer 0
 
 # kill focused window

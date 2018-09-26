@@ -11,6 +11,7 @@ yaourt -S --noconfirm --needed xorg-xinit
 # i3
 yaourt -S --noconfirm --needed i3-gaps-next-git
 yaourt -S --noconfirm --needed feh
+yaourt -S --noconfirm --needed compton
 yaourt -S --noconfirm --needed dunst
 yaourt -S --noconfirm --needed scrot
 yaourt -S --noconfirm --needed rofi
@@ -31,7 +32,7 @@ yaourt -S --noconfirm --needed light
 yaourt -S --noconfirm --needed xorg-xbacklight
 
 # terminal
-yaourt -S --noconfirm --needed alacritty-scrollback-git
+yaourt -S --noconfirm --needed alacritty
 yaourt -S --noconfirm --needed termite
 yaourt -S --noconfirm --needed htop
 yaourt -S --noconfirm --needed ncmpcpp
@@ -42,9 +43,8 @@ yaourt -S --noconfirm --needed zsh-completions
 yaourt -S --noconfirm --needed oh-my-zsh-git
 
 # browser
-yaourt -S --noconfirm --needed chromium
+yaourt -S --noconfirm --needed brave
 yaourt -S --noconfirm --needed google-chrome
-yaourt -S --noconfirm --needed firefox
 
 # ide & editor
 yaourt -S --noconfirm --needed jetbrains-toolbox
@@ -59,8 +59,6 @@ yaourt -S --noconfirm --needed texmaker
 
 # font
 yaourt -S --noconfirm --needed ttf-material-icons
-yaourt -S --noconfirm --needed ttf-roboto
-yaourt -S --noconfirm --needed ttf-roboto-mono
 
 # chat
 yaourt -S --noconfirm --needed rambox-bin

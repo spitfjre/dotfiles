@@ -39,8 +39,9 @@ height = 22
 bottom = false
 fixed-center = true
 
-border-left-size = 2
-border-right-size = 2
+border-bottom-size = 1
+border-left-size = 0
+border-right-size = 0
 border-color = #000000
 
 background = ${colors.material_light_background}
@@ -48,11 +49,11 @@ foreground = ${colors.material_foreground}
 
 font-0 = Iosevka Term:fontformat=truetype:pixelsize=9:antialias=true;2
 font-1 = Material Icons:fontformat=truetype:pixelsize=11:antialias=true;3
-font-2 = Iosevka Term:fontformat=truetype:pixelsize=14:antialias=true;2
+font-2 = Iosevka Term:fontformat=truetype:pixelsize=16:antialias=true;3
 
 modules-left = left_start left_primary_dark i3 left_dark_primary left_primary_light wifi_up eth_up wifi_down eth_down left_light_dark title left_dark_primary left_primary_light
 modules-center = 
-modules-right = right_light_primary right_primary_dark mpd_title right_dark_light mpd right_light_primary battery right_primary_dark memory right_dark_light cpu right_light_dark temperature right_dark_light volume right_light_dark date right_dark_primary time
+modules-right = right_light_primary right_primary_dark mpd_title right_dark_light mpd right_light_primary battery right_primary_dark memory right_dark_light cpu right_light_dark temperature right_dark_light volume right_light_dark date right_dark_light time right_light_primary right_start
 
 
 
@@ -62,8 +63,9 @@ height = 22
 bottom = false
 fixed-center = true
 
-border-left-size = 2
-border-right-size = 2
+border-bottom-size = 1
+border-left-size = 0
+border-right-size = 0
 border-color = #000000
 
 background = ${colors.material_light_background}
@@ -71,11 +73,11 @@ foreground = ${colors.material_foreground}
 
 font-0 = Iosevka Term:fontformat=truetype:pixelsize=9:antialias=true;2
 font-1 = Material Icons:fontformat=truetype:pixelsize=11:antialias=true;3
-font-2 = Iosevka Term:fontformat=truetype:pixelsize=14:antialias=true;2
+font-2 = Iosevka Term:fontformat=truetype:pixelsize=16:antialias=true;3
 
 modules-left = left_start left_primary_dark i3 left_dark_primary left_primary_light wifi_up eth_up wifi_down eth_down left_light_dark title left_dark_primary left_primary_light
 modules-center =  
-modules-right = right_light_primary right_primary_dark mpd_title right_dark_light mpd right_light_primary battery right_primary_dark memory right_dark_light cpu right_light_dark temperature right_dark_light volume right_light_dark date right_dark_primary time 
+modules-right = right_light_primary right_primary_dark mpd_title right_dark_light mpd right_light_primary battery right_primary_dark memory right_dark_light cpu right_light_dark temperature right_dark_light volume right_light_dark date right_dark_light time right_light_primary
 
 tray-position = right
 tray-detached = false
@@ -91,7 +93,16 @@ tray-scale = 1.0
 
 [module/left_start]
 type = custom/text
-content            = %{T3}%{T-}
+content            = ${env:MONITOR}
+content-foreground = ${colors.material_foreground}
+content-background = ${colors.material_primary}
+content-padding = 1
+
+
+
+[module/right_start]
+type = custom/text
+content            = ${env:USER}
 content-foreground = ${colors.material_foreground}
 content-background = ${colors.material_primary}
 content-padding = 1
@@ -100,86 +111,96 @@ content-padding = 1
 
 [module/left_dark_light]
 type = custom/text
-content = %{B#414a59 F#2a313b}%{T3}%{T-}%{F#ffffff B#414a59}
+content = %{T3}%{T-}
+content-foreground = ${colors.material_dark_background}
 content-background = ${colors.material_light_background}
 
 
 
 [module/left_dark_primary]
 type = custom/text
-content = %{B#5294e2 F#2a313b}%{T3}%{T-}%{F#ffffff B#5294e2}
-content-background = ${colors.material_light_background}
+content = %{T3}%{T-}
+content-foreground = ${colors.material_dark_background}
+content-background = ${colors.material_primary}
 
 
 
 [module/left_light_dark]
 type = custom/text
-content = %{B#2a313b F#414a59}%{T3}%{T-}%{F#ffffff B#2a313b}
-content-background = ${colors.material_light_background}
+content = %{T3}%{T-}
+content-foreground = ${colors.material_light_background}
+content-background = ${colors.material_dark_background}
 
 
 
 [module/left_light_primary]
 type = custom/text
-content = %{B#5294e2 F#414a59}%{T3}%{T-}%{F#ffffff B#5294e2}
-content-background = ${colors.material_light_background}
+content = %{T3}%{T-}
+content-foreground = ${colors.material_light_background}
+content-background = ${colors.material_primary}
 
 
 
 [module/left_primary_dark]
 type = custom/text
-content = %{B#2a313b F#5294e2}%{T3}%{T-}%{F#ffffff B#2a313b}
-content-background = ${colors.material_light_background}
+content = %{T3}%{T-}
+content-foreground = ${colors.material_primary}
+content-background = ${colors.material_dark_background}
 
 
 
 [module/left_primary_light]
 type = custom/text
-content = %{B#414a59 F#5294e2}%{T3}%{T-}%{F#ffffff B#414a59}
+content = %{T3}%{T-}
+content-foreground = ${colors.material_primary}
 content-background = ${colors.material_light_background}
 
 
 
 [module/right_dark_light]
 type = custom/text
-content = %{B#2a313b F#414a59}%{T3}%{T-}%{F#ffffff B#2a313b}
-content-background = ${colors.material_light_background}
+content = %{T3}%{T-}
+content-foreground = ${colors.material_light_background}
+content-background = ${colors.material_dark_background}
 
 
 
 [module/right_dark_primary]
 type = custom/text
-content = %{B#2a313b F#5294e2}%{T3}%{T-}%{F#ffffff B#2a313b}
-content-background = ${colors.material_light_background}
-
+content = %{T3}%{T-}
+content-foreground = ${colors.material_primary}
+content-background = ${colors.material_dark_background}
 
 
 [module/right_light_dark]
 type = custom/text
-content = %{B#414a59 F#2a313b}%{T3}%{T-}%{F#ffffff B#414a59}
+content = %{T3}%{T-}
+content-foreground = ${colors.material_dark_background}
 content-background = ${colors.material_light_background}
 
 
 
 [module/right_light_primary]
 type = custom/text
-content = %{B#414a59 F#5294e2}%{T3}%{T-}%{F#ffffff B#414a59}
+content = %{T3}%{T-}
+content-foreground = ${colors.material_primary}
 content-background = ${colors.material_light_background}
 
 
 
 [module/right_primary_dark]
 type = custom/text
-content = %{B#5294e2 F#2a313b}%{T3}%{T-}%{F#ffffff B#5294e2}
-content-background = ${colors.material_light_background}
+content = %{T3}%{T-}
+content-foreground = ${colors.material_dark_background}
+content-background = ${colors.material_primary}
 
 
 
 [module/right_primary_light]
 type = custom/text
-content = %{B#5294e2 F#414a59}%{T3}%{T-}%{F#ffffff B#5294e2}
-content-background = ${colors.material_light_background}
-
+content = %{T3}%{T-}
+content-foreground = ${colors.material_light_background}
+content-background = ${colors.material_primary}
 
 
 [module/title]
@@ -378,7 +399,7 @@ interval = 1
 time = %H:%M
 
 format-padding = 1
-format-background = ${colors.material_primary}
+format-background = ${colors.material_light_background}
 format-prefix = %{T2}%{T-}
 
 label = %time%
