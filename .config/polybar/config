@@ -27,12 +27,6 @@ material_warn = ${xrdb:material_warn}
 
 
 
-[interfaces]
-eth = enp0s31f6
-wifi = wlp0s20f0u3
-
-
-
 [bar/top]
 monitor = ${env:MONITOR}
 height = 22
@@ -42,7 +36,7 @@ fixed-center = true
 border-bottom-size = 1
 border-left-size = 0
 border-right-size = 0
-border-color = #000000
+border-color = ${colors.material_dark_background}
 
 background = ${colors.material_light_background}
 foreground = ${colors.material_foreground}
@@ -51,7 +45,7 @@ font-0 = Iosevka Term:fontformat=truetype:pixelsize=9:antialias=true;2
 font-1 = Material Icons:fontformat=truetype:pixelsize=11:antialias=true;3
 font-2 = Iosevka Term:fontformat=truetype:pixelsize=16:antialias=true;3
 
-modules-left = left_start left_primary_dark i3 left_dark_primary left_primary_light wifi_up eth_up wifi_down eth_down left_light_dark title left_dark_primary left_primary_light
+modules-left = wifi eth left_primary_dark i3 left_dark_light wifi_up eth_up wifi_down eth_down left_light_dark title left_dark_primary left_primary_light
 modules-center = 
 modules-right = right_light_primary right_primary_dark mpd_title right_dark_light mpd right_light_primary battery right_primary_dark memory right_dark_light cpu right_light_dark temperature right_dark_light volume right_light_dark date right_dark_light time right_light_primary right_start
 
@@ -66,7 +60,7 @@ fixed-center = true
 border-bottom-size = 1
 border-left-size = 0
 border-right-size = 0
-border-color = #000000
+border-color = ${colors.material_dark_background}
 
 background = ${colors.material_light_background}
 foreground = ${colors.material_foreground}
@@ -75,7 +69,7 @@ font-0 = Iosevka Term:fontformat=truetype:pixelsize=9:antialias=true;2
 font-1 = Material Icons:fontformat=truetype:pixelsize=11:antialias=true;3
 font-2 = Iosevka Term:fontformat=truetype:pixelsize=16:antialias=true;3
 
-modules-left = left_start left_primary_dark i3 left_dark_primary left_primary_light wifi_up eth_up wifi_down eth_down left_light_dark title left_dark_primary left_primary_light
+modules-left = wifi eth left_primary_dark i3 left_dark_light wifi_up eth_up wifi_down eth_down left_light_dark title left_dark_primary left_primary_light
 modules-center =  
 modules-right = right_light_primary right_primary_dark mpd_title right_dark_light mpd right_light_primary battery right_primary_dark memory right_dark_light cpu right_light_dark temperature right_dark_light volume right_light_dark date right_dark_light time right_light_primary
 
@@ -88,15 +82,6 @@ tray-offset-x = 0
 tray-offset-y = 0
 tray-padding = 1
 tray-scale = 1.0
-
-
-
-[module/left_start]
-type = custom/text
-content            = ${env:MONITOR}
-content-foreground = ${colors.material_foreground}
-content-background = ${colors.material_primary}
-content-padding = 1
 
 
 
@@ -300,6 +285,8 @@ format-prefix = %{T2}%{T-}
 label = %percentage:3%%
 label-padding-left = 1
 
+
+
 [module/memory]
 type = internal/memory
 interval = 1
@@ -313,9 +300,21 @@ label-padding-left = 1
 
 
 
+[module/wifi]
+type = internal/network
+interface = ${env:IFACE_WLAN}
+
+format-connected-padding = 1
+format-connected-foreground = ${colors.material_foreground}
+format-connected-background = ${colors.material_primary}
+
+label-connected = %essid%
+
+
+
 [module/wifi_down]
 type = internal/network
-interface = ${interfaces.wifi}
+interface = ${env:IFACE_WLAN}
 interval = 1.0
 accumulate-stats = true
 
@@ -331,7 +330,7 @@ label-connected-padding-left = 1
 
 [module/wifi_up]
 type = internal/network
-interface = ${interfaces.wifi}
+interface = ${env:IFACE_WLAN}
 interval = 1.0
 accumulate-stats = true
 
@@ -345,9 +344,21 @@ label-connected-padding-left = 1
 
 
 
+[module/eth]
+type = internal/network
+interface = ${env:IFACE_ETH}
+
+format-connected-padding = 1
+format-connected-foreground = ${colors.material_foreground}
+format-connected-background = ${colors.material_primary}
+
+label-connected = %local_ip%
+
+
+
 [module/eth_down]
 type = internal/network
-interface = ${interfaces.eth}
+interface = ${env:IFACE_ETH}
 interval = 1.0
 accumulate-stats = true
 
@@ -363,7 +374,7 @@ label-connected-padding-left = 1
 
 [module/eth_up]
 type = internal/network
-interface = ${interfaces.eth}
+interface = ${env:IFACE_ETH}
 interval = 1.0
 accumulate-stats = true
 

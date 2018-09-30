@@ -28,11 +28,11 @@ set_from_resource $material_warn                material_warn
 
 # class                 border                      background                  text                 indicator                  child_border
 client.focused          $material_primary           $material_primary           $material_foreground $material_primary          $material_primary
-client.focused_inactive $material_primary           $material_light_background  $material_foreground $material_light_background $material_light_background
-client.unfocused        $material_primary           $material_light_background  $material_foreground $material_light_background $material_light_background
+client.focused_inactive $material_dark_background   $material_dark_background   $material_foreground $material_dark_background  $material_dark_background
+client.unfocused        $material_dark_background   $material_dark_background   $material_foreground $material_dark_background  $material_dark_background
 client.urgent           $material_warn              $material_warn              $material_foreground $material_warn             $material_warn 
-client.placeholder      $material_light_background  $material_light_background  $material_foreground $material_light_background $material_light_background
-client.background       $material_light_background
+client.placeholder      $material_dark_background   $material_dark_background   $material_foreground $material_dark_background  $material_dark_background
+client.background       $material_dark_background
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier       $mod
@@ -45,8 +45,8 @@ for_window [class="^.*"] border pixel 1
 for_window [class="^.*"] title_format "  %title"
 
 # i3-gaps
-gaps inner 0
-gaps outer 0
+gaps inner 8
+gaps outer 2
 
 # kill focused window
 bindsym $mod+Shift+q kill
