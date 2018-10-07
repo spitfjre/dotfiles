@@ -16,194 +16,242 @@
 ;
 ;==========================================================
 
-
-
+;=====================================================
+;   colors
+;=====================================================
 [colors]
-material_foreground = ${xrdb:material_foreground}
-material_dark_background = ${xrdb:material_dark_background}
-material_light_background = ${xrdb:material_light_background}
-material_primary = ${xrdb:material_primary}
-material_warn = ${xrdb:material_warn}
+material-foreground = ${xrdb:material_foreground}
+material-dark-background = ${xrdb:material_dark_background}
+material-light-background = ${xrdb:material_light_background}
+material-primary = ${xrdb:material_primary}
+material-warn = ${xrdb:material_warn}
 black = #000000
 
+;=====================================================
+;   variables
+;=====================================================
+[variables]
+bar-height = 22
+bar-border-size = 1
+bar-overline-size = 2
 
+module-padding = 1
+module-maxlen = 50
 
+;=====================================================
+;   fonts
+;=====================================================
+[fonts]
+font-0 = Iosevka Term:fontformat=truetype:pixelsize=9:antialias=true;2
+font-1 = Material Icons:fontformat=truetype:pixelsize=11:antialias=true;3
+font-2 = Iosevka Term:fontformat=truetype:pixelsize=16:antialias=true;3
+
+;=====================================================
+;   bar/top
+;=====================================================
 [bar/top]
 monitor = ${env:MONITOR}
-height = 22
+height = ${variables.bar-height}
 bottom = false
 fixed-center = true
 
-border-bottom-size = 1
-border-left-size = 0
-border-right-size = 0
+overline-size = ${variables.bar-overline-size}
+
+border-bottom-size = ${variables.bar-border-size}
 border-color = ${colors.black}
 
-background = ${colors.material_light_background}
-foreground = ${colors.material_foreground}
+background = ${colors.material-light-background}
+foreground = ${colors.material-foreground}
 
-font-0 = Iosevka Term:fontformat=truetype:pixelsize=9:antialias=true;2
-font-1 = Material Icons:fontformat=truetype:pixelsize=11:antialias=true;3
-font-2 = Iosevka Term:fontformat=truetype:pixelsize=16:antialias=true;3
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
 
-modules-left = wifi eth left_primary_dark i3 left_dark_light wifi_up eth_up wifi_down eth_down left_light_dark title left_dark_primary left_primary_light
+modules-left = wifi eth lpd i3 ldl wifi_up eth_up wifi_down eth_down lld title ldp lpl
 modules-center = 
-modules-right = right_light_primary right_primary_dark mpd_title right_dark_light mpd right_light_primary battery right_primary_dark memory right_dark_light cpu right_light_dark temperature right_dark_light volume right_light_dark date right_dark_light time right_light_primary right_start
+modules-right = rlp rpd mpd_title rdl mpd rlp battery rpd memory rdl cpu rld temperature rdl volume rld date rdl time rlp user
 
-
-
+;=====================================================
+;   bar/top_with_tray
+;=====================================================
 [bar/top_with_tray]
 monitor = ${env:MONITOR}
-height = 22
+height = ${variables.bar-height}
 bottom = false
 fixed-center = true
 
-border-bottom-size = 1
-border-left-size = 0
-border-right-size = 0
+overline-size = ${variables.bar-overline-size}
+
+border-bottom-size = ${variables.bar-border-size}
 border-color = ${colors.black}
 
-background = ${colors.material_light_background}
-foreground = ${colors.material_foreground}
+background = ${colors.material-light-background}
+foreground = ${colors.material-foreground}
 
-font-0 = Iosevka Term:fontformat=truetype:pixelsize=9:antialias=true;2
-font-1 = Material Icons:fontformat=truetype:pixelsize=11:antialias=true;3
-font-2 = Iosevka Term:fontformat=truetype:pixelsize=16:antialias=true;3
+font-0 = ${fonts.font-0}
+font-1 = ${fonts.font-1}
+font-2 = ${fonts.font-2}
 
-modules-left = wifi eth left_primary_dark i3 left_dark_light wifi_up eth_up wifi_down eth_down left_light_dark title left_dark_primary left_primary_light
+modules-left = wifi eth lpd i3 ldl wifi_up eth_up wifi_down eth_down lld title ldp lpl
 modules-center =  
-modules-right = right_light_primary right_primary_dark mpd_title right_dark_light mpd right_light_primary battery right_primary_dark memory right_dark_light cpu right_light_dark temperature right_dark_light volume right_light_dark date right_dark_light time right_light_primary
+modules-right = rlp rpd mpd_title rdl mpd rlp battery rpd memory rdl cpu rld temperature rdl volume rld date rdl time rlp
 
 tray-position = right
 tray-detached = false
 tray-maxsize = 15
 tray-transparent = false
-tray-background = ${colors.material_primary}
+tray-background = ${colors.material-primary}
 tray-offset-x = 0
 tray-offset-y = 0
 tray-padding = 1
 tray-scale = 1.0
 
-
-
-[module/right_start]
+;=====================================================
+;   module/ldl
+;=====================================================
+[module/ldl]
 type = custom/text
+
+content = %{T3}%{T-}
+content-foreground = ${colors.material-dark-background}
+content-background = ${colors.material-light-background}
+
+;=====================================================
+;   module/ldp
+;=====================================================
+[module/ldp]
+type = custom/text
+
+content = %{T3}%{T-}
+content-foreground = ${colors.material-dark-background}
+content-background = ${colors.material-primary}
+
+;=====================================================
+;   module/lld
+;=====================================================
+[module/lld]
+type = custom/text
+
+content = %{T3}%{T-}
+content-foreground = ${colors.material-light-background}
+content-background = ${colors.material-dark-background}
+
+;=====================================================
+;   module/rdl
+;=====================================================
+[module/llp]
+type = custom/text
+
+content = %{T3}%{T-}
+content-foreground = ${colors.material-light-background}
+content-background = ${colors.material-primary}
+
+;=====================================================
+;   module/lpd
+;=====================================================
+[module/lpd]
+type = custom/text
+
+content = %{T3}%{T-}
+content-foreground = ${colors.material-primary}
+content-background = ${colors.material-dark-background}
+
+;=====================================================
+;   module/lpl
+;=====================================================
+[module/lpl]
+type = custom/text
+
+content = %{T3}%{T-}
+content-foreground = ${colors.material-primary}
+content-background = ${colors.material-light-background}
+
+;=====================================================
+;   module/rdl
+;=====================================================
+[module/rdl]
+type = custom/text
+
+content = %{T3}%{T-}
+content-foreground = ${colors.material-light-background}
+content-background = ${colors.material-dark-background}
+
+;=====================================================
+;   module/rdp
+;=====================================================
+[module/rdp]
+type = custom/text
+
+content = %{T3}%{T-}
+content-foreground = ${colors.material-primary}
+content-background = ${colors.material-dark-background}
+
+;=====================================================
+;   module/rld
+;=====================================================
+[module/rld]
+type = custom/text
+
+content = %{T3}%{T-}
+content-foreground = ${colors.material-dark-background}
+content-background = ${colors.material-light-background}
+
+;=====================================================
+;   module/rlp
+;=====================================================
+[module/rlp]
+type = custom/text
+
+content = %{T3}%{T-}
+content-foreground = ${colors.material-primary}
+content-background = ${colors.material-light-background}
+
+;=====================================================
+;   module/rpd
+;=====================================================
+[module/rpd]
+type = custom/text
+
+content = %{T3}%{T-}
+content-foreground = ${colors.material-dark-background}
+content-background = ${colors.material-primary}
+
+;=====================================================
+;   module/rpl
+;=====================================================
+[module/rpl]
+type = custom/text
+
+content = %{T3}%{T-}
+content-foreground = ${colors.material-light-background}
+content-background = ${colors.material-primary}
+
+;=====================================================
+;   bar/user
+;=====================================================
+[module/user]
+type = custom/text
+
 content            = ${env:USER}
-content-foreground = ${colors.material_foreground}
-content-background = ${colors.material_primary}
-content-padding = 1
+content-background = ${colors.material-primary}
+content-padding = ${variables.module-padding}
 
-
-
-[module/left_dark_light]
-type = custom/text
-content = %{T3}%{T-}
-content-foreground = ${colors.material_dark_background}
-content-background = ${colors.material_light_background}
-
-
-
-[module/left_dark_primary]
-type = custom/text
-content = %{T3}%{T-}
-content-foreground = ${colors.material_dark_background}
-content-background = ${colors.material_primary}
-
-
-
-[module/left_light_dark]
-type = custom/text
-content = %{T3}%{T-}
-content-foreground = ${colors.material_light_background}
-content-background = ${colors.material_dark_background}
-
-
-
-[module/left_light_primary]
-type = custom/text
-content = %{T3}%{T-}
-content-foreground = ${colors.material_light_background}
-content-background = ${colors.material_primary}
-
-
-
-[module/left_primary_dark]
-type = custom/text
-content = %{T3}%{T-}
-content-foreground = ${colors.material_primary}
-content-background = ${colors.material_dark_background}
-
-
-
-[module/left_primary_light]
-type = custom/text
-content = %{T3}%{T-}
-content-foreground = ${colors.material_primary}
-content-background = ${colors.material_light_background}
-
-
-
-[module/right_dark_light]
-type = custom/text
-content = %{T3}%{T-}
-content-foreground = ${colors.material_light_background}
-content-background = ${colors.material_dark_background}
-
-
-
-[module/right_dark_primary]
-type = custom/text
-content = %{T3}%{T-}
-content-foreground = ${colors.material_primary}
-content-background = ${colors.material_dark_background}
-
-
-[module/right_light_dark]
-type = custom/text
-content = %{T3}%{T-}
-content-foreground = ${colors.material_dark_background}
-content-background = ${colors.material_light_background}
-
-
-
-[module/right_light_primary]
-type = custom/text
-content = %{T3}%{T-}
-content-foreground = ${colors.material_primary}
-content-background = ${colors.material_light_background}
-
-
-
-[module/right_primary_dark]
-type = custom/text
-content = %{T3}%{T-}
-content-foreground = ${colors.material_dark_background}
-content-background = ${colors.material_primary}
-
-
-
-[module/right_primary_light]
-type = custom/text
-content = %{T3}%{T-}
-content-foreground = ${colors.material_light_background}
-content-background = ${colors.material_primary}
-
-
+;=====================================================
+;   module/title
+;=====================================================
 [module/title]
 type = internal/xwindow
 
 format = <label>
-format-background = ${colors.material_dark_background}
-format-padding = 1
+format-background = ${colors.material-dark-background}
+format-padding = ${variables.module-padding}
 
-format-prefix = %{T2}%{T-}
+label = %{T2}%{T-} %title%
+label-maxlen = ${variables.module-maxlen}
 
-label = %title%
-label-padding-left = 1
-label-maxlen = 50
-
-
-
+;=====================================================
+;   module/i3
+;=====================================================
 [module/i3]
 type = internal/i3
 index-sort = true
@@ -211,292 +259,283 @@ wrapping-scroll = true
 strip-wsnumbers = true
 pin-workspaces = true
 
-format-background = ${colors.material_dark_background}
+format-padding = ${variables.module-padding}
+format-background = ${colors.material-dark-background}
 
-label-focused = %{B#5294e2 F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#5294e2}%{T3}%{T-}%{F-B-}
-label-focused-foreground = ${colors.material_foreground}
-label-focused-background = ${colors.material_primary}
+;label-focused = %{B#5294e2 F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#5294e2}%{T3}%{T-}%{F-B-}
+label-focused = %index% 
+label-focused-padding = 1
+label-focused-margin = 1
+label-focused-overline = ${colors.material-primary}
 
-label-unfocused = %{T3} %{T-} %index% %{T3} %{T-}
-label-unfocused-foreground = ${colors.material_foreground}
-label-unfocused-background = ${colors.material_dark_background}
+;label-unfocused = %{T3} %{T-} %index% %{T3} %{T-}
+label-unfocused = %index%
+label-unfocused-padding = 1
+label-unfocused-margin = 1
 
-label-visible = %{B#414a59 F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#414a59}%{T3}%{T-}%{F-B-}
-label-visible-foreground = ${colors.material_foreground}
-label-visible-background = ${colors.material_light_background}
+;label-visible = %{B#414a59 F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#414a59}%{T3}%{T-}%{F-B-}
+label-visible = %index%
+label-visible-padding = 1
+label-visible-margin = 1
+label-visible-overline = ${colors.material-light-background}
 
-label-urgent = %{B#cc575d F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#cc575d}%{T3}%{T-}%{F-B-}
-label-urgent-foreground = ${colors.material_foreground}
-label-urgent-background = ${colors.material_warn}
+;label-urgent = %{B#cc575d F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#cc575d}%{T3}%{T-}%{F-B-}
+label-urgent = %index%
+label-urgent-padding = 1
+label-urgent-margin = 1
+label-urgent-overline = ${colors.material-warn}
 
-
-
+;=====================================================
+;   module/mpd
+;=====================================================
 [module/mpd]
 type = internal/mpd
 
 format-playing = <icon-prev><toggle><icon-next>
-format-playing-padding = 1
+format-playing-padding = ${variables.module-padding}
 format-paused = <icon-prev><toggle><icon-next>
-format-paused-padding = 1
+format-paused-padding = ${variables.module-padding}
 
 icon-play = %{T2}%{T-}
-icon-play-background = ${colors.material_light_background}
+icon-play-background = ${colors.material-light-background}
 
 icon-pause = %{T2}%{T-}
-icon-pause-background = ${colors.material_light_background}
+icon-pause-background = ${colors.material-light-background}
 
 icon-next = %{T2}%{T-}
-icon-next-background = ${colors.material_light_background}
+icon-next-background = ${colors.material-light-background}
 
 icon-prev = %{T2}%{T-}
-icon-prev-background = ${colors.material_light_background}
+icon-prev-background = ${colors.material-light-background}
 
 label-offline = mpd is offline
-label-offline-background = ${colors.material_light_background}
+label-offline-background = ${colors.material-light-background}
 
 
-
+;=====================================================
+;   module/mpd_title
+;=====================================================
 [module/mpd_title]
 type = internal/mpd
 
 format-playing = <label-song>
-format-playing-background = ${colors.material_dark_background}
-format-playing-padding = 1
+format-playing-background = ${colors.material-dark-background}
+format-playing-padding = ${variables.module-padding}
 format-paused = <label-song>
-format-paused-background = ${colors.material_dark_background}
-format-paused-padding = 1
+format-paused-background = ${colors.material-dark-background}
+format-paused-padding = ${variables.module-padding}
 format-stopped = <label-song>
-format-stopped-background = ${colors.material_dark_background}
-format-stopped-padding = 1
+format-stopped-background = ${colors.material-dark-background}
+format-stopped-padding = ${variables.module-padding}
 
-label-song-maxlen     = 50
+label-song-maxlen     = ${variables.module-maxlen}
 label-song-ellipsis   = true
 label-song            = %title%
 
-
-
+;=====================================================
+;   module/cpu
+;=====================================================
 [module/cpu]
 type = internal/cpu
 interval = 1
 
-format-padding = 1
-format-background = ${colors.material_light_background}
-format-prefix = %{T2}%{T-}
+format-padding = ${variables.module-padding}
+format-background = ${colors.material-light-background}
 
-label = %percentage:3%%
-label-padding-left = 1
+label = %{T2}%{T-} %percentage:3%%
 
-
-
+;=====================================================
+;   module/memory
+;=====================================================
 [module/memory]
 type = internal/memory
 interval = 1
 
-format-padding = 1
-format-background = ${colors.material_dark_background}
-format-prefix = %{T2}%{T-}
+format-padding = ${variables.module-padding}
+format-background = ${colors.material-dark-background}
 
-label = %percentage_used:3%%
-label-padding-left = 1
+label = %{T2}%{T-} %percentage_used:3%%
 
-
-
+;=====================================================
+;   module/wifi
+;=====================================================
 [module/wifi]
 type = internal/network
 interface = ${env:IFACE_WLAN}
 
-format-connected-padding = 1
-format-connected-foreground = ${colors.material_foreground}
-format-connected-background = ${colors.material_primary}
+format-connected-padding = ${variables.module-padding}
+format-connected-foreground = ${colors.material-foreground}
+format-connected-background = ${colors.material-primary}
 
 label-connected = %essid%
 
-
-
+;=====================================================
+;   module/wifi_down
+;=====================================================
 [module/wifi_down]
 type = internal/network
 interface = ${env:IFACE_WLAN}
 interval = 1.0
 accumulate-stats = true
 
-format-connected-padding = 1
-format-connected-foreground = ${colors.material_foreground}
-format-connected-background = ${colors.material_light_background}
-format-connected-prefix = %{T2}%{T-}
+format-connected-padding = ${variables.module-padding}
+format-connected-foreground = ${colors.material-foreground}
+format-connected-background = ${colors.material-light-background}
 
-label-connected = %downspeed:8%
-label-connected-padding-left = 1
+label-connected = %{T2}%{T-} %downspeed:8%
 
-
-
+;=====================================================
+;   module/wifi_up
+;=====================================================
 [module/wifi_up]
 type = internal/network
 interface = ${env:IFACE_WLAN}
 interval = 1.0
 accumulate-stats = true
 
-format-connected-padding = 1
-format-connected-foreground = ${colors.material_foreground}
-format-connected-background = ${colors.material_light_background}
-format-connected-prefix = %{T2}%{T-}
+format-connected-padding = ${variables.module-padding}
+format-connected-foreground = ${colors.material-foreground}
+format-connected-background = ${colors.material-light-background}
 
-label-connected = %upspeed:8%
-label-connected-padding-left = 1
+label-connected = %{T2}%{T-} %upspeed:8%
 
-
-
+;=====================================================
+;   module/eth
+;=====================================================
 [module/eth]
 type = internal/network
 interface = ${env:IFACE_ETH}
 
-format-connected-padding = 1
-format-connected-foreground = ${colors.material_foreground}
-format-connected-background = ${colors.material_primary}
+format-connected-padding = ${variables.module-padding}
+format-connected-foreground = ${colors.material-foreground}
+format-connected-background = ${colors.material-primary}
 
 label-connected = %local_ip%
 
-
-
+;=====================================================
+;   module/eth_down
+;=====================================================
 [module/eth_down]
 type = internal/network
 interface = ${env:IFACE_ETH}
 interval = 1.0
 accumulate-stats = true
 
-format-connected-padding = 1
-format-connected-foreground = ${colors.material_foreground}
-format-connected-background = ${colors.material_light_background}
-format-connected-prefix = %{T2}%{T-}
+format-connected-padding = ${variables.module-padding}
+format-connected-foreground = ${colors.material-foreground}
+format-connected-background = ${colors.material-light-background}
 
-label-connected = %downspeed:8%
-label-connected-padding-left = 1
+label-connected = %{T2}%{T-} %downspeed:8%
 
-
-
+;=====================================================
+;   module/eth_up
+;=====================================================
 [module/eth_up]
 type = internal/network
 interface = ${env:IFACE_ETH}
 interval = 1.0
 accumulate-stats = true
 
-format-connected-padding = 1
-format-connected-foreground = ${colors.material_foreground}
-format-connected-background = ${colors.material_light_background}
-format-connected-prefix = %{T2}%{T-}
+format-connected-padding = ${variables.module-padding}
+format-connected-foreground = ${colors.material-foreground}
+format-connected-background = ${colors.material-light-background}
 
-label-connected = %upspeed:8%
-label-connected-padding-left = 1
+label-connected = %{T2}%{T-} %upspeed:8%
 
-
-
+;=====================================================
+;   module/wifi
+;=====================================================
 [module/date]
 type = internal/date
 interval = 1
-
 date = %d-%m-%Y
 
-format-padding = 1
-format-background = ${colors.material_dark_background}
-format-prefix = %{T2}%{T-}
+format-padding = ${variables.module-padding}
+format-background = ${colors.material-dark-background}
 
-label = %date%
-label-padding-left = 1
+label = %{T2}%{T-} %date%
 
-
-
+;=====================================================
+;   module/time
+;=====================================================
 [module/time]
 type = internal/date
 interval = 1
-
 time = %H:%M
 
-format-padding = 1
-format-background = ${colors.material_light_background}
-format-prefix = %{T2}%{T-}
+format-padding = ${variables.module-padding}
+format-background = ${colors.material-light-background}
 
-label = %time%
-label-padding-left = 1
+label = %{T2}%{T-} %time%
 
-
-
+;=====================================================
+;   module/volume
+;=====================================================
 [module/volume]
 type = internal/alsa
 interval = 0.1
 
-format-volume-padding = 1
-format-volume-background = ${colors.material_light_background}
-format-volume-prefix = %{T2}%{T-}
+format-volume-padding = ${variables.module-padding}
+format-volume-background = ${colors.material-light-background}
 
-label-volume = %percentage:3%%
-label-volume-padding-left = 1
+label-volume = %{T2}%{T-} %percentage:3%%
 
-format-muted-padding = 1
-format-muted-background = ${colors.material_light_background}
-format-muted-prefix = %{T2}%{T-}
+format-muted-padding = ${variables.module-padding}
+format-muted-background = ${colors.material-light-background}
 
-label-muted = %percentage:3%%
-label-muted-padding-left = 1
+label-muted = %{T2}%{T-} %percentage:3%%
 
-
-
+;=====================================================
+;   module/battery
+;=====================================================
 [module/battery]
 type = internal/battery
 battery = BAT0
 adapter = AC
 full-at = 95
 
-format-charging-padding = 1
+format-charging-padding = ${variables.module-padding}
 format-charging = <label-charging>
-format-charging-prefix = %{T2}%{T-}
-format-charging-prefix-background = ${colors.material_primary}
 
-format-discharging-padding = 1
+label-charging = %{T2}%{T-} %percentage:3%%
+
+format-discharging-padding = ${variables.module-padding}
 format-discharging = <label-discharging>
-format-discharging-prefix = %{T2}%{T-}
-format-discharging-prefix-background = ${colors.material_primary}
 
-format-full-padding = 1
+label-discharging = %{T2}%{T-} %percentage:3%%
+
+format-full-padding = ${variables.module-padding}
 format-full = <label-full>
-format-full-prefix = %{T2}%{T-}
-format-full-prefix-background = ${colors.material_primary}
 
-label-charging-padding-left = 1
-label-charging = %percentage:3%%
+label-full = %{T2}%{T-} %percentage:3%%
 
-label-discharging-padding-left = 1
-label-discharging = %percentage:3%%
-
-label-full-padding-left = 1
-label-full = %percentage:3%%
-
-
-
+;=====================================================
+;   module/temperature
+;=====================================================
 [module/temperature]
 type = internal/temperature
 thermal-zone = 0
 warn-temperature = 70
 
-format-padding = 1
-format-background = ${colors.material_dark_background}
-format-prefix = %{T2}%{T-}
+format-padding = ${variables.module-padding}
+format-background = ${colors.material-dark-background}
 
-label = %temperature-c:3%
-label-padding-left = 1
+label = %{T2}%{T-} %temperature-c:3%
 
-format-warn-padding = 1
-format-warn-background = ${colors.material_warn}
-format-warn-prefix = %{T2}%{T-}
+format-warn-padding = ${variables.module-padding}
+format-warn-background = ${colors.material-warn}
 
-label-warn = %temperature-c:3%
-label-warn-padding-left = 1
+label-warn = %{T2}%{T-} %temperature-c:3%
 
-
-
+;=====================================================
+;   settings
+;=====================================================
 [settings]
 screenchange-reload = true
 
-
-
+;=====================================================
+;   global/wm
+;=====================================================
 [global/wm]
 margin-top = 0
 margin-bottom = 0
