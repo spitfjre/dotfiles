@@ -33,7 +33,6 @@ black = #000000
 [variables]
 bar-height = 22
 bar-border-size = 1
-bar-overline-size = 2
 
 module-padding = 1
 module-maxlen = 50
@@ -54,8 +53,6 @@ monitor = ${env:MONITOR}
 height = ${variables.bar-height}
 bottom = false
 fixed-center = true
-
-overline-size = ${variables.bar-overline-size}
 
 border-bottom-size = ${variables.bar-border-size}
 border-color = ${colors.black}
@@ -79,8 +76,6 @@ monitor = ${env:MONITOR}
 height = ${variables.bar-height}
 bottom = false
 fixed-center = true
-
-overline-size = ${variables.bar-overline-size}
 
 border-bottom-size = ${variables.bar-border-size}
 border-color = ${colors.black}
@@ -259,31 +254,15 @@ wrapping-scroll = true
 strip-wsnumbers = true
 pin-workspaces = true
 
-format-padding = ${variables.module-padding}
 format-background = ${colors.material-dark-background}
 
-;label-focused = %{B#5294e2 F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#5294e2}%{T3}%{T-}%{F-B-}
-label-focused = %index% 
-label-focused-padding = 1
-label-focused-margin = 1
-label-focused-overline = ${colors.material-primary}
+label-focused = %{B#5294e2 F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#5294e2}%{T3}%{T-}%{F-B-}
 
-;label-unfocused = %{T3} %{T-} %index% %{T3} %{T-}
-label-unfocused = %index%
-label-unfocused-padding = 1
-label-unfocused-margin = 1
+label-unfocused = %{T3} %{T-} %index% %{T3} %{T-}
 
-;label-visible = %{B#414a59 F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#414a59}%{T3}%{T-}%{F-B-}
-label-visible = %index%
-label-visible-padding = 1
-label-visible-margin = 1
-label-visible-overline = ${colors.material-light-background}
+label-visible = %{B#414a59 F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#414a59}%{T3}%{T-}%{F-B-}
 
-;label-urgent = %{B#cc575d F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#cc575d}%{T3}%{T-}%{F-B-}
-label-urgent = %index%
-label-urgent-padding = 1
-label-urgent-margin = 1
-label-urgent-overline = ${colors.material-warn}
+label-urgent = %{B#cc575d F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#cc575d}%{T3}%{T-}%{F-B-}
 
 ;=====================================================
 ;   module/mpd

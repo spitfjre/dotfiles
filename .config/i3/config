@@ -11,6 +11,7 @@ exec --no-startup-id dropbox
 exec --no-startup-id dunst
 exec --no-startup-id mpd
 exec --no-startup-id nm-applet
+exec --no-startup-id compton -b
 
 # disable touchpad
 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"

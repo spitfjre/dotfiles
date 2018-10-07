@@ -18,6 +18,7 @@ yaourt -S --noconfirm --needed arandr
 yaourt -S --noconfirm --needed lxappearance
 yaourt -S --noconfirm --needed numlockx
 yaourt -S --noconfirm --needed mpd
+yaourt -S --noconfirm --needed compton
 yaourt -S --noconfirm --needed mpc
 yaourt -S --noconfirm --needed networkmanager
 yaourt -S --noconfirm --needed polybar # Place polybar last to ensure polybar also installs the mpd module
