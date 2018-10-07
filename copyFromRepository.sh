@@ -3,6 +3,7 @@
 repoDir="$HOME/Workspace/dotfiles"
 
 mkdir $HOME/Pictures/wallpaper
+mkdir $HOME/.ncmpcpp
 mkdir $HOME/.fonts
 
 cp -rv $repoDir/.config/* $HOME/.config/

@@ -9,6 +9,7 @@ cp -r $HOME/.config/htop/* $repoDir/.config/htop/
 cp -r $HOME/.config/i3/config $repoDir/.config/i3/
 cp -r $HOME/.config/mpd/mpd.conf $repoDir/.config/mpd/
 cp -r $HOME/.config/polybar/config $repoDir/.config/polybar/
+cp -r $HOME/.config/polybar/launch.sh $repoDir/.config/polybar/
 cp -r $HOME/.config/termite/* $repoDir/.config/termite/
 
 cp -r $HOME/Pictures/wallpaper/* $repoDir/wallpaper/

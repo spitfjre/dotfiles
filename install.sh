@@ -11,7 +11,6 @@ yaourt -S --noconfirm --needed xorg-xinit
 # i3
 yaourt -S --noconfirm --needed i3-gaps-next-git
 yaourt -S --noconfirm --needed feh
-yaourt -S --noconfirm --needed compton
 yaourt -S --noconfirm --needed dunst
 yaourt -S --noconfirm --needed scrot
 yaourt -S --noconfirm --needed rofi
@@ -36,6 +35,7 @@ yaourt -S --noconfirm --needed alacritty
 yaourt -S --noconfirm --needed termite
 yaourt -S --noconfirm --needed htop
 yaourt -S --noconfirm --needed ncmpcpp
+yaourt -S --noconfirm --needed ranger
 
 # zsh
 yaourt -S --noconfirm --needed zsh
@@ -43,7 +43,7 @@ yaourt -S --noconfirm --needed zsh-completions
 yaourt -S --noconfirm --needed oh-my-zsh-git
 
 # browser
-yaourt -S --noconfirm --needed brave
+yaourt -S --noconfirm --needed firefox
 yaourt -S --noconfirm --needed google-chrome
 
 # ide & editor

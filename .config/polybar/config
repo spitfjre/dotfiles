@@ -24,6 +24,7 @@ material_dark_background = ${xrdb:material_dark_background}
 material_light_background = ${xrdb:material_light_background}
 material_primary = ${xrdb:material_primary}
 material_warn = ${xrdb:material_warn}
+black = #000000
 
 
 
@@ -36,7 +37,7 @@ fixed-center = true
 border-bottom-size = 1
 border-left-size = 0
 border-right-size = 0
-border-color = ${colors.material_dark_background}
+border-color = ${colors.black}
 
 background = ${colors.material_light_background}
 foreground = ${colors.material_foreground}
@@ -60,7 +61,7 @@ fixed-center = true
 border-bottom-size = 1
 border-left-size = 0
 border-right-size = 0
-border-color = ${colors.material_dark_background}
+border-color = ${colors.black}
 
 background = ${colors.material_light_background}
 foreground = ${colors.material_foreground}
