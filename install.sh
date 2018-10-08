@@ -8,6 +8,12 @@ yaourt -S --noconfirm --needed xorg-apps
 yaourt -S --noconfirm --needed xorg
 yaourt -S --noconfirm --needed xorg-xinit
 
+# network manager
+yaourt -S --noconfirm --needed openvpn
+yaourt -S --noconfirm --needed networkmanager
+yaourt -S --noconfirm --needed networkmanager-applet
+yaourt -S --noconfirm --needed networkmanager-openvpn
+
 # i3
 yaourt -S --noconfirm --needed i3-gaps-next-git
 yaourt -S --noconfirm --needed feh
@@ -20,7 +26,6 @@ yaourt -S --noconfirm --needed numlockx
 yaourt -S --noconfirm --needed mpd
 yaourt -S --noconfirm --needed compton
 yaourt -S --noconfirm --needed mpc
-yaourt -S --noconfirm --needed networkmanager
 yaourt -S --noconfirm --needed polybar # Place polybar last to ensure polybar also installs the mpd module
 
 # gtk-theme
