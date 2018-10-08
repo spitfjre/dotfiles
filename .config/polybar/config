@@ -475,16 +475,19 @@ full-at = 95
 
 format-charging-padding = ${variables.module-padding}
 format-charging = <label-charging>
+format-charging-background = ${colors.material-primary}
 
 label-charging = %{T2}%{T-} %percentage:3%%
 
 format-discharging-padding = ${variables.module-padding}
 format-discharging = <label-discharging>
+format-discharging-background = ${colors.material-primary}
 
 label-discharging = %{T2}%{T-} %percentage:3%%
 
 format-full-padding = ${variables.module-padding}
 format-full = <label-full>
+format-full-background = ${colors.material-primary}
 
 label-full = %{T2}%{T-} %percentage:3%%
 
