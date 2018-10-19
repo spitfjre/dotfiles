@@ -11,6 +11,7 @@ DEFAULT_USER=`whoami`
 
 alias ls='ls -A --color=auto'
 alias syu='yaourt -Syu --aur --noconfirm'
+alias vpn='sudo openvpn --daemon --config ~/.client.opvn'
 alias docker_clean='docker rmi $(docker images -q)'
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
@@ -29,5 +30,3 @@ export PATH="$PATH:$HOME/.npm-packages/bin"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
-export BROWSER=/usr/bin/brave

@@ -12,7 +12,6 @@ yaourt -S --noconfirm --needed xorg-xinit
 yaourt -S --noconfirm --needed openvpn
 yaourt -S --noconfirm --needed networkmanager
 yaourt -S --noconfirm --needed networkmanager-applet
-yaourt -S --noconfirm --needed networkmanager-openvpn
 
 # i3
 yaourt -S --noconfirm --needed i3-gaps-next-git
