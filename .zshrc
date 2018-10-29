@@ -11,7 +11,7 @@ DEFAULT_USER=`whoami`
 
 alias ls='ls -A --color=auto'
 alias syu='yaourt -Syu --aur --noconfirm'
-alias vpn='sudo openvpn --daemon --config ~/client.opvn'
+alias vpn='sudo openvpn --daemon --config ~/client.ovpn'
 alias docker_clean='docker rmi $(docker images -q)'
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
