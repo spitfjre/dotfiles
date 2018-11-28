@@ -71,7 +71,8 @@ yaourt -S --noconfirm --needed discord
 
 # dev
 yaourt -S --noconfirm --needed git
-yaourt -S --noconfirm --needed jdk8
+yaourt -S --noconfirm --needed jdk-openjdk
+yaourt -S --noconfirm --needed jdk8-openjdk
 yaourt -S --noconfirm --needed maven
 yaourt -S --noconfirm --needed gradle
 yaourt -S --noconfirm --needed nodejs
