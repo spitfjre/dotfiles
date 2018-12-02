@@ -38,7 +38,7 @@ for screen in $(xrandr --query | grep -w connected); do
   case ${screen} in
     *primary*)
       printf "Launching primary bar(s) on ${BLUE}%s${NC}\\n" "${output}"
-      launch_bar "${output}" top_with_tray
+      launch_bar "${output}" top
       ;;
     *)
       printf "Launching secondary bar(s) on ${BLUE}%s${NC}\\n" "${output}"

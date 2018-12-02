@@ -16,7 +16,7 @@ alias docker_clean='docker rmi $(docker images -q)'
 
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 
-export JAVA_HOME=/usr/lib/jvm/java-8-jdk
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk
 export ANDROID_HOME=/home/spitfjre/Android/Sdk
 export PATH=$PATH:/home/spitfjre/Android/Sdk/platform-tools
 
@@ -30,3 +30,4 @@ export PATH="$PATH:$HOME/.npm-packages/bin"
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
+source /usr/share/nvm/init-nvm.sh
