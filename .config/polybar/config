@@ -42,8 +42,10 @@ label-maxlen = 50
 ;=====================================================
 [fonts]
 font-0 = Iosevka:size=9:antialias=true;2
-font-1 = Material Icons:size=10:antialias=true;3
+font-1 = Iosevka:size=9:weight=bold:antialias=true;2
 font-2 = Iosevka:size=12:antialias=true;2
+font-3 = Iosevka:size=12:weight=bold:antialias=true;2
+font-4 = Material Icons:size=10:antialias=true;3
 
 ;=====================================================
 ;   bar/top
@@ -63,10 +65,12 @@ foreground = ${colors.material-foreground}
 font-0 = ${fonts.font-0}
 font-1 = ${fonts.font-1}
 font-2 = ${fonts.font-2}
+font-3 = ${fonts.font-3}
+font-4 = ${fonts.font-4}
 
-modules-left = user lpd i3 wifi eth ldl title
+modules-left = user lsp i3 lpd wifi eth ldl title lsl
 modules-center = 
-modules-right = mpd rld memory rsd cpu rsd temperature rsd volume rdp date 
+modules-right = rsl mpd rld memory rsd cpu rsd temperature rsd volume rdp date 
 
 ;=====================================================
 ;   section/base_left_primary
@@ -78,15 +82,15 @@ format-background = ${colors.material-primary}
 format-connected-foreground = ${colors.material-foreground}
 format-connected-background = ${colors.material-primary}
 format-warn-foreground = ${colors.material-foreground}
-format-warn-background = ${colors.material-warn}
+format-warn-background = ${colors.material-primary}
 format-volume-foreground = ${colors.material-foreground}
 format-volume-background = ${colors.material-primary}
 format-muted-foreground = ${colors.material-foreground}
-format-muted-background = ${colors.material-warn}
+format-muted-background = ${colors.material-primary}
 format-charging-foreground = ${colors.material-foreground}
 format-charging-background = ${colors.material-primary}
 format-discharging-foreground = ${colors.material-foreground}
-format-discharging-background = ${colors.material-warn}
+format-discharging-background = ${colors.material-primary}
 format-full-foreground = ${colors.material-foreground}
 format-full-background = ${colors.material-primary}
 format-playing-foreground = ${colors.material-foreground}
@@ -118,15 +122,15 @@ format-background = ${colors.material-dark-background}
 format-connected-foreground = ${colors.material-foreground}
 format-connected-background = ${colors.material-dark-background}
 format-warn-foreground = ${colors.material-foreground}
-format-warn-background = ${colors.material-warn}
+format-warn-background = ${colors.material-dark-background}
 format-volume-foreground = ${colors.material-foreground}
 format-volume-background = ${colors.material-dark-background}
 format-muted-foreground = ${colors.material-foreground}
-format-muted-background = ${colors.material-warn}
+format-muted-background = ${colors.material-dark-background}
 format-charging-foreground = ${colors.material-foreground}
 format-charging-background = ${colors.material-dark-background}
 format-discharging-foreground = ${colors.material-foreground}
-format-discharging-background = ${colors.material-warn}
+format-discharging-background = ${colors.material-dark-background}
 format-full-foreground = ${colors.material-foreground}
 format-full-background = ${colors.material-dark-background}
 format-playing-foreground = ${colors.material-foreground}
@@ -158,15 +162,15 @@ format-background = ${colors.material-light-background}
 format-connected-foreground = ${colors.material-foreground}
 format-connected-background = ${colors.material-light-background}
 format-warn-foreground = ${colors.material-foreground}
-format-warn-background = ${colors.material-warn}
+format-warn-background = ${colors.material-light-background}
 format-volume-foreground = ${colors.material-foreground}
 format-volume-background = ${colors.material-light-background}
 format-muted-foreground = ${colors.material-foreground}
-format-muted-background = ${colors.material-warn}
+format-muted-background = ${colors.material-light-background}
 format-charging-foreground = ${colors.material-foreground}
 format-charging-background = ${colors.material-light-background}
 format-discharging-foreground = ${colors.material-foreground}
-format-discharging-background = ${colors.material-warn}
+format-discharging-background = ${colors.material-light-background}
 format-full-foreground = ${colors.material-foreground}
 format-full-background = ${colors.material-light-background}
 format-playing-foreground = ${colors.material-foreground}
@@ -198,15 +202,15 @@ format-background = ${colors.material-primary}
 format-connected-foreground = ${colors.material-foreground}
 format-connected-background = ${colors.material-primary}
 format-warn-foreground = ${colors.material-foreground}
-format-warn-background = ${colors.material-warn}
+format-warn-background = ${colors.material-primary}
 format-volume-foreground = ${colors.material-foreground}
 format-volume-background = ${colors.material-primary}
 format-muted-foreground = ${colors.material-foreground}
-format-muted-background = ${colors.material-warn}
+format-muted-background = ${colors.material-primary}
 format-charging-foreground = ${colors.material-foreground}
 format-charging-background = ${colors.material-primary}
 format-discharging-foreground = ${colors.material-foreground}
-format-discharging-background = ${colors.material-warn}
+format-discharging-background = ${colors.material-primary}
 format-full-foreground = ${colors.material-foreground}
 format-full-background = ${colors.material-primary}
 format-playing-foreground = ${colors.material-foreground}
@@ -238,15 +242,15 @@ format-background = ${colors.material-dark-background}
 format-connected-foreground = ${colors.material-foreground}
 format-connected-background = ${colors.material-dark-background}
 format-warn-foreground = ${colors.material-foreground}
-format-warn-background = ${colors.material-warn}
+format-warn-background = ${colors.material-dark-background}
 format-volume-foreground = ${colors.material-foreground}
 format-volume-background = ${colors.material-dark-background}
 format-muted-foreground = ${colors.material-foreground}
-format-muted-background = ${colors.material-warn}
+format-muted-background = ${colors.material-dark-background}
 format-charging-foreground = ${colors.material-foreground}
 format-charging-background = ${colors.material-dark-background}
 format-discharging-foreground = ${colors.material-foreground}
-format-discharging-background = ${colors.material-warn}
+format-discharging-background = ${colors.material-dark-background}
 format-full-foreground = ${colors.material-foreground}
 format-full-background = ${colors.material-dark-background}
 format-playing-foreground = ${colors.material-foreground}
@@ -278,15 +282,15 @@ format-background = ${colors.material-light-background}
 format-connected-foreground = ${colors.material-foreground}
 format-connected-background = ${colors.material-light-background}
 format-warn-foreground = ${colors.material-foreground}
-format-warn-background = ${colors.material-warn}
+format-warn-background = ${colors.material-light-background}
 format-volume-foreground = ${colors.material-foreground}
 format-volume-background = ${colors.material-light-background}
 format-muted-foreground = ${colors.material-foreground}
-format-muted-background = ${colors.material-warn}
+format-muted-background = ${colors.material-light-background}
 format-charging-foreground = ${colors.material-foreground}
 format-charging-background = ${colors.material-light-background}
 format-discharging-foreground = ${colors.material-foreground}
-format-discharging-background = ${colors.material-warn}
+format-discharging-background = ${colors.material-light-background}
 format-full-foreground = ${colors.material-foreground}
 format-full-background = ${colors.material-light-background}
 format-playing-foreground = ${colors.material-foreground}
@@ -315,7 +319,7 @@ format-stopped-padding = ${variables.label-padding}
 type = custom/text
 
 content = %{T3}%{T-}
-content-foreground = ${colors.material-light-background}
+content-foreground = ${colors.material-foreground}
 content-background = ${colors.material-primary}
 
 ;=====================================================
@@ -385,7 +389,7 @@ content-background = ${colors.material-light-background}
 type = custom/text
 
 content = %{T3}%{T-}
-content-foreground = ${colors.material-light-background}
+content-foreground = ${colors.material-foreground}
 content-background = ${colors.material-primary}
 
 ;=====================================================
@@ -459,15 +463,14 @@ content-foreground = ${colors.material-light-background}
 content-background = ${colors.material-primary}
 
 ;=====================================================
-;   bar/user
+;   module/user
 ;=====================================================
 [module/user]
 type = custom/text
 
-content = ${env:USER}
+content = %{T5}%{T-} %{T2}spitfjre%{T-}
 content-background = ${colors.material-primary}
 content-padding = ${variables.label-padding}
-content-font = 4
 
 ;=====================================================
 ;   module/title
@@ -476,6 +479,7 @@ content-font = 4
 type = internal/xwindow
 inherit = section/base_left_light
 
+label = %{T5}%{T-} %title%
 label-maxlen = ${variables.label-maxlen}
 
 ;=====================================================
@@ -488,12 +492,24 @@ wrapping-scroll = true
 strip-wsnumbers = true
 pin-workspaces = true
 
-format-background = ${colors.material-dark-background}
+format-padding = ${variables.label-padding}
+format-background = ${colors.material-primary}
 
-label-focused = %{B#5294e2 F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#5294e2}%{T3}%{T-}%{F-B-}
-label-unfocused = %{T3} %{T-} %index% %{T3} %{T-}
-label-visible = %{B#414a59 F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#414a59}%{T3}%{T-}%{F-B-}
-label-urgent = %{B#cc575d F#2a313b}%{T3}%{T-}%{F-B-} %index% %{B#2a313b F#cc575d}%{T3}%{T-}%{F-B-}
+label-focused = ● %index%
+label-focused-font = 2
+label-focused-padding = ${variables.label-padding}
+
+label-unfocused = ◌ %index%
+label-unfocused-font = 1
+label-unfocused-padding = ${variables.label-padding}
+
+label-visible = ○ %index%
+label-visible-font = 2
+label-visible-padding = ${variables.label-padding}
+
+label-urgent = ◎ %index%
+label-urgent-font = 2
+label-urgent-padding = ${variables.label-padding}
 
 ;=====================================================
 ;   module/mpd
@@ -505,14 +521,14 @@ inherit = section/base_right_light
 format-playing = <label-song> %{T3}%{T-} <icon-prev><toggle><icon-next>
 format-paused = <label-song> %{T3}%{T-} <icon-prev><toggle><icon-next>
 
-icon-play = %{T2}%{T-}
-icon-pause = %{T2}%{T-}
-icon-next = %{T2}%{T-}
-icon-prev = %{T2}%{T-}
+icon-play = %{T5}%{T-}
+icon-pause = %{T5}%{T-}
+icon-next = %{T5}%{T-}
+icon-prev = %{T5}%{T-}
 
 label-song-maxlen = ${variables.label-maxlen}
 label-song-ellipsis = true
-label-song = ♪ %artist% - %title%
+label-song = %{T5}%{T-} %artist% - %title%
 
 label-offline = mpd is offline
 
@@ -524,7 +540,7 @@ type = internal/cpu
 inherit = section/base_right_dark
 interval = 1
 
-label = %{T2}%{T-} %percentage:3%%
+label = %{T5}%{T-} %percentage:3%%
 
 ;=====================================================
 ;   module/memory
@@ -534,7 +550,7 @@ type = internal/memory
 inherit = section/base_right_dark
 interval = 1
 
-label = %{T2}%{T-} %percentage_used:3%%
+label = %{T5}%{T-} %percentage_used:3%%
 
 ;=====================================================
 ;   module/wifi
@@ -546,7 +562,7 @@ interface = ${env:IFACE_WLAN}
 interval = 1
 accumulate-stats = true
 
-label-connected = "%{T2}%{T-} %upspeed:8% %{T3}%{T-} %{T2}%{T-} %downspeed:8%"
+label-connected = "%{T5}%{T-} %upspeed:8% %{T3}%{T-} %{T5}%{T-} %downspeed:8%"
 
 ;=====================================================
 ;   module/eth
@@ -558,7 +574,7 @@ interface = ${env:IFACE_ETH}
 interval = 1
 accumulate-stats = true
 
-label-connected = "%{T2}%{T-} %upspeed:8% %{T3}%{T-} %{T2}%{T-} %downspeed:8%"
+label-connected = "%{T5}%{T-} %upspeed:8% %{T3}%{T-} %{T5}%{T-} %downspeed:8%"
 
 ;=====================================================
 ;   module/date
@@ -567,10 +583,10 @@ label-connected = "%{T2}%{T-} %upspeed:8% %{T3}%{T-} %{T2}%{T-} %downsp
 type = internal/date
 inherit = section/base_right_primary
 interval = 1
-date = %d-%m-%Y
+date = %a
 time = %H:%M
 
-label = %{T2}%{T-} %date% %{T3}%{T-} %{T2}%{T-} %time%
+label = %{T5}%{T-} %{T2}%date% %time%%{T-}
 
 ;=====================================================
 ;   module/volume
@@ -580,8 +596,8 @@ type = internal/alsa
 inherit = section/base_right_dark
 interval = 1
 
-label-volume = %{T2}%{T-} %percentage:3%%
-label-muted = %{T2}%{T-} %percentage:3%%
+label-volume = %{T5}%{T-} %percentage:3%%
+label-muted = %{T5}%{T-} %percentage:3%%
 
 ;=====================================================
 ;   module/battery
@@ -594,13 +610,13 @@ adapter = AC
 full-at = 95
 
 format-charging = <label-charging>
-label-charging = %{T2}%{T-} %percentage:3%%
+label-charging = %{T5}%{T-} %percentage:3%%
 
 format-discharging = <label-discharging>
-label-discharging = %{T2}%{T-} %percentage:3%%
+label-discharging = %{T5}%{T-} %percentage:3%%
 
 format-full = <label-full>
-label-full = %{T2}%{T-} %percentage:3%%
+label-full = %{T5}%{T-} %percentage:3%%
 
 ;=====================================================
 ;   module/temperature
@@ -611,8 +627,8 @@ inherit = section/base_right_dark
 thermal-zone = 0
 warn-temperature = 70
 
-label = %{T2}%{T-} %temperature-c:3%
-label-warn = %{T2}%{T-} %temperature-c:3%
+label = %{T5}%{T-} %temperature-c:3%
+label-warn = %{T5}%{T-} %temperature-c:3%
 
 ;=====================================================
 ;   settings
