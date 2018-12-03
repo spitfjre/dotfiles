@@ -68,9 +68,9 @@ font-2 = ${fonts.font-2}
 font-3 = ${fonts.font-3}
 font-4 = ${fonts.font-4}
 
-modules-left = user lsp i3 lpd wifi eth ldl title lsl
+modules-left = user lsp i3 lpd wifi eth ldl title
 modules-center = 
-modules-right = rsl mpd rld memory rsd cpu rsd temperature rsd volume rdp date 
+modules-right = mpd rld memory rsd cpu rsd temperature rsd volume rdp date 
 
 ;=====================================================
 ;   section/base_left_primary

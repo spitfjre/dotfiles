@@ -1,7 +1,7 @@
 set $mod Mod4
 
 # autostart
-exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/1920x1080.png
+exec_always --no-startup-id feh --bg-fill ~/Pictures/wallpaper/2560x1440.png
 exec_always --no-startup-id sh ~/.config/i3/arandr.sh
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh
@@ -38,7 +38,7 @@ client.background       $material_dark_background
 floating_modifier           $mod
 popup_during_fullscreen     smart
 bindsym $mod+Return         exec --no-startup-id alacritty
-bindsym $mod+Shift+Return   exec --no-startup-id ranger
+bindsym $mod+Shift+Return   exec --no-startup-id alacritty -e ranger
 mouse_warping               none
 
 for_window [class="^.*"] border pixel 1
