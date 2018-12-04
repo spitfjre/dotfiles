@@ -31,12 +31,18 @@ window:
     x: 2
     y: 2
 
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: false
+
   # Window decorations
   #
   # Values for `decorations`:
   #     - full: Borders and title bar
   #     - none: Neither borders nor title bar
   decorations: full
+
+  # When true, alacritty starts maximized.
+  start_maximized: false
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -90,19 +96,19 @@ font:
   normal:
     family: Iosevka Term
     # The `style` can be specified to pick a specific face.
-    # style: Regular
+    #style: Regular
 
   # Bold font face
   bold:
     family: Iosevka Term
     # The `style` can be specified to pick a specific face.
-    # style: Bold
+    #style: Bold
 
   # Italic font face
   italic:
     family: Iosevka Term
     # The `style` can be specified to pick a specific face.
-    # style: Italic
+    #style: Italic
 
   # Point size
   size: 11.0
@@ -111,14 +117,14 @@ font:
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
   offset:
     x: 0
-    y: 0
+    y: 1
 
   # Glyph offset determines the locations of the glyphs within their cells with
   # the default being at the bottom. Increasing `x` moves the glyph to the right,
   # increasing `y` moves the glyph upwards.
   glyph_offset:
     x: 0
-    y: 0
+    y: 1
 
   # Scale the font size based on the monitor's DPI. This will lead to bigger text on HiDPI
   # screens and make reading text a little easier.
@@ -129,10 +135,8 @@ font:
 # Display the time it takes to redraw each frame.
 render_timer: false
 
-# Use custom cursor colors. If `true`, the `colors.cursor.foreground` and
-# `colors.cursor.background` colors will be used to display the cursor.
-# Otherwise the cell colors are inverted for the cursor.
-custom_cursor_colors: true
+# Keep the log file after quitting Alacritty.
+persistent_logging: false
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
@@ -258,19 +262,18 @@ selection:
 
 dynamic_title: true
 
-hide_cursor_when_typing: false
+cursor:
+  # Cursor style
+  #
+  # Values for 'style':
+  #   - ▇ Block
+  #   - _ Underline
+  #   - | Beam
+  style: Block
 
-# Cursor style
-#
-# Values for 'cursor_style':
-#   - Block
-#   - Underline
-#   - Beam
-cursor_style: Block
-
-# If this is `true`, the cursor will be rendered as a hollow box when the
-# window is not focused.
-unfocused_hollow_cursor: true
+  # If this is `true`, the cursor will be rendered as a hollow box when the
+  # window is not focused.
+  unfocused_hollow: true
 
 # Live config reload (changes require restart)
 live_config_reload: true
@@ -279,7 +282,6 @@ live_config_reload: true
 #
 # You can set `shell.program` to the path of your favorite shell, e.g. `/bin/fish`.
 # Entries in `shell.args` are passed unmodified as arguments to the shell.
-#
 #shell:
 #  program: /bin/bash
 #  args:
@@ -310,6 +312,12 @@ live_config_reload: true
 #
 #   A full list with available key codes can be found here:
 #   https://docs.rs/glutin/*/glutin/enum.VirtualKeyCode.html#variants
+#
+#   Instead of using the name of the keys, the `key` field also supports using
+#   the scancode of the desired key. Scancodes have to be specified as a
+#   decimal number.
+#   This command will allow you to display the hex scancodes for certain keys:
+#     `showkey --scancodes`
 #
 # Values for `mods`:
 #   - Command
@@ -343,6 +351,7 @@ live_config_reload: true
 #   - ClearHistory
 #   - Hide
 #   - Quit
+#   - ClearLogNotice
 #
 # Values for `command`:
 #   The `command` field must be a map containing a `program` string and
@@ -367,6 +376,8 @@ key_bindings:
   - { key: Key0,     mods: Control, action: ResetFontSize                }
   - { key: Equals,   mods: Control, action: IncreaseFontSize             }
   - { key: Subtract, mods: Control, action: DecreaseFontSize             }
+  - { key: L,        mods: Control, action: ClearLogNotice               }
+  - { key: L,        mods: Control, chars: "\x0c"                        }
   - { key: Home,                    chars: "\x1bOH",   mode: AppCursor   }
   - { key: Home,                    chars: "\x1b[H",   mode: ~AppCursor  }
   - { key: End,                     chars: "\x1bOF",   mode: AppCursor   }

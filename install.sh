@@ -46,6 +46,7 @@ yaourt -S --noconfirm --needed ranger
 yaourt -S --noconfirm --needed zsh
 yaourt -S --noconfirm --needed zsh-completions
 yaourt -S --noconfirm --needed oh-my-zsh-git
+yaourt -S --noconfirm --needed zsh-theme-powerlevel9k
 
 # browser
 yaourt -S --noconfirm --needed firefox

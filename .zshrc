@@ -2,8 +2,6 @@ export LANG="en_US.UTF-8"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export ZSH=/usr/share/oh-my-zsh
 
-ZSH_THEME="blinks"
-
 plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
@@ -31,3 +29,5 @@ export PATH="$PATH:$HOME/.npm-packages/bin"
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 source /usr/share/nvm/init-nvm.sh
+source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
+POWERLEVEL9K_ALWAYS_SHOW_USER=true
