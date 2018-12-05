@@ -79,6 +79,7 @@ yaourt -S --noconfirm --needed gradle
 yaourt -S --noconfirm --needed nodejs
 yaourt -S --noconfirm --needed npm
 yaourt -S --noconfirm --needed vim
+yaourt -S --noconfirm --needed postman
 
 # misc
 yaourt -S --noconfirm --needed ipe
