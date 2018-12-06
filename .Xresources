@@ -1,4 +1,3 @@
-Xft.dpi: 		96
 Xft.antialias: 	true
 Xft.hinting: 	true
 Xft.rgba: 		rgb
@@ -67,27 +66,12 @@ Xft.lcdfilter: 	lcddefault
 *material_warn: 	  		base_material_warn
 
 ! Rofi Settings
-rofi.dpi:			  96
 rofi.width:			  50
-rofi.padding:		  10
 rofi.fullscreen: 	  false
-rofi.fixed-num-lines: true
-rofi.bw:			  1
 rofi.location:		  0
 rofi.terminal:		  alacritty
 rofi.lines:			  10
 rofi.eh:			  1
-rofi.hide-scrollbar:  true
-rofi.separator-style: solid
 rofi.font:      	  Iosevka Term 9
 rofi.show-icons:      true
-
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-rofi.color-enabled: false
-! 					background				  		foreground					background alt			  		highlight background 	highlight foreground
-rofi.color-window: 	base_material_dark_background, 	base_material_primary,    	base_material_primary
-rofi.color-normal: 	base_material_dark_background, 	base_material_foreground, 	base_material_dark_background, 	base_material_primary, 	base_material_foreground
-rofi.color-active: 	base_material_dark_background, 	base_material_primary,    	base_material_dark_background, 	base_material_primary, 	base_material_foreground
-rofi.color-urgent: 	base_material_dark_background, 	base_material_foreground, 	base_material_dark_background, 	base_material_primary, 	base_material_foreground
+rofi.drun-icon-theme: Arc

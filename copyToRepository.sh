@@ -11,6 +11,7 @@ cp -r $HOME/.config/mpd/mpd.conf $repoDir/.config/mpd/
 cp -r $HOME/.config/polybar/config $repoDir/.config/polybar/
 cp -r $HOME/.config/polybar/launch.sh $repoDir/.config/polybar/
 cp -r $HOME/.config/ranger/rc.conf $repoDir/.config/ranger/
+cp -r $HOME/.config/rofi/* $repoDir/.config/rofi/
 cp -r $HOME/.config/termite/* $repoDir/.config/termite/
 
 cp -r $HOME/Pictures/wallpaper/* $repoDir/wallpaper/
