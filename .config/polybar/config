@@ -31,7 +31,7 @@ black = #000000
 ;   variables
 ;=====================================================
 [variables]
-bar-height = 18
+bar-height = 20
 bar-border-size = 1
 
 label-padding = 1
@@ -45,7 +45,7 @@ font-0 = Iosevka:size=9:antialias=true;2
 font-1 = Iosevka:size=9:weight=bold:antialias=true;2
 font-2 = Iosevka:size=12:antialias=true;2
 font-3 = Iosevka:size=12:weight=bold:antialias=true;2
-font-4 = Material Icons:size=10:antialias=true;3
+font-4 = Material Icons:size=11:antialias=true;3
 
 ;=====================================================
 ;   bar/top
@@ -70,7 +70,7 @@ font-4 = ${fonts.font-4}
 
 modules-left = user lsp i3 lpd wifi eth ldl title
 modules-center = 
-modules-right = mpd rld memory rsd cpu rsd temperature rsd volume rdp date 
+modules-right = mpd rld memory rsd cpu rsd temperature rsd volume rdp date rsp time
 
 ;=====================================================
 ;   section/base_left_primary
@@ -495,19 +495,19 @@ pin-workspaces = true
 format-padding = ${variables.label-padding}
 format-background = ${colors.material-primary}
 
-label-focused = ● %index%
+label-focused = %{T4}●%{T-} %index%
 label-focused-font = 2
 label-focused-padding = ${variables.label-padding}
 
-label-unfocused = ◌ %index%
-label-unfocused-font = 1
+label-unfocused = %{T4}◌%{T-} %index%
+label-unfocused-font = 2
 label-unfocused-padding = ${variables.label-padding}
 
-label-visible = ○ %index%
+label-visible = %{T4}○%{T-} %index%
 label-visible-font = 2
 label-visible-padding = ${variables.label-padding}
 
-label-urgent = ◎ %index%
+label-urgent = %{T4}◎%{T-} %index%
 label-urgent-font = 2
 label-urgent-padding = ${variables.label-padding}
 
@@ -577,16 +577,26 @@ accumulate-stats = true
 label-connected = "%{T5}%{T-} %upspeed:8% %{T3}%{T-} %{T5}%{T-} %downspeed:8%"
 
 ;=====================================================
+;   module/time
+;=====================================================
+[module/time]
+type = internal/date
+inherit = section/base_right_primary
+interval = 1
+time = %H:%M
+
+label = %{T5}%{T-} %{T2}%time%%{T-}
+
+;=====================================================
 ;   module/date
 ;=====================================================
 [module/date]
 type = internal/date
 inherit = section/base_right_primary
 interval = 1
-date = %a
-time = %H:%M
+date = %a %d.%m
 
-label = %{T5}%{T-} %{T2}%date% %time%%{T-}
+label = %{T5}%{T-} %{T2}%date%%{T-}
 
 ;=====================================================
 ;   module/volume
