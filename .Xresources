@@ -1,3 +1,4 @@
+Xft.dpi:		96
 Xft.antialias: 	true
 Xft.hinting: 	true
 Xft.rgba: 		rgb
@@ -67,11 +68,13 @@ Xft.lcdfilter: 	lcddefault
 
 ! Rofi Settings
 rofi.width:			  50
-rofi.fullscreen: 	  false
+rofi.fullscreen: 	  true
+rofi.blur-background: true
 rofi.location:		  0
 rofi.terminal:		  alacritty
 rofi.lines:			  10
 rofi.eh:			  1
 rofi.font:      	  Iosevka Term 9
+rofi.dpi:		      96
 rofi.show-icons:      true
 rofi.drun-icon-theme: Arc

@@ -1,0 +1,24 @@
+// vim:ts=4:sw=4:et
+{
+    "border": "pixel",
+    "current_border_width": 1,
+    "floating": "auto_off",
+    "geometry": {
+       "height": 1057,
+       "width": 1918,
+       "x": 0,
+       "y": 0
+    },
+    "name": "Inbox - maximilian.aulbach@gmx.de - Mozilla Thunderbird",
+    "percent": 1,
+    "swallows": [
+       {
+          "class": "^Thunderbird$"
+       // "instance": "^Mail$",
+       // "title": "^Inbox\\ \\-\\ maximilian\\.aulbach\\@gmx\\.de\\ \\-\\ Mozilla\\ Thunderbird$",
+       // "window_role": "^3pane$"
+       }
+    ],
+    "type": "con"
+}
+

@@ -30,3 +30,6 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 source /usr/share/zsh-theme-powerlevel9k/powerlevel9k.zsh-theme
 POWERLEVEL9K_ALWAYS_SHOW_USER=true
+
+# Set up Node Version Manager
+source /usr/share/nvm/init-nvm.sh

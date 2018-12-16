@@ -16,6 +16,25 @@ exec --no-startup-id compton -b
 # disable touchpad
 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
 
+# initialize layouts
+# workspace 2
+exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/spitfjre/.config/i3/workspace-2.json'"
+exec --no-startup-id alacritty
+exec --no-startup-id alacritty
+exec --no-startup-id rambox
+
+# workspace 3
+exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/spitfjre/.config/i3/workspace-3.json'"
+exec --no-startup-id google-chrome-stable
+
+# workspace 4
+exec --no-startup-id "i3-msg 'workspace 4; append_layout /home/spitfjre/.config/i3/workspace-4.json'"
+exec --no-startup-id firefox
+
+# workspace 8
+exec --no-startup-id "i3-msg 'workspace 8; append_layout /home/spitfjre/.config/i3/workspace-8.json'"
+exec --no-startup-id thunderbird
+
 # font for window titles
 font pango: Iosevka 9
 
@@ -37,8 +56,8 @@ client.background       $material_dark_background
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier           $mod
 popup_during_fullscreen     smart
-bindsym $mod+Return         exec --no-startup-id alacritty
-bindsym $mod+Shift+Return   exec --no-startup-id alacritty -e ranger
+bindsym $mod+Return         exec --no-startup-id WINIT_HIDPI_FACTOR=1.0 alacritty
+bindsym $mod+Shift+Return   exec --no-startup-id WINIT_HIDPI_FACTOR=1.0 alacritty -e ranger
 mouse_warping               none
 
 for_window [class="^.*"] border pixel 1

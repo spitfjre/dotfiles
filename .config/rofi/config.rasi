@@ -36,12 +36,12 @@
 }
 #window {
     background-color: @background;
-    border:           1;
+    border:           0;
     padding:          5;
 }
 #mainbox {
     border:  0;
-    padding: 0;
+    padding: 30%;
 }
 #message {
     border:       2px 0px 0px ;
