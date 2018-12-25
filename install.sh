@@ -2,30 +2,19 @@
 
 yaourt -S --noconfirm --needed archlinux-keyring
 
-# xorg
-yaourt -S --noconfirm --needed xorg-server
-yaourt -S --noconfirm --needed xorg-apps
-yaourt -S --noconfirm --needed xorg
-yaourt -S --noconfirm --needed xorg-xinit
-
 # network manager
 yaourt -S --noconfirm --needed openvpn
 yaourt -S --noconfirm --needed networkmanager
-yaourt -S --noconfirm --needed networkmanager-applet
 
-# i3
-yaourt -S --noconfirm --needed i3-gaps-next-git
-yaourt -S --noconfirm --needed feh
+# sway + system
+yaourt -S --noconfirm --needed sway-git
+yaourt -S --noconfirm --needed waybar-git
 yaourt -S --noconfirm --needed dunst
-yaourt -S --noconfirm --needed scrot
 yaourt -S --noconfirm --needed rofi
-yaourt -S --noconfirm --needed arandr
 yaourt -S --noconfirm --needed lxappearance
 yaourt -S --noconfirm --needed numlockx
 yaourt -S --noconfirm --needed mpd
-yaourt -S --noconfirm --needed compton
 yaourt -S --noconfirm --needed mpc
-yaourt -S --noconfirm --needed polybar # Place polybar last to ensure polybar also installs the mpd module
 
 # gtk-theme
 yaourt -S --noconfirm --needed arc-gtk-theme
@@ -33,7 +22,6 @@ yaourt -S --noconfirm --needed arc-icon-theme
 
 # laptop
 yaourt -S --noconfirm --needed light
-yaourt -S --noconfirm --needed xorg-xbacklight
 
 # terminal
 yaourt -S --noconfirm --needed alacritty
