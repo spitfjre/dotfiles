@@ -15,8 +15,8 @@ input "2:7:SynPS/2_Synaptics_TouchPad" {
 
 # autostart
 exec_always --no-startup-id xrdb ~/.Xresources
+exec_always --no-startup-id sh ~/.config/waybar/launch.sh
 
-exec --no-startup-id waybar
 exec --no-startup-id numlockx on
 exec --no-startup-id dropbox
 exec --no-startup-id dunst
