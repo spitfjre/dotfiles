@@ -40,8 +40,10 @@
     padding:          5;
 }
 #mainbox {
-    border:  0;
-    padding: 30%;
+    border: 1;
+    border-color: @selected-active-background;
+    margin: 30%;
+    padding: 5;
 }
 #message {
     border:       2px 0px 0px ;
