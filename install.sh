@@ -9,7 +9,7 @@ yaourt -S --noconfirm --needed networkmanager
 # sway + system
 yaourt -S --noconfirm --needed sway-git
 yaourt -S --noconfirm --needed waybar-git
-yaourt -S --noconfirm --needed dunst
+yaourt -S --noconfirm --needed mako
 yaourt -S --noconfirm --needed rofi
 yaourt -S --noconfirm --needed lxappearance
 yaourt -S --noconfirm --needed numlockx
@@ -79,6 +79,9 @@ yaourt -S --noconfirm --needed thunderbird
 yaourt -S --noconfirm --needed gimp
 yaourt -S --noconfirm --needed evince
 
+# flutter
+yaourt -S --noconfirm --needed flutter
+
 # docker
 yaourt -S --noconfirm --needed docker
 sudo systemctl start docker
@@ -86,6 +89,3 @@ sudo systemctl enable docker
 sudo gpasswd -a spitfjre docker
 sudo newgrp docker
 exit
-
-# flutter
-yaourt -S --noconfirm --needed flutter
