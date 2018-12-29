@@ -14,8 +14,8 @@ cp -r $HOME/.config/waybar/* ${repoDir}/.config/waybar/
 cp -r $HOME/Pictures/wallpaper/* ${repoDir}/wallpaper/
 cp -r $HOME/.fonts/* ${repoDir}/.fonts/
 
-if [[ -e $HOME/.Xresources ]]
- then cp $HOME/.Xresources ${repoDir}/
+if [[ -e $HOME/.Xdefaults ]]
+ then cp $HOME/.Xdefaults ${repoDir}/
 fi
 if [[ -e $HOME/.zprofile ]]
  then cp $HOME/.zprofile ${repoDir}/

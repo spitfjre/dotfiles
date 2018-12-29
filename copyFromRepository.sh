@@ -11,6 +11,6 @@ cp -rv ${repoDir}/wallpaper/* $HOME/Pictures/wallpaper/
 cp -rv ${repoDir}/.fonts/* $HOME/.fonts/
 cp ${repoDir}/.ncmpcpp/config $HOME/.ncmpcpp/
 
-cp ${repoDir}/.Xresources $HOME
+cp ${repoDir}/.Xdefaults $HOME
 cp ${repoDir}/.zprofile $HOME
 cp ${repoDir}/.zshrc $HOME
