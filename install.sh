@@ -54,7 +54,6 @@ yaourt -S --noconfirm --needed google-chrome
 
 # ide & editor
 yaourt -S --noconfirm --needed jetbrains-toolbox
-yaourt -S --noconfirm --needed android-studio
 yaourt -S --noconfirm --needed sublime-text
 yaourt -S --noconfirm --needed visual-studio-code-bin
 
