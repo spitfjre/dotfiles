@@ -1,102 +1,87 @@
 #!/usr/bin/env bash
 
-yaourt -S --noconfirm --needed archlinux-keyring
+yay -S --noconfirm --needed archlinux-keyring
 
 # xorg
-yaourt -S --noconfirm --needed xorg-server
-yaourt -S --noconfirm --needed xorg-apps
-yaourt -S --noconfirm --needed xorg
-yaourt -S --noconfirm --needed xorg-xinit
+yay -S --noconfirm --needed xorg-server
+yay -S --noconfirm --needed xorg-apps
+yay -S --noconfirm --needed xorg
+yay -S --noconfirm --needed xorg-xinit
 
 # network manager
-yaourt -S --noconfirm --needed openvpn
-yaourt -S --noconfirm --needed networkmanager
-yaourt -S --noconfirm --needed networkmanager-applet
+yay -S --noconfirm --needed openvpn
+yay -S --noconfirm --needed networkmanager
 
 # i3
-yaourt -S --noconfirm --needed i3-gaps-next-git
-yaourt -S --noconfirm --needed feh
-yaourt -S --noconfirm --needed dunst
-yaourt -S --noconfirm --needed scrot
-yaourt -S --noconfirm --needed rofi
-yaourt -S --noconfirm --needed arandr
-yaourt -S --noconfirm --needed lxappearance
-yaourt -S --noconfirm --needed numlockx
-yaourt -S --noconfirm --needed mpd
-yaourt -S --noconfirm --needed compton
-yaourt -S --noconfirm --needed mpc
-yaourt -S --noconfirm --needed polybar # Place polybar last to ensure polybar also installs the mpd module
+yay -S --noconfirm --needed i3-gaps-next-git
+yay -S --noconfirm --needed feh
+yay -S --noconfirm --needed dunst
+yay -S --noconfirm --needed scrot
+yay -S --noconfirm --needed rofi
+yay -S --noconfirm --needed arandr
+yay -S --noconfirm --needed lxappearance
+yay -S --noconfirm --needed mpd
+yay -S --noconfirm --needed compton
+yay -S --noconfirm --needed mpc
+yay -S --noconfirm --needed polybar # Place polybar last to ensure polybar also installs the mpd module
 
 # gtk-theme
-yaourt -S --noconfirm --needed arc-gtk-theme
-yaourt -S --noconfirm --needed arc-icon-theme
-
-# laptop
-yaourt -S --noconfirm --needed light
-yaourt -S --noconfirm --needed xorg-xbacklight
+yay -S --noconfirm --needed mojave-gtk-theme-git
+yay -S --noconfirm --needed mojave-ct-icon-theme
 
 # terminal
-yaourt -S --noconfirm --needed alacritty
-yaourt -S --noconfirm --needed termite
-yaourt -S --noconfirm --needed htop
-yaourt -S --noconfirm --needed ncmpcpp
-yaourt -S --noconfirm --needed ranger
+yay -S --noconfirm --needed alacritty
+yay -S --noconfirm --needed termite
+yay -S --noconfirm --needed htop
+yay -S --noconfirm --needed ncmpcpp
+yay -S --noconfirm --needed ranger
 
 # zsh
-yaourt -S --noconfirm --needed zsh
-yaourt -S --noconfirm --needed zsh-completions
-yaourt -S --noconfirm --needed oh-my-zsh-git
-yaourt -S --noconfirm --needed zsh-theme-powerlevel9k
+yay -S --noconfirm --needed zsh
+yay -S --noconfirm --needed zsh-completions
+yay -S --noconfirm --needed oh-my-zsh-git
+yay -S --noconfirm --needed zsh-theme-powerlevel9k
 
 # browser
-yaourt -S --noconfirm --needed firefox
-yaourt -S --noconfirm --needed google-chrome
+yay -S --noconfirm --needed firefox
+yay -S --noconfirm --needed google-chrome
 
 # ide & editor
-yaourt -S --noconfirm --needed jetbrains-toolbox
-yaourt -S --noconfirm --needed sublime-text
-yaourt -S --noconfirm --needed visual-studio-code-bin
-
-# tex
-yaourt -S --noconfirm --needed texlive-most
-yaourt -S --noconfirm --needed texlive-lang
-yaourt -S --noconfirm --needed texmaker
+yay -S --noconfirm --needed jetbrains-toolbox
+yay -S --noconfirm --needed sublime-text
 
 # font
-yaourt -S --noconfirm --needed ttf-material-icons
+yay -S --noconfirm --needed ttf-iosevka-ss08
+yay -S --noconfirm --needed ttf-iosevka-term-ss08
+yay -S --noconfirm --needed ttf-material-icons
 
 # chat
-yaourt -S --noconfirm --needed rambox-bin
-yaourt -S --noconfirm --needed discord
+yay -S --noconfirm --needed rambox-bin
+yay -S --noconfirm --needed discord
 
 # dev
-yaourt -S --noconfirm --needed git
-yaourt -S --noconfirm --needed jdk-openjdk
-yaourt -S --noconfirm --needed jdk8-openjdk
-yaourt -S --noconfirm --needed maven
-yaourt -S --noconfirm --needed gradle
-yaourt -S --noconfirm --needed nodejs
-yaourt -S --noconfirm --needed npm
-yaourt -S --noconfirm --needed vim
-yaourt -S --noconfirm --needed postman-bin
+yay -S --noconfirm --needed git
+yay -S --noconfirm --needed jdk8-openjdk
+yay -S --noconfirm --needed maven
+yay -S --noconfirm --needed nodejs
+yay -S --noconfirm --needed npm
+yay -S --noconfirm --needed vim
+yay -S --noconfirm --needed postman-bin
 
 # misc
-yaourt -S --noconfirm --needed ipe
-yaourt -S --noconfirm --needed jdownloader2
-yaourt -S --noconfirm --needed keepassx2
-yaourt -S --noconfirm --needed mpv
-yaourt -S --noconfirm --needed dropbox
-yaourt -S --noconfirm --needed thunderbird
-yaourt -S --noconfirm --needed gimp
-yaourt -S --noconfirm --needed evince
+yay -S --noconfirm --needed jdownloader2
+yay -S --noconfirm --needed keepassx2
+yay -S --noconfirm --needed audacious
+yay -S --noconfirm --needed mpv
+yay -S --noconfirm --needed dropbox
+yay -S --noconfirm --needed thunderbird
+yay -S --noconfirm --needed gimp
+yay -S --noconfirm --needed evince
 
 # docker
-yaourt -S --noconfirm --needed docker
+yay -S --noconfirm --needed docker
 sudo systemctl start docker
 sudo systemctl enable docker
 sudo gpasswd -a spitfjre docker
 sudo newgrp docker
 exit
-
-# flutter
-yaourt -S --noconfirm --needed flutter
