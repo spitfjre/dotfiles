@@ -1,0 +1,83 @@
+[user]
+	email =
+	mail =
+	name =
+
+[push]
+	default = simple
+
+[alias]
+	s = status
+	
+	# commit
+	cim = commit --message
+	cima = commit --all --message
+	
+	# pull / fetch
+	fetchall = "!git fetch -p --all"
+	pr = pull --rebase # always use pr for pulling
+	
+	# push
+	publish = "!git pnv --set-upstream origin `git symbolic-ref --short HEAD`" # create remote branch for local branch and connect local and remote branch
+	pnv = !git push --no-verify # pushes without using any git hooks
+
+	difflist = !git diff --name-only
+
+	# undo git commands
+	undo = reset HEAD^ # undo last commit (soft - keep file changes)
+	unstage = reset HEAD # undo git add (soft - keep file changes)
+
+	# deleting branches: del deletes local then remote - delRemote only the remote branch
+	del = !sh -c 'git branch -D $1 && git pnv origin :$1' -
+	delRemote = !sh -c 'git pnv origin :$1' -
+	pruneit = !git remote prune origin # deleting all remote branches locally, which are already deleted remotely
+
+	# show graph in terminal
+	gl = log --graph --oneline --decorate --branches --all -20
+	glog = log --graph --oneline --decorate --branches --all
+	olog = log --decorate --oneline
+	olog7 = log --decorate --oneline -7
+
+	# run prall before using git flow - after using git flow run pushrelease
+	prall = !git fetchall && git checkout production && git pr && git checkout master && git pr && git checkout develop && git pr && git s && git gl
+	prdev = !git fetchall && git checkout master && git pr && git checkout develop && git pr && git s && git gl
+	pushrelease = !git pnv && git checkout master && git pnv && git pnv --tags && git checkout develop && git s && git gl
+
+	# ignore, unignore and show ignored files (files that are only locally ignored by your local git - this crashes on pull / push when changes to ignored files are made)
+	ignore = update-index --assume-unchanged
+	ignored = !git ls-files -v | grep \"^[[:lower:]]\"
+	unignore = update-index --no-assume-unchanged
+
+	# linux specific => TODO - there is an issue with xdg-open and default editors
+	openconfigLINUX = !sudo xdg-open $HOME/.gitconfig # uses preferred application for file type
+	
+	# open config does not work on windows, so show path of config
+	configpath = config --global --list --show-origin
+
+
+[core]
+	# specify the editor you want to use for commit messages or interactive rebase etc. (on windows write the full path to exe)
+	editor = "subl -n -w"
+	# pager option does not remove paged output from terminal after closing pagination (git gl will be auto closed and not removed from terminal)
+	pager = "less -F -X"
+
+[rerere]
+	autoupdate = true
+	enabled = true
+
+[rebase]
+	autosquash = true
+
+#  this options are for large-file-storage, which is a git extension, which should be used for images or else...
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	process = git-lfs filter-process
+	required = true
+	smudge = git-lfs smudge -- %f
+
+[url "https://"]
+	insteadOf = git://
+
+[credential]
+	# on push git asks for credentials if using https (instead of ssh) - this options stores the credentials after first input
+	helper = store
