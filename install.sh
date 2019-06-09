@@ -53,7 +53,8 @@ yay -S --noconfirm --needed sublime-text
 # font
 yay -S --noconfirm --needed ttf-iosevka-ss08
 yay -S --noconfirm --needed ttf-iosevka-term-ss08
-yay -S --noconfirm --needed ttf-material-icons
+yay -S --noconfirm --needed ttf-font-awesome
+yay -S --noconfirm --needed system-san-francisco-font-git
 
 # chat
 yay -S --noconfirm --needed rambox-bin
@@ -71,7 +72,6 @@ yay -S --noconfirm --needed postman-bin
 # misc
 yay -S --noconfirm --needed jdownloader2
 yay -S --noconfirm --needed keepassx2
-yay -S --noconfirm --needed audacious
 yay -S --noconfirm --needed mpv
 yay -S --noconfirm --needed dropbox
 yay -S --noconfirm --needed thunderbird

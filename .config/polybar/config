@@ -25,14 +25,13 @@ material-dark-background = ${xrdb:material_dark_background}
 material-light-background = ${xrdb:material_light_background}
 material-primary = ${xrdb:material_primary}
 material-warn = ${xrdb:material_warn}
-black = #000000
 
 ;=====================================================
 ;   variables
 ;=====================================================
 [variables]
 bar-height = 20
-bar-border-size = 1
+bar-border-size = 2
 
 label-padding = 1
 label-maxlen = 50
@@ -41,11 +40,12 @@ label-maxlen = 50
 ;   fonts
 ;=====================================================
 [fonts]
-font-0 = Iosevka:size=9:antialias=true;2
-font-1 = Iosevka:size=9:weight=bold:antialias=true;2
-font-2 = Iosevka:size=12:antialias=true;2
-font-3 = Iosevka:size=12:weight=bold:antialias=true;2
-font-4 = Material Icons:size=11:antialias=true;3
+font-0 = Iosevka SS08:size=9:antialias=true;2
+font-1 = Iosevka SS08:size=9:weight=bold:antialias=true;2
+font-2 = Iosevka SS08:size=12:antialias=true;2
+font-3 = Iosevka SS08:size=12:weight=bold:antialias=true;2
+font-4 = Font Awesome 5 Free:size=9:antialias=true;2
+font-5 = Font Awesome 5 Free:size=9:weight=bold:antialias=true;2
 
 ;=====================================================
 ;   bar/top
@@ -57,7 +57,7 @@ bottom = false
 fixed-center = true
 
 border-bottom-size = ${variables.bar-border-size}
-border-color = ${colors.black}
+border-color = ${colors.material-dark-background}
 
 background = ${colors.material-light-background}
 foreground = ${colors.material-foreground}
@@ -67,6 +67,7 @@ font-1 = ${fonts.font-1}
 font-2 = ${fonts.font-2}
 font-3 = ${fonts.font-3}
 font-4 = ${fonts.font-4}
+font-5 = ${fonts.font-5}
 
 modules-left = user lsp i3 lpd wifi eth ldl title
 modules-center = 
@@ -468,7 +469,7 @@ content-background = ${colors.material-primary}
 [module/user]
 type = custom/text
 
-content = %{T5}%{T-} %{T2}spitfjre%{T-}
+content = %{T6}%{T-} %{T2}spitfjre%{T-}
 content-background = ${colors.material-primary}
 content-padding = ${variables.label-padding}
 
@@ -479,7 +480,7 @@ content-padding = ${variables.label-padding}
 type = internal/xwindow
 inherit = section/base_left_light
 
-label = %{T5}%{T-} %title%
+label = %{T5}%{T-} %title%
 label-maxlen = ${variables.label-maxlen}
 
 ;=====================================================
@@ -518,17 +519,17 @@ label-urgent-padding = ${variables.label-padding}
 type = internal/mpd
 inherit = section/base_right_light
 
-format-playing = <label-song> %{T3}%{T-} <icon-prev><toggle><icon-next>
-format-paused = <label-song> %{T3}%{T-} <icon-prev><toggle><icon-next>
+format-playing = <label-song> %{T3}%{T-} <icon-prev> <toggle> <icon-next>
+format-paused = <label-song> %{T3}%{T-} <icon-prev> <toggle> <icon-next>
 
-icon-play = %{T5}%{T-}
-icon-pause = %{T5}%{T-}
-icon-next = %{T5}%{T-}
-icon-prev = %{T5}%{T-}
+icon-play = %{T5}%{T-}
+icon-pause = %{T5}%{T-}
+icon-next = %{T5}%{T-}
+icon-prev = %{T5}%{T-}
 
 label-song-maxlen = ${variables.label-maxlen}
 label-song-ellipsis = true
-label-song = %{T5}%{T-} %artist% - %title%
+label-song = %{T5}%{T-} %artist% - %title%
 
 label-offline = mpd is offline
 
@@ -540,7 +541,7 @@ type = internal/cpu
 inherit = section/base_right_dark
 interval = 1
 
-label = %{T5}%{T-} %percentage:3%%
+label = %{T5}%{T-} %percentage:3%%
 
 ;=====================================================
 ;   module/memory
@@ -550,7 +551,7 @@ type = internal/memory
 inherit = section/base_right_dark
 interval = 1
 
-label = %{T5}%{T-} %percentage_used:3%%
+label = %{T5}%{T-} %percentage_used:3%%
 
 ;=====================================================
 ;   module/wifi
@@ -562,7 +563,7 @@ interface = ${env:IFACE_WLAN}
 interval = 1
 accumulate-stats = true
 
-label-connected = "%{T5}%{T-} %upspeed:8% %{T3}%{T-} %{T5}%{T-} %downspeed:8%"
+label-connected = "%{T5}%{T-} %upspeed:8% %{T3}%{T-} %{T5}%{T-} %downspeed:8%"
 
 ;=====================================================
 ;   module/eth
@@ -574,7 +575,7 @@ interface = ${env:IFACE_ETH}
 interval = 1
 accumulate-stats = true
 
-label-connected = "%{T5}%{T-} %upspeed:8% %{T3}%{T-} %{T5}%{T-} %downspeed:8%"
+label-connected = "%{T5}%{T-} %upspeed:8% %{T3}%{T-} %{T5}%{T-} %downspeed:8%"
 
 ;=====================================================
 ;   module/time
@@ -585,7 +586,7 @@ inherit = section/base_right_primary
 interval = 1
 time = %H:%M
 
-label = %{T5}%{T-} %{T2}%time%%{T-}
+label = %{T6}%{T-} %{T2}%time%%{T-}
 
 ;=====================================================
 ;   module/date
@@ -596,7 +597,7 @@ inherit = section/base_right_primary
 interval = 1
 date = %a %d.%m
 
-label = %{T5}%{T-} %{T2}%date%%{T-}
+label = %{T6}%{T-} %{T2}%date%%{T-}
 
 ;=====================================================
 ;   module/volume
@@ -606,8 +607,8 @@ type = internal/alsa
 inherit = section/base_right_dark
 interval = 1
 
-label-volume = %{T5}%{T-} %percentage:3%%
-label-muted = %{T5}%{T-} %percentage:3%%
+label-volume = %{T5}%{T-} %percentage:3%%
+label-muted = %{T5}%{T-} %percentage:3%%
 
 ;=====================================================
 ;   module/battery
@@ -620,13 +621,13 @@ adapter = AC
 full-at = 95
 
 format-charging = <label-charging>
-label-charging = %{T5}%{T-} %percentage:3%%
+label-charging = %{T5}%{T-} %percentage:3%%
 
 format-discharging = <label-discharging>
-label-discharging = %{T5}%{T-} %percentage:3%%
+label-discharging = %{T5}%{T-} %percentage:3%%
 
 format-full = <label-full>
-label-full = %{T5}%{T-} %percentage:3%%
+label-full = %{T5}%{T-} %percentage:3%%
 
 ;=====================================================
 ;   module/temperature
@@ -637,8 +638,8 @@ inherit = section/base_right_dark
 thermal-zone = 0
 warn-temperature = 70
 
-label = %{T5}%{T-} %temperature-c:3%
-label-warn = %{T5}%{T-} %temperature-c:3%
+label = %{T5}%{T-} %temperature-c:3%
+label-warn = %{T5}%{T-} %temperature-c:3%
 
 ;=====================================================
 ;   settings

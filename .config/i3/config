@@ -14,7 +14,7 @@ exec --no-startup-id mpd
 exec --no-startup-id xinput --disable "SynPS/2 Synaptics TouchPad"
 
 # font for window titles
-font pango: Iosevka 9
+font pango: Iosevka SS08 9
 
 # colors
 set_from_resource $material_foreground          material_foreground
@@ -38,12 +38,12 @@ bindsym $mod+Return         exec --no-startup-id WINIT_HIDPI_FACTOR=1.0 alacritt
 bindsym $mod+Shift+Return   exec --no-startup-id WINIT_HIDPI_FACTOR=1.0 alacritty -e ranger
 mouse_warping               none
 
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 for_window [class="^.*"] title_format "  %title"
 
 # i3-gaps
-gaps inner 0
-gaps outer 0
+gaps inner 2
+gaps outer 2
 
 # kill focused window
 bindsym $mod+Shift+q kill

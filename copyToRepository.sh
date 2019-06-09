@@ -7,7 +7,6 @@ cp -r $HOME/.config/dunst/* $repoDir/.config/dunst/
 cp -r $HOME/.config/feh/* $repoDir/.config/feh/
 cp -r $HOME/.config/htop/* $repoDir/.config/htop/
 cp -r $HOME/.config/i3/config $repoDir/.config/i3/
-cp -r $HOME/.config/i3/*.json $repoDir/.config/i3/
 cp -r $HOME/.config/mpd/mpd.conf $repoDir/.config/mpd/
 cp -r $HOME/.config/polybar/config $repoDir/.config/polybar/
 cp -r $HOME/.config/polybar/launch.sh $repoDir/.config/polybar/
@@ -16,13 +15,15 @@ cp -r $HOME/.config/rofi/* $repoDir/.config/rofi/
 cp -r $HOME/.config/termite/* $repoDir/.config/termite/
 
 cp -r $HOME/Pictures/wallpaper/* $repoDir/wallpaper/
-cp -r $HOME/.fonts/* $repoDir/.fonts/
 
 if [ -e $HOME/.xinitrc ]
  then cp $HOME/.xinitrc $repoDir/
 fi
 if [ -e $HOME/.Xresources ]
  then cp $HOME/.Xresources $repoDir/
+fi
+if [ -e $HOME/.gitconfig ]
+ then cp $HOME/.gitconfig $repoDir/
 fi
 if [ -e $HOME/.zprofile ]
  then cp $HOME/.zprofile $repoDir/
