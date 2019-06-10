@@ -8,7 +8,7 @@ source $ZSH/oh-my-zsh.sh
 DEFAULT_USER=`whoami`
 
 alias ls='ls -A --color=auto'
-alias syu='yay -Syu --aur --noconfirm'
+alias syu='yay -Syu --noconfirm'
 alias vpn='sudo openvpn --daemon --config ~/client.ovpn'
 alias docker_clean='docker rmi $(docker images -q)'
 
