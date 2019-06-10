@@ -40,8 +40,8 @@ label-maxlen = 50
 ;   fonts
 ;=====================================================
 [fonts]
-font-0 = Iosevka SS08:size=9:antialias=true;2
-font-1 = Iosevka SS08:size=9:weight=bold:antialias=true;2
+font-0 = SFNS Display:size=9:antialias=true;2
+font-1 = SFNS Display:size=9:weight=bold:antialias=true;2
 font-2 = Iosevka SS08:size=12:antialias=true;2
 font-3 = Iosevka SS08:size=12:weight=bold:antialias=true;2
 font-4 = Font Awesome 5 Free:size=9:antialias=true;2
