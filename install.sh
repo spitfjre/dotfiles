@@ -71,7 +71,7 @@ yay -S --noconfirm --needed postman-bin
 
 # misc
 yay -S --noconfirm --needed jdownloader2
-yay -S --noconfirm --needed keepassx2
+yay -S --noconfirm --needed keeweb
 yay -S --noconfirm --needed mpv
 yay -S --noconfirm --needed dropbox
 yay -S --noconfirm --needed thunderbird
