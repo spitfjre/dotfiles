@@ -6,6 +6,7 @@ exec_always --no-startup-id sh ~/.config/i3/arandr.sh
 exec_always --no-startup-id xrdb ~/.Xresources
 exec_always --no-startup-id sh ~/.config/polybar/launch.sh
 
+exec --no-startup-id compton
 exec --no-startup-id dropbox
 exec --no-startup-id dunst
 exec --no-startup-id mpd

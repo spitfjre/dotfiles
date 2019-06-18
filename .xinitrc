@@ -1,6 +1,7 @@
 #!/bin/sh
 
 setxkbmap -layout us -variant altgr-intl
-xrdb -merge ~/.Xresources
+
+[[ -f ~/.Xresources ]] && xrdb -merge -I$HOME ~/.Xresources
 
 exec i3
