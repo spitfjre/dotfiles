@@ -31,7 +31,7 @@ rofi.lines:			  10
 rofi.eh:			  1
 rofi.hide-scrollbar:  true
 rofi.separator-style: solid
-rofi.font:      	  SFNS Display 11
+rofi.font:      	  Iosevka Term SS08 11
 rofi.show-icons:      true
 rofi.drun-icon-theme: Mojave-Ct
 rofi.blur-background: true
