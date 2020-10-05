@@ -69,9 +69,9 @@ font-3 = ${fonts.font-3}
 font-4 = ${fonts.font-4}
 font-5 = ${fonts.font-5}
 
-modules-left = user lsp i3 lpd wifi eth ldl title
+modules-left = user lsp i3 lpd wifi eth lsd title ldl
 modules-center = 
-modules-right = mpd rld memory rsd cpu rsd temperature rsd volume rdp date rsp time
+modules-right = rld memory rsd cpu rsd temperature rsd volume rdp date rsp time
 
 ;=====================================================
 ;   section/base_left_primary
@@ -94,12 +94,6 @@ format-discharging-foreground = ${colors.material-foreground}
 format-discharging-background = ${colors.material-primary}
 format-full-foreground = ${colors.material-foreground}
 format-full-background = ${colors.material-primary}
-format-playing-foreground = ${colors.material-foreground}
-format-playing-background = ${colors.material-primary}
-format-paused-foreground = ${colors.material-foreground}
-format-paused-background = ${colors.material-primary}
-format-stopped-foreground = ${colors.material-foreground}
-format-stopped-background = ${colors.material-primary}
 
 format-padding = ${variables.label-padding}
 format-connected-padding = ${variables.label-padding}
@@ -109,9 +103,6 @@ format-muted-padding = ${variables.label-padding}
 format-charging-padding = ${variables.label-padding}
 format-discharging-padding = ${variables.label-padding}
 format-full-padding = ${variables.label-padding}
-format-playing-padding = ${variables.label-padding}
-format-paused-padding = ${variables.label-padding}
-format-stopped-padding = ${variables.label-padding}
 
 ;=====================================================
 ;   section/base_left_dark
@@ -134,12 +125,6 @@ format-discharging-foreground = ${colors.material-foreground}
 format-discharging-background = ${colors.material-dark-background}
 format-full-foreground = ${colors.material-foreground}
 format-full-background = ${colors.material-dark-background}
-format-playing-foreground = ${colors.material-foreground}
-format-playing-background = ${colors.material-dark-background}
-format-paused-foreground = ${colors.material-foreground}
-format-paused-background = ${colors.material-dark-background}
-format-stopped-foreground = ${colors.material-foreground}
-format-stopped-background = ${colors.material-dark-background}
 
 format-padding = ${variables.label-padding}
 format-connected-padding = ${variables.label-padding}
@@ -149,9 +134,6 @@ format-muted-padding = ${variables.label-padding}
 format-charging-padding = ${variables.label-padding}
 format-discharging-padding = ${variables.label-padding}
 format-full-padding = ${variables.label-padding}
-format-playing-padding = ${variables.label-padding}
-format-paused-padding = ${variables.label-padding}
-format-stopped-padding = ${variables.label-padding}
 
 ;=====================================================
 ;   section/base_left_light
@@ -174,12 +156,6 @@ format-discharging-foreground = ${colors.material-foreground}
 format-discharging-background = ${colors.material-light-background}
 format-full-foreground = ${colors.material-foreground}
 format-full-background = ${colors.material-light-background}
-format-playing-foreground = ${colors.material-foreground}
-format-playing-background = ${colors.material-light-background}
-format-paused-foreground = ${colors.material-foreground}
-format-paused-background = ${colors.material-light-background}
-format-stopped-foreground = ${colors.material-foreground}
-format-stopped-background = ${colors.material-light-background}
 
 format-padding = ${variables.label-padding}
 format-connected-padding = ${variables.label-padding}
@@ -189,9 +165,6 @@ format-muted-padding = ${variables.label-padding}
 format-charging-padding = ${variables.label-padding}
 format-discharging-padding = ${variables.label-padding}
 format-full-padding = ${variables.label-padding}
-format-playing-padding = ${variables.label-padding}
-format-paused-padding = ${variables.label-padding}
-format-stopped-padding = ${variables.label-padding}
 
 ;=====================================================
 ;   section/base_right_primary
@@ -214,12 +187,6 @@ format-discharging-foreground = ${colors.material-foreground}
 format-discharging-background = ${colors.material-primary}
 format-full-foreground = ${colors.material-foreground}
 format-full-background = ${colors.material-primary}
-format-playing-foreground = ${colors.material-foreground}
-format-playing-background = ${colors.material-primary}
-format-paused-foreground = ${colors.material-foreground}
-format-paused-background = ${colors.material-primary}
-format-stopped-foreground = ${colors.material-foreground}
-format-stopped-background = ${colors.material-primary}
 
 format-padding = ${variables.label-padding}
 format-connected-padding = ${variables.label-padding}
@@ -229,9 +196,6 @@ format-muted-padding = ${variables.label-padding}
 format-charging-padding = ${variables.label-padding}
 format-discharging-padding = ${variables.label-padding}
 format-full-padding = ${variables.label-padding}
-format-playing-padding = ${variables.label-padding}
-format-paused-padding = ${variables.label-padding}
-format-stopped-padding = ${variables.label-padding}
 
 ;=====================================================
 ;   section/base_right_dark
@@ -254,12 +218,6 @@ format-discharging-foreground = ${colors.material-foreground}
 format-discharging-background = ${colors.material-dark-background}
 format-full-foreground = ${colors.material-foreground}
 format-full-background = ${colors.material-dark-background}
-format-playing-foreground = ${colors.material-foreground}
-format-playing-background = ${colors.material-dark-background}
-format-paused-foreground = ${colors.material-foreground}
-format-paused-background = ${colors.material-dark-background}
-format-stopped-foreground = ${colors.material-foreground}
-format-stopped-background = ${colors.material-dark-background}
 
 format-padding = ${variables.label-padding}
 format-connected-padding = ${variables.label-padding}
@@ -269,9 +227,6 @@ format-muted-padding = ${variables.label-padding}
 format-charging-padding = ${variables.label-padding}
 format-discharging-padding = ${variables.label-padding}
 format-full-padding = ${variables.label-padding}
-format-playing-padding = ${variables.label-padding}
-format-paused-padding = ${variables.label-padding}
-format-stopped-padding = ${variables.label-padding}
 
 ;=====================================================
 ;   section/base_right_light
@@ -294,12 +249,6 @@ format-discharging-foreground = ${colors.material-foreground}
 format-discharging-background = ${colors.material-light-background}
 format-full-foreground = ${colors.material-foreground}
 format-full-background = ${colors.material-light-background}
-format-playing-foreground = ${colors.material-foreground}
-format-playing-background = ${colors.material-light-background}
-format-paused-foreground = ${colors.material-foreground}
-format-paused-background = ${colors.material-light-background}
-format-stopped-foreground = ${colors.material-foreground}
-format-stopped-background = ${colors.material-light-background}
 
 format-padding = ${variables.label-padding}
 format-connected-padding = ${variables.label-padding}
@@ -309,9 +258,6 @@ format-muted-padding = ${variables.label-padding}
 format-charging-padding = ${variables.label-padding}
 format-discharging-padding = ${variables.label-padding}
 format-full-padding = ${variables.label-padding}
-format-playing-padding = ${variables.label-padding}
-format-paused-padding = ${variables.label-padding}
-format-stopped-padding = ${variables.label-padding}
 
 ;=====================================================
 ;   module/lsp
@@ -478,7 +424,7 @@ content-padding = ${variables.label-padding}
 ;=====================================================
 [module/title]
 type = internal/xwindow
-inherit = section/base_left_light
+inherit = section/base_left_dark
 
 label = %{T5}%{T-} %title%
 label-maxlen = ${variables.label-maxlen}
@@ -511,27 +457,6 @@ label-visible-padding = ${variables.label-padding}
 label-urgent = %{T4}◎%{T-} %index%
 label-urgent-font = 2
 label-urgent-padding = ${variables.label-padding}
-
-;=====================================================
-;   module/mpd
-;=====================================================
-[module/mpd]
-type = internal/mpd
-inherit = section/base_right_light
-
-format-playing = <label-song> %{T3}%{T-} <icon-prev> <toggle> <icon-next>
-format-paused = <label-song> %{T3}%{T-} <icon-prev> <toggle> <icon-next>
-
-icon-play = %{T5}%{T-}
-icon-pause = %{T5}%{T-}
-icon-next = %{T5}%{T-}
-icon-prev = %{T5}%{T-}
-
-label-song-maxlen = ${variables.label-maxlen}
-label-song-ellipsis = true
-label-song = %{T5}%{T-} %artist% - %title%
-
-label-offline = mpd is offline
 
 ;=====================================================
 ;   module/cpu
