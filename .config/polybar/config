@@ -69,7 +69,7 @@ font-3 = ${fonts.font-3}
 font-4 = ${fonts.font-4}
 font-5 = ${fonts.font-5}
 
-modules-left = user lsp i3 lpd wifi eth ldl title
+modules-left = user lsp i3 lpd wifi eth lsd title ldl
 modules-center = 
 modules-right = rld memory rsd cpu rsd temperature rsd volume rdp date rsp time
 
@@ -424,7 +424,7 @@ content-padding = ${variables.label-padding}
 ;=====================================================
 [module/title]
 type = internal/xwindow
-inherit = section/base_left_light
+inherit = section/base_left_dark
 
 label = %{T5}%{T-} %title%
 label-maxlen = ${variables.label-maxlen}
